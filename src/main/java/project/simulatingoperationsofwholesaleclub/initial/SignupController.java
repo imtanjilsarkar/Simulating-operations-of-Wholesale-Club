@@ -1,4 +1,4 @@
-package project.simulatingoperationsofwholesaleclub.inital;
+package project.simulatingoperationsofwholesaleclub.initial;
 
 public class SignupController {
     //handles new user registration
