@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="project.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.ShiftController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="project.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.ShiftController">
+
+    <!-- Title -->
+    <Label layoutX="180.0" layoutY="30.0"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"
+           text="Shift Assignment"/>
+
+    <!-- Select Employee Label -->
+    <Label layoutX="50.0" layoutY="100.0"
+           style="-fx-font-size: 14px;"
+           text="Select Employee:"/>
+
+    <!-- Employee ComboBox -->
+    <ComboBox fx:id="employeeComboBox"
+              layoutX="200.0" layoutY="95.0"
+              prefWidth="200.0" prefHeight="25.0"/>
+
+    <!-- Select Shift Label -->
+    <Label layoutX="50.0" layoutY="150.0"
+           style="-fx-font-size: 14px;"
+           text="Select Shift:"/>
+
+    <!-- Shift ComboBox -->
+    <ComboBox fx:id="shiftComboBox"
+              layoutX="200.0" layoutY="145.0"
+              prefWidth="200.0" prefHeight="25.0"/>
+
+    <!-- Assign Button -->
+    <Button layoutX="200.0" layoutY="200.0"
+            prefWidth="100.0" prefHeight="30.0"
+            style="-fx-background-color: #0078D7; -fx-text-fill: white;"
+            text="Assign"
+            onAction="#handleAssignShift"/>
 
 </AnchorPane>
