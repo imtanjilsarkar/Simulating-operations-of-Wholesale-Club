@@ -6,52 +6,30 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0"
-            style="-fx-background-color: white;"
-            xmlns="http://javafx.com/javafx/25"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="project.simulatingoperationsofwholesaleclub.initial.LoginController">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.simulatingoperationsofwholesaleclub.initial.LoginController">
 
     <!-- Page Title -->
-    <Label layoutX="340.0" layoutY="50.0"
-           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;"
-           text="Login to Your Account" />
+    <Label layoutX="319.0" layoutY="50.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;" text="Login to Your Account" />
 
     <!-- Username Label -->
-    <Label layoutX="250.0" layoutY="130.0"
-           style="-fx-font-size: 14px;"
-           text="Username:" />
+    <Label layoutX="250.0" layoutY="130.0" style="-fx-font-size: 14px;" text="Username:" />
 
     <!-- Username Input -->
-    <TextField layoutX="350.0" layoutY="125.0"
-               prefWidth="200.0" promptText="Enter your username" fx:id="usernameField"/>
+    <TextField fx:id="usernameField" layoutX="350.0" layoutY="125.0" prefWidth="200.0" promptText="Enter your username" />
 
     <!-- Password Label -->
-    <Label layoutX="250.0" layoutY="180.0"
-           style="-fx-font-size: 14px;"
-           text="Password:" />
+    <Label layoutX="250.0" layoutY="180.0" style="-fx-font-size: 14px;" text="Password:" />
 
     <!-- Password Input -->
-    <PasswordField layoutX="350.0" layoutY="175.0"
-                   prefWidth="200.0" promptText="Enter your password" fx:id="passwordField"/>
+    <PasswordField fx:id="passwordField" layoutX="350.0" layoutY="175.0" prefWidth="200.0" promptText="Enter your password" />
 
     <!-- Login Button -->
-    <Button layoutX="350.0" layoutY="230.0"
-            prefWidth="200.0" prefHeight="40.0"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;"
-            text="Login"
-            onAction="#handleLogin" />
+    <Button layoutX="350.0" layoutY="230.0" onAction="#handleLogin" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Login" />
 
     <!-- Back Button -->
-    <Button layoutX="350.0" layoutY="290.0"
-            prefWidth="200.0" prefHeight="40.0"
-            style="-fx-background-color: white; -fx-border-color: #0078D7; -fx-border-width: 2; -fx-text-fill: #0078D7; -fx-font-size: 15px; -fx-background-radius: 8;"
-            text="Back"
-            onAction="#handleBack" />
+    <Button layoutX="350.0" layoutY="290.0" onAction="#handleBack" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: #0078D7; -fx-border-width: 2; -fx-text-fill: #0078D7; -fx-font-size: 15px; -fx-background-radius: 8;" text="Back" />
 
     <!-- Footer -->
-    <Label layoutX="300.0" layoutY="460.0"
-           style="-fx-font-size: 12px; -fx-text-fill: #999999;"
-           text="© 2025 HR &amp; Support Management System" />
+    <Label layoutX="300.0" layoutY="460.0" style="-fx-font-size: 12px; -fx-text-fill: #999999;" text="© 2025 HR &amp; Support Management System" />
 
 </AnchorPane>
