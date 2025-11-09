@@ -37,14 +37,14 @@ Supports multiple user roles with specific functionalities including HR, Custome
    - Renew memberships  
    - Manage membership database (other goals to be completed)  
 
-5. **HR Manager** *(Your User)*  
+5. **HR Manager**  
    - Recruit, remove, update employee info  
    - Approve leave requests  
    - Manage attendance, payroll  
    - Assign work shifts  
    - Generate HR summary report  
 
-6. **Customer Support Staff** *(Your User)*  
+6. **Customer Support Staff**  
    - Add, update, close complaints  
    - Check customer order status  
    - Register new memberships  
