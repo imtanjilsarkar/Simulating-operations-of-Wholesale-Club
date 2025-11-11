@@ -3,6 +3,6 @@ module project.simulatingoperationsofwholesaleclub {
     requires javafx.fxml;
 
 
-    opens project.simulatingoperationsofwholesaleclub to javafx.fxml;
-    exports project.simulatingoperationsofwholesaleclub;
+    opens com.group16.simulatingoperationsofwholesaleclub to javafx.fxml;
+    exports com.group16.simulatingoperationsofwholesaleclub;
 }

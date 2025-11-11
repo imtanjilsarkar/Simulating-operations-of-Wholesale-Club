@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0"
+            style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller.OrderStatusController">
+
+    <!-- Title -->
+    <Label layoutX="250.0" layoutY="20.0"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;"
+           text="Order Status" />
+
+    <!-- TableView -->
+    <TableView layoutX="50.0" layoutY="70.0" prefWidth="600.0" prefHeight="300.0" fx:id="orderTable">
+        <columns>
+            <TableColumn text="Order ID" prefWidth="100.0" fx:id="colOrderId" />
+            <TableColumn text="Customer Name" prefWidth="150.0" fx:id="colCustomerName" />
+            <TableColumn text="Product" prefWidth="150.0" fx:id="colProduct" />
+            <TableColumn text="Quantity" prefWidth="80.0" fx:id="colQuantity" />
+            <TableColumn text="Status" prefWidth="120.0" fx:id="colStatus" />
+        </columns>
+    </TableView>
+
+    <!-- Refresh Button -->
+    <Button layoutX="300.0" layoutY="390.0"
+            prefWidth="100.0" prefHeight="35.0"
+            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;"
+            text="Refresh"
+            onAction="#handleRefresh" />
+
+</AnchorPane>

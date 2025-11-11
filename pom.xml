@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                project.simulatingoperationsofwholesaleclub/project.simulatingoperationsofwholesaleclub.HelloApplication
+                                project.simulatingoperationsofwholesaleclub/com.group16.simulatingoperationsofwholesaleclub.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
