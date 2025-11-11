@@ -24,4 +24,5 @@ public class SupportReportController {
     public void handleRefresh(ActionEvent actionEvent) {
     }
     //generate support report
+    //nhdjafdnh
 }
