@@ -30,6 +30,6 @@
     <Button layoutX="350.0" layoutY="290.0" onAction="#handleBack" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: #0078D7; -fx-border-width: 2; -fx-text-fill: #0078D7; -fx-font-size: 15px; -fx-background-radius: 8;" text="Back" />
 
     <!-- Footer -->
-    <Label layoutX="300.0" layoutY="460.0" style="-fx-font-size: 12px; -fx-text-fill: #999999;" text="© 2025 HR &amp; Support Management System" />
+    <Label layoutX="300.0" layoutY="460.0" style="-fx-font-size: 12px; -fx-text-fill: #999999;" text="© 2025 Wholesale Club Management System" />
 
 </AnchorPane>
