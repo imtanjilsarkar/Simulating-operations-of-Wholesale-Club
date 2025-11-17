@@ -6,33 +6,24 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0"
-            style="-fx-background-color: white;"
-            xmlns="http://javafx.com/javafx/25"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.LeaveApprovalController">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.LeaveApprovalController">
 
-    <Label layoutX="300.0" layoutY="20.0"
-           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;"
-           text="Leave Approval Requests" />
+    <Label layoutX="300.0" layoutY="20.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;" text="Leave Approval Requests" />
 
-    <TableView layoutX="50.0" layoutY="70.0" prefWidth="700.0" prefHeight="350.0" fx:id="leaveTable">
+    <TableView fx:id="leaveTable" layoutX="50.0" layoutY="70.0" prefHeight="350.0" prefWidth="700.0">
         <columns>
-            <TableColumn text="Employee Name" prefWidth="150.0" fx:id="colEmployeeName" />
-            <TableColumn text="Leave Type" prefWidth="120.0" fx:id="colLeaveType" />
-            <TableColumn text="Start Date" prefWidth="120.0" fx:id="colStartDate" />
-            <TableColumn text="End Date" prefWidth="120.0" fx:id="colEndDate" />
-            <TableColumn text="Status" prefWidth="100.0" fx:id="colStatus" />
-            <TableColumn text="Action" prefWidth="90.0" fx:id="colAction" />
+            <TableColumn fx:id="colEmployeeName" prefWidth="150.0" text="Employee Name" />
+            <TableColumn fx:id="colLeaveType" prefWidth="120.0" text="Leave Type" />
+            <TableColumn fx:id="colStartDate" prefWidth="120.0" text="Start Date" />
+            <TableColumn fx:id="colEndDate" prefWidth="120.0" text="End Date" />
+            <TableColumn fx:id="colStatus" prefWidth="100.0" text="Status" />
+            <TableColumn fx:id="colAction" prefWidth="90.0" text="Action" />
         </columns>
     </TableView>
 
-    <Button layoutX="250.0" layoutY="440.0" prefWidth="120.0" text="Approve"
-            style="-fx-background-color: #28a745; -fx-text-fill: white;"
-            onAction="#handleApprove" />
+    <Button layoutX="250.0" layoutY="440.0" onAction="#handleApprove" prefWidth="120.0" style="-fx-background-color: #28a745; -fx-text-fill: white;" text="Approve" />
 
-    <Button layoutX="430.0" layoutY="440.0" prefWidth="120.0" text="Reject"
-            style="-fx-background-color: #dc3545; -fx-text-fill: white;"
-            onAction="#handleReject" />
+    <Button layoutX="430.0" layoutY="440.0" onAction="#handleReject" prefWidth="120.0" style="-fx-background-color: #dc3545; -fx-text-fill: white;" text="Reject" />
+   <Button layoutX="11.0" layoutY="22.0" onAction="#handleBack" prefHeight="26.0" prefWidth="38.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="←" />
 
 </AnchorPane>

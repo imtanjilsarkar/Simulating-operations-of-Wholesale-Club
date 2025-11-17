@@ -7,31 +7,38 @@ import java.io.IOException;
 
 public class HRManagerDashboardController {
     @javafx.fxml.FXML
-    public void handlePayroll(ActionEvent actionEvent) {
+    public void handlePayroll(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/hrManager/payroll.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void handleSummaryReport(ActionEvent actionEvent) {
+    public void handleSummaryReport(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/hrManager/hr_summary_report..fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void handleUpdateEmployee(ActionEvent actionEvent) {
+    public void handleUpdateEmployee(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/hrManager/update_employee.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void handleRecruitment(ActionEvent actionEvent) {
+    public void handleRecruitment(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/hrManager/recruitment.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void handleAttendance(ActionEvent actionEvent) {
+    public void handleAttendance(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/hrManager/attendance.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void handleLeaveApproval(ActionEvent actionEvent) {
+    public void handleLeaveApproval(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/hrManager/leave_approval.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void handleRemoveEmployee(ActionEvent actionEvent) {
+    public void handleRemoveEmployee(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/hrManager/remove_employee.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -40,7 +47,8 @@ public class HRManagerDashboardController {
     }
 
     @javafx.fxml.FXML
-    public void handleShift(ActionEvent actionEvent) {
+    public void handleShift(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/hrManager/shift.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML

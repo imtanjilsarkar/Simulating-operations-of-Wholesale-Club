@@ -24,13 +24,14 @@
     <PasswordField fx:id="passwordField" layoutX="350.0" layoutY="175.0" prefWidth="200.0" promptText="Enter your password" />
 
     <!-- Login Button -->
-    <Button layoutX="350.0" layoutY="230.0" onAction="#handleLogin" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Login" />
+    <Button layoutX="346.0" layoutY="243.0" onAction="#handleLogin" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Login" />
 
     <!-- Back Button -->
-    <Button layoutX="350.0" layoutY="290.0" onAction="#handleBack" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: #0078D7; -fx-border-width: 2; -fx-text-fill: #0078D7; -fx-font-size: 15px; -fx-background-radius: 8;" text="Back" />
+    <Button layoutX="346.0" layoutY="303.0" onAction="#handleBack" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: #0078D7; -fx-border-width: 2; -fx-text-fill: #0078D7; -fx-font-size: 15px; -fx-background-radius: 8;" text="Back" />
 
     <!-- Footer -->
     <Label layoutX="300.0" layoutY="460.0" style="-fx-font-size: 12px; -fx-text-fill: #999999;" text="© 2025 Wholesale Club Management System" />
-   <Button layoutX="350.0" layoutY="349.0" onAction="#handleForgotPassword" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: #0078D7; -fx-border-width: 2; -fx-text-fill: #0078D7; -fx-font-size: 15px; -fx-background-radius: 8;" text="Forgot Password" />
+   <Button layoutX="346.0" layoutY="362.0" onAction="#handleForgotPassword" prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: #0078D7; -fx-border-width: 2; -fx-text-fill: #0078D7; -fx-font-size: 15px; -fx-background-radius: 8;" text="Forgot Password" />
+   <Label fx:id="outputLable" layoutX="350.0" layoutY="211.0" prefHeight="18.0" prefWidth="309.0" />
 
 </AnchorPane>

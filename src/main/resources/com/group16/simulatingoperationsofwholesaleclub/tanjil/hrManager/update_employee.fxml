@@ -37,5 +37,6 @@
 
     <!-- Update Button -->
     <Button layoutX="390.0" layoutY="380.0" onAction="#handleUpdateEmployee" prefWidth="180" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Update Employee" />
+   <Button layoutX="14.0" layoutY="41.0" onAction="#handleBack" prefHeight="26.0" prefWidth="38.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="←" />
 
 </AnchorPane>

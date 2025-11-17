@@ -6,29 +6,21 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0"
-            style="-fx-background-color: white;"
-            xmlns="http://javafx.com/javafx/25"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.AttendanceController">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.AttendanceController">
 
-    <Label layoutX="300.0" layoutY="20.0"
-           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;"
-           text="Employee Attendance" />
+    <Label layoutX="300.0" layoutY="20.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;" text="Employee Attendance" />
 
-    <TableView layoutX="50.0" layoutY="70.0" prefWidth="700.0" prefHeight="350.0" fx:id="attendanceTable">
+    <TableView fx:id="attendanceTable" layoutX="50.0" layoutY="70.0" prefHeight="350.0" prefWidth="700.0">
         <columns>
-            <TableColumn text="Employee Name" prefWidth="150.0" fx:id="colEmployeeName" />
-            <TableColumn text="Date" prefWidth="120.0" fx:id="colDate" />
-            <TableColumn text="Check-In" prefWidth="120.0" fx:id="colCheckIn" />
-            <TableColumn text="Check-Out" prefWidth="120.0" fx:id="colCheckOut" />
-            <TableColumn text="Status" prefWidth="100.0" fx:id="colStatus" />
+            <TableColumn fx:id="colEmployeeName" prefWidth="150.0" text="Employee Name" />
+            <TableColumn fx:id="colDate" prefWidth="120.0" text="Date" />
+            <TableColumn fx:id="colCheckIn" prefWidth="120.0" text="Check-In" />
+            <TableColumn fx:id="colCheckOut" prefWidth="120.0" text="Check-Out" />
+            <TableColumn fx:id="colStatus" prefWidth="100.0" text="Status" />
         </columns>
     </TableView>
 
-    <Button layoutX="300.0" layoutY="440.0" prefWidth="200.0" prefHeight="40.0"
-            text="Mark Attendance"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;"
-            onAction="#handleMarkAttendance" />
+    <Button layoutX="300.0" layoutY="440.0" onAction="#handleMarkAttendance" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Mark Attendance" />
+   <Button layoutX="14.0" layoutY="22.0" onAction="#handleBack" prefHeight="26.0" prefWidth="38.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="←" />
 
 </AnchorPane>
