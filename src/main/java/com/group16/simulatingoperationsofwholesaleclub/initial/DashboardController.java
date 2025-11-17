@@ -1,7 +1,10 @@
 package com.group16.simulatingoperationsofwholesaleclub.initial;
 
+import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
 
 public class DashboardController {
 
@@ -34,7 +37,8 @@ public class DashboardController {
     }
 
     @javafx.fxml.FXML
-    public void handleCustomerSupport(ActionEvent actionEvent) {
+    public void handleCustomerSupport(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/customerSupportStaff/support_dashboard.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -46,7 +50,8 @@ public class DashboardController {
     }
 
     @javafx.fxml.FXML
-    public void handleHRManager(ActionEvent actionEvent) {
+    public void handleHRManager(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/hrManager/hr_manager_dashboard.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML

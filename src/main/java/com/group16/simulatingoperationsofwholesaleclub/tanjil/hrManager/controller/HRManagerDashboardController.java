@@ -1,6 +1,9 @@
 package com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller;
 
+import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import javafx.event.ActionEvent;
+
+import java.io.IOException;
 
 public class HRManagerDashboardController {
     @javafx.fxml.FXML
@@ -32,7 +35,8 @@ public class HRManagerDashboardController {
     }
 
     @javafx.fxml.FXML
-    public void handleLogout(ActionEvent actionEvent) {
+    public void handleLogout(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/initial/initial.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML

@@ -8,7 +8,7 @@
 <AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.initial.InitialController">
 
     <!-- Title -->
-    <Label layoutX="165.0" layoutY="121.0" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #0078D7;" text="Wholesale Club Management System" />
+    <Label fx:id="label" layoutX="165.0" layoutY="121.0" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #0078D7;" text="Wholesale Club Management System" />
 
     <!-- Tagline -->
     <Label layoutX="234.0" layoutY="159.0" style="-fx-font-size: 14px; -fx-text-fill: #666666;" text="Simulating operations of Wholesale Club (HyperMarket)" />
