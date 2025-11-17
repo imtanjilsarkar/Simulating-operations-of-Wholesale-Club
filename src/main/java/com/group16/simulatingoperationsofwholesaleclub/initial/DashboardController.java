@@ -55,7 +55,9 @@ public class DashboardController {
     }
 
     @javafx.fxml.FXML
-    public void handleMembershipManager(ActionEvent actionEvent) {
+    public void handleMembershipManager(ActionEvent actionEvent) throws  IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/membershipManager/membership_dashboard.fxml", actionEvent);
+
     }
     //common dashboard for scene switching
 }

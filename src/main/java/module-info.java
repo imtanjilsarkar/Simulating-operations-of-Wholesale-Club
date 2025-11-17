@@ -16,4 +16,8 @@ module project.simulatingoperationsofwholesaleclub {
 
     opens com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller to javafx.fxml;
     exports com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller;
+
+    opens com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManager.controller to javafx.fxml;
+    exports com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManager.controller;
+
 }
