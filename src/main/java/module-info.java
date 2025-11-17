@@ -20,4 +20,7 @@ module project.simulatingoperationsofwholesaleclub {
     opens com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManager.controller to javafx.fxml;
     exports com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManager.controller;
 
+    opens com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller to javafx.fxml;
+    exports com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller;
+
 }
