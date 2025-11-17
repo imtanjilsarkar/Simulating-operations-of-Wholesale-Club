@@ -25,7 +25,8 @@ public class LoginController {
     public void handleLogin(ActionEvent actionEvent) throws IOException {
         String username = usernameField.getText();
         String password = passwordField.getText();
-        if ((username.equals("tanjil") || username.equals("mohi") || username.equals("nafi") || username.equals("rahad")) && (password.equals("1234"))){
+        if ((username.equals("tanjil") || username.equals("mohi") || username.equals("nafiu") || username.equals("rahad")) && (password.equals("1234"))){
+
             SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/initial/dashboard.fxml", actionEvent);
         }
         else {
