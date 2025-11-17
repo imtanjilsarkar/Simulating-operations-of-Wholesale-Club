@@ -15,42 +15,42 @@
       </Label>
       <Button layoutX="57.0" layoutY="106.0" mnemonicParsing="false" onAction="#NewMembershipBTn" text="New Membership">
          <font>
-            <Font size="16.0" />
+            <Font name="Baskerville Old Face" size="16.0" />
          </font>
       </Button>
       <Button layoutX="57.0" layoutY="175.0" mnemonicParsing="false" onAction="#RenewMembershipsBTN" text="Renew Memberships">
          <font>
-            <Font size="16.0" />
+            <Font name="Baskerville Old Face" size="16.0" />
          </font>
       </Button>
       <Button layoutX="57.0" layoutY="247.0" mnemonicParsing="false" onAction="#CancelMembershipsBTN" text="Cancel Memberships">
          <font>
-            <Font size="16.0" />
+            <Font name="Baskerville Old Face" size="16.0" />
          </font>
       </Button>
       <Button layoutX="57.0" layoutY="325.0" mnemonicParsing="false" onAction="#LostCardBTN" text="Lost Card Requests">
          <font>
-            <Font size="16.0" />
+            <Font name="Baskerville Old Face" size="16.0" />
          </font>
       </Button>
       <Button layoutX="419.0" layoutY="106.0" mnemonicParsing="false" onAction="#BenefitsBTN" text="Membership Benefits">
          <font>
-            <Font size="16.0" />
+            <Font name="Baskerville Old Face" size="16.0" />
          </font>
       </Button>
       <Button layoutX="419.0" layoutY="175.0" mnemonicParsing="false" onAction="#MembershipReportsBTN" text="Membership Reports">
          <font>
-            <Font size="16.0" />
+            <Font name="Baskerville Old Face" size="16.0" />
          </font>
       </Button>
       <Button layoutX="419.0" layoutY="247.0" mnemonicParsing="false" onAction="#VerifyMembershipBTN" text="Verify Membership">
          <font>
-            <Font size="16.0" />
+            <Font name="Baskerville Old Face" size="16.0" />
          </font>
       </Button>
       <Button layoutX="419.0" layoutY="325.0" mnemonicParsing="false" onAction="#MembershipIssuesBTN" text="Membership Issues">
          <font>
-            <Font size="16.0" />
+            <Font name="Baskerville Old Face" size="16.0" />
          </font>
       </Button>
    </children>
