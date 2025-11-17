@@ -6,48 +6,28 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0"
-            style="-fx-background-color: white;"
-            xmlns="http://javafx.com/javafx/25"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller.AddComplaintController">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller.AddComplaintController">
 
     <!-- Title -->
-    <Label layoutX="280.0" layoutY="40.0"
-           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;"
-           text="Add New Complaint" />
+    <Label layoutX="280.0" layoutY="40.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;" text="Add New Complaint" />
 
     <!-- Customer Name -->
-    <Label layoutX="150.0" layoutY="100.0"
-           text="Customer Name:" />
-    <TextField layoutX="300.0" layoutY="95.0"
-               prefWidth="300.0" fx:id="customerNameField" />
+    <Label layoutX="150.0" layoutY="100.0" text="Customer Name:" />
+    <TextField fx:id="customerNameField" layoutX="300.0" layoutY="95.0" prefWidth="300.0" />
 
     <!-- Complaint Title -->
-    <Label layoutX="150.0" layoutY="150.0"
-           text="Complaint Title:" />
-    <TextField layoutX="300.0" layoutY="145.0"
-               prefWidth="300.0" fx:id="complaintTitleField" />
+    <Label layoutX="150.0" layoutY="150.0" text="Complaint Title:" />
+    <TextField fx:id="complaintTitleField" layoutX="300.0" layoutY="145.0" prefWidth="300.0" />
 
     <!-- Complaint Description -->
-    <Label layoutX="150.0" layoutY="200.0"
-           text="Description:" />
-    <TextArea layoutX="300.0" layoutY="195.0"
-              prefWidth="300.0" prefHeight="150.0"
-              fx:id="descriptionArea" />
+    <Label layoutX="150.0" layoutY="200.0" text="Description:" />
+    <TextArea fx:id="descriptionArea" layoutX="300.0" layoutY="195.0" prefHeight="150.0" prefWidth="300.0" />
 
     <!-- Submit Button -->
-    <Button layoutX="300.0" layoutY="370.0"
-            prefWidth="120.0" prefHeight="40.0"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;"
-            text="Submit"
-            onAction="#handleSubmitComplaint" />
+    <Button layoutX="300.0" layoutY="370.0" onAction="#handleSubmitComplaint" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Submit" />
 
     <!-- Cancel Button -->
-    <Button layoutX="480.0" layoutY="370.0"
-            prefWidth="120.0" prefHeight="40.0"
-            style="-fx-background-color: white; -fx-border-color: #0078D7; -fx-text-fill: #0078D7; -fx-background-radius: 8;"
-            text="Cancel"
-            onAction="#handleCancel" />
+    <Button layoutX="480.0" layoutY="370.0" onAction="#handleCancel" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #0078D7; -fx-text-fill: #0078D7; -fx-background-radius: 8;" text="Cancel" />
+   <Button layoutX="14.0" layoutY="460.0" onAction="#handleBack" prefHeight="18.0" prefWidth="56.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Back" />
 
 </AnchorPane>

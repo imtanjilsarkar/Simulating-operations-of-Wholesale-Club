@@ -2,59 +2,38 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0"
-            style="-fx-background-color: #F9FAFB;"
-            xmlns="http://javafx.com/javafx/25"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.HRManagerDashboardController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F9FAFB;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.HRManagerDashboardController">
 
     <!-- Sidebar -->
-    <AnchorPane layoutX="0.0" layoutY="0.0" prefWidth="220.0" prefHeight="600.0"
-                style="-fx-background-color: #0078D7;">
-        <Label layoutX="40.0" layoutY="40.0" text="HR Manager"
-               style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" />
+    <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="600.0" prefWidth="220.0" style="-fx-background-color: #0078D7;">
+        <Label layoutX="40.0" layoutY="40.0" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="HR Manager" />
 
         <VBox layoutX="20.0" layoutY="100.0" spacing="15.0">
-            <Button text="Recruitment" onAction="#handleRecruitment"
-                    prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" />
-            <Button text="Remove Employee" onAction="#handleRemoveEmployee"
-                    prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" />
-            <Button text="Update Employee" onAction="#handleUpdateEmployee"
-                    prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" />
-            <Button text="Leave Approval" onAction="#handleLeaveApproval"
-                    prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" />
-            <Button text="Attendance" onAction="#handleAttendance"
-                    prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" />
-            <Button text="Payroll" onAction="#handlePayroll"
-                    prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" />
-            <Button text="Shift" onAction="#handleShift"
-                    prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" />
-            <Button text="Summary Report" onAction="#handleSummaryReport"
-                    prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" />
+            <Button onAction="#handleRecruitment" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Recruitment" />
+            <Button onAction="#handleRemoveEmployee" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Remove Employee" />
+            <Button onAction="#handleUpdateEmployee" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Update Employee" />
+            <Button onAction="#handleLeaveApproval" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Leave Approval" />
+            <Button onAction="#handleAttendance" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Attendance" />
+            <Button onAction="#handlePayroll" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Payroll" />
+            <Button onAction="#handleShift" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Shift" />
+            <Button onAction="#handleSummaryReport" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Summary Report" />
         </VBox>
 
         <!-- Logout Button -->
-        <Button layoutX="40.0" layoutY="530.0" text="Logout"
-                onAction="#handleLogout"
-                prefWidth="140.0"
-                style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" />
+        <Button layoutX="40.0" layoutY="530.0" onAction="#handleLogout" prefWidth="140.0" style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Logout" />
+      <Button layoutX="40.0" layoutY="497.0" onAction="#handleBack" prefWidth="140.0" style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Back" />
     </AnchorPane>
 
     <!-- Header -->
-    <Label layoutX="260.0" layoutY="40.0"
-           text="Welcome to HR Manager Dashboard"
-           style="-fx-font-size: 22px; -fx-text-fill: #0078D7; -fx-font-weight: bold;" />
+    <Label layoutX="260.0" layoutY="40.0" style="-fx-font-size: 22px; -fx-text-fill: #0078D7; -fx-font-weight: bold;" text="Welcome to HR Manager Dashboard" />
 
-    <Line layoutX="260.0" layoutY="80.0" endX="600.0" stroke="#0078D7" strokeWidth="2"/>
+    <Line endX="600.0" layoutX="260.0" layoutY="80.0" stroke="#0078D7" strokeWidth="2" />
 
     <!-- Placeholder for Content Area -->
-    <Label layoutX="260.0" layoutY="120.0"
-           text="Select an option from the sidebar to continue."
-           style="-fx-text-fill: #666666; -fx-font-size: 14px;" />
+    <Label layoutX="260.0" layoutY="120.0" style="-fx-text-fill: #666666; -fx-font-size: 14px;" text="Select an option from the sidebar to continue." />
 
 </AnchorPane>

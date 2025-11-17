@@ -42,5 +42,10 @@ public class HRManagerDashboardController {
     @javafx.fxml.FXML
     public void handleShift(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void handleBack(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/initial/dashboard.fxml", actionEvent);
+    }
     //main HR dashboard
 }
