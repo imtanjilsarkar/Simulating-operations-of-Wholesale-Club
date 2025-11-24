@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller.SalesPerformaneController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: white;">
+
+    <!-- Title -->
+    <Label text="Sales Performance"
+           layoutX="220" layoutY="20"
+           style="-fx-font-size: 20px; -fx-text-fill: #004aad;"/>
+
+    <!-- From Date -->
+    <Label text="From:"
+           layoutX="80" layoutY="80"
+           style="-fx-text-fill: #004aad;"/>
+    <DatePicker fx:id="fromDatePicker"
+                layoutX="130" layoutY="75"
+                prefWidth="150"/>
+
+    <!-- To Date -->
+    <Label text="To:"
+           layoutX="320" layoutY="80"
+           style="-fx-text-fill: #004aad;"/>
+    <DatePicker fx:id="toDatePicker"
+                layoutX="360" layoutY="75"
+                prefWidth="150"/>
+
+    <!-- View Report Button -->
+    <Button text="View Sales Report"
+            fx:id="viewReportButton"
+            layoutX="220" layoutY="130"
+            prefWidth="160"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"/>
+
+    <!-- Output Area -->
+    <TextArea fx:id="salesOutputArea"
+              layoutX="80" layoutY="180"
+              prefWidth="440" prefHeight="180"
+              promptText="Sales summary will appear here..."
+              style="-fx-border-color: #007bff;"/>
+
+    <!-- ✅ Back Button -->
+    <Button text="Back"
+            fx:id="backBtn"
+            layoutX="260" layoutY="370"
+            prefWidth="80"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"/>
 
 </AnchorPane>

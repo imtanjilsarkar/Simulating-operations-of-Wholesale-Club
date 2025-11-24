@@ -1,57 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 
+<AnchorPane prefHeight="451.0" prefWidth="715.0"
+            style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller.StoreManagerDashboardController">
 
-<AnchorPane prefHeight="451.0" prefWidth="715.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller.StoreManagerDashboardController">
-   <children>
-      <Label layoutX="139.0" layoutY="14.0" text="Store Manager Dashboard" textAlignment="CENTER" textFill="#3a91ef" underline="true">
-         <font>
-            <Font name="System Bold" size="33.0" />
-         </font>
-      </Label>
-      <Button layoutX="113.0" layoutY="104.0" mnemonicParsing="false" onAction="#DailyOperationsBTN" text="Daily Operations">
-         <font>
-            <Font name="Baskerville Old Face" size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="113.0" layoutY="188.0" mnemonicParsing="false" onAction="#ApprovePurchaseBTN" text="Approve Purchase">
-         <font>
-            <Font name="Baskerville Old Face" size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="113.0" layoutY="272.0" mnemonicParsing="false" onAction="#StaffShiftsBTN" text="Staff Shifts">
-         <font>
-            <Font name="Baskerville Old Face" size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="113.0" layoutY="360.0" mnemonicParsing="false" onAction="#SalesPerformanceBTN" text="Sales Performance">
-         <font>
-            <Font name="Baskerville Old Face" size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="479.0" layoutY="104.0" mnemonicParsing="false" onAction="#CustomerComplaintsBTN" text="Customer Complaints">
-         <font>
-            <Font name="Baskerville Old Face" size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="479.0" layoutY="188.0" mnemonicParsing="false" onAction="#DisC_PromBTN" text="Discounts &amp; Promotions">
-         <font>
-            <Font name="Baskerville Old Face" size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="479.0" layoutY="272.0" mnemonicParsing="false" onAction="#ReportsBTN" text="Reports for Top Management">
-         <font>
-            <Font name="Baskerville Old Face" size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="479.0" layoutY="360.0" mnemonicParsing="false" onAction="#AuditStaffBTN" text="Audit Staff Activities">
-         <font>
-            <Font name="Baskerville Old Face" size="16.0" />
-         </font>
-      </Button>
-   </children>
+    <!-- Title -->
+    <Label layoutX="180" layoutY="20"
+           text="Store Manager Dashboard"
+           textFill="#004aad">
+        <font>
+            <Font size="28.0" />
+        </font>
+    </Label>
+
+    <!-- Left Column -->
+    <Button layoutX="100" layoutY="100"
+            onAction="#DailyOperationsBTN"
+            prefWidth="180"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
+            text="Daily Operations"/>
+
+    <Button layoutX="100" layoutY="170"
+            onAction="#ApprovePurchaseBTN"
+            prefWidth="180"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
+            text="Approve Purchase"/>
+
+    <Button layoutX="100" layoutY="240"
+            onAction="#StaffShiftsBTN"
+            prefWidth="180"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
+            text="Staff Shifts"/>
+
+    <Button layoutX="100" layoutY="310"
+            onAction="#SalesPerformanceBTN"
+            prefWidth="180"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
+            text="Sales Performance"/>
+
+    <!-- Right Column -->
+    <Button layoutX="430" layoutY="100"
+            onAction="#CustomerComplaintsBTN"
+            prefWidth="180"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
+            text="Customer Complaints"/>
+
+    <Button layoutX="430" layoutY="170"
+            onAction="#DisC_PromBTN"
+            prefWidth="180"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
+            text="Discounts_Promotions"/>
+
+    <Button layoutX="430" layoutY="240"
+            onAction="#ReportsBTN"
+            prefWidth="180"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
+            text="Top Management Reports"/>
+
+    <Button layoutX="430" layoutY="310"
+            onAction="#AuditStaffBTN"
+            prefWidth="180"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
+            text="Audit Staff Activities"/>
+
+    <!-- ✅ Back Button -->
+    <Button layoutX="310" layoutY="380"
+            prefWidth="90"
+            onAction="#BackBTN"
+            text="Back"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"/>
+
 </AnchorPane>

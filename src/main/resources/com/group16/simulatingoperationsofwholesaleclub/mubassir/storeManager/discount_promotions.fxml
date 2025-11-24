@@ -1,14 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller.Discount_PromotionController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: white;">
+
+    <!-- Title -->
+    <Label text="Discount Promotion Approval"
+           layoutX="20" layoutY="20"
+           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #004aad;"/>
+
+    <!-- Promotion Title -->
+    <Label text="Promotion Title:"
+           layoutX="20" layoutY="80"
+           style="-fx-text-fill:#004aad;"/>
+    <TextField fx:id="promoTitleField"
+               layoutX="160" layoutY="75"
+               prefWidth="250"
+               style="-fx-border-color:#007bff;"/>
+
+    <!-- Promotion Details -->
+    <Label text="Promotion Details:"
+           layoutX="20" layoutY="130"
+           style="-fx-text-fill:#004aad;"/>
+    <TextArea fx:id="promoDetailsField"
+              layoutX="160" layoutY="125"
+              prefWidth="300" prefHeight="100"
+              style="-fx-border-color:#007bff;"/>
+
+    <!-- Budget Impact -->
+    <Label text="Budget Impact:"
+           layoutX="20" layoutY="240"
+           style="-fx-text-fill:#004aad;"/>
+    <TextField fx:id="budgetImpactField"
+               layoutX="160" layoutY="235"
+               prefWidth="150"
+               style="-fx-border-color:#007bff;"/>
+
+    <!-- Approve Button -->
+    <Button text="Approve"
+            fx:id="approveBtn"
+            layoutX="160" layoutY="290"
+            prefWidth="100"
+            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius: 5;"/>
+
+    <!-- Reject Button -->
+    <Button text="Reject"
+            fx:id="rejectBtn"
+            layoutX="270" layoutY="290"
+            prefWidth="100"
+            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius: 5;"/>
+
+    <!-- ✅ Back Button -->
+    <Button text="Back"
+            fx:id="backBtn"
+            layoutX="380" layoutY="290"
+            prefWidth="80"
+            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius: 5;"/>
 
 </AnchorPane>

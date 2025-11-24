@@ -34,4 +34,8 @@ public class StoreManagerDashboardController {
     @javafx.fxml.FXML
     public void DisC_PromBTN(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void BackBTN(ActionEvent actionEvent) {
+    }
 }

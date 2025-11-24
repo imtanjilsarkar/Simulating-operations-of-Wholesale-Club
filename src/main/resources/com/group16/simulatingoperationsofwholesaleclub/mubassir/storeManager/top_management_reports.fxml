@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller.TopManagementReportsController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: white;">
+
+    <!-- Title -->
+    <Label text="Management Report"
+           layoutX="200" layoutY="30"
+           style="-fx-font-size: 18px; -fx-text-fill: #004aad;"/>
+
+    <!-- Report Date -->
+    <Label text="Date:"
+           layoutX="140" layoutY="100"
+           style="-fx-text-fill: #004aad;"/>
+    <DatePicker fx:id="reportDatePicker"
+                layoutX="180" layoutY="95"
+                prefWidth="250"/>
+
+    <!-- Show Report Button -->
+    <Button text="Show Report"
+            fx:id="showReportButton"
+            layoutX="240" layoutY="150"
+            prefWidth="120"
+            style="-fx-background-color: #007bff; -fx-text-fill: white;"/>
+
+    <!-- Output -->
+    <TextArea fx:id="reportOutputArea"
+              layoutX="80" layoutY="200"
+              prefWidth="440" prefHeight="150"
+              promptText="Report will appear here..."
+              style="-fx-border-color: #007bff;"/>
+
+    <!-- ✅ Back Button -->
+    <Button text="Back"
+            fx:id="backBtn"
+            layoutX="260" layoutY="360"
+            prefWidth="80"
+            style="-fx-background-color: #007bff; -fx-text-fill: white;"/>
 
 </AnchorPane>

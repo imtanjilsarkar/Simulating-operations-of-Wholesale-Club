@@ -1,14 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller.DailyOperationController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="600.0" prefWidth="800.0"
+            style="-fx-background-color: white;">
+
+    <!-- Title -->
+    <Label text="Daily Operations Overview"
+           layoutX="20" layoutY="20"
+           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #004aad;"/>
+
+    <!-- Sales -->
+    <Label text="Sales Today:"
+           layoutX="20" layoutY="80"
+           style="-fx-font-size: 16px; -fx-text-fill: #004aad;"/>
+    <TextField fx:id="salesField"
+               layoutX="150" layoutY="75"
+               prefWidth="150" promptText="0"
+               style="-fx-border-color: #007bff;"/>
+
+    <!-- Low Stock -->
+    <Label text="Low Stock Items:"
+           layoutX="20" layoutY="130"
+           style="-fx-font-size: 16px; -fx-text-fill: #004aad;"/>
+    <TextField fx:id="lowStockField"
+               layoutX="150" layoutY="125"
+               prefWidth="150" promptText="0"
+               style="-fx-border-color: #007bff;"/>
+
+    <!-- Staff -->
+    <Label text="Active Staff:"
+           layoutX="20" layoutY="180"
+           style="-fx-font-size: 16px; -fx-text-fill: #004aad;"/>
+    <TextField fx:id="staffField"
+               layoutX="150" layoutY="175"
+               prefWidth="150" promptText="0"
+               style="-fx-border-color: #007bff;"/>
+
+    <!-- Recent Activities -->
+    <Label text="Recent Activities:"
+           layoutX="20" layoutY="230"
+           style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #004aad;"/>
+
+    <TextArea fx:id="activityArea"
+              layoutX="20" layoutY="260"
+              prefWidth="760" prefHeight="200"
+              promptText="Recent activity logs will appear here..."
+              style="-fx-border-color: #007bff;"/>
+
+    <!-- Buttons -->
+    <Button fx:id="addActivityBtn"
+            text="Add Activity"
+            layoutX="20" layoutY="480"
+            prefWidth="120"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"/>
+
+    <Button fx:id="exportBtn"
+            text="Export Report"
+            layoutX="160" layoutY="480"
+            prefWidth="150"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"/>
+
+    <Button fx:id="backBtn"
+            text="Back"
+            layoutX="350" layoutY="480"
+            prefWidth="80"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"/>
 
 </AnchorPane>
