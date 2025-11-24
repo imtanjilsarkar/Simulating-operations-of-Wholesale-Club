@@ -6,33 +6,24 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="450.0" prefWidth="700.0"
-            style="-fx-background-color: white;"
-            xmlns="http://javafx.com/javafx/25"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller.OrderStatusController">
+<AnchorPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller.OrderStatusController">
 
     <!-- Title -->
-    <Label layoutX="250.0" layoutY="20.0"
-           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;"
-           text="Order Status" />
+    <Label layoutX="250.0" layoutY="20.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;" text="Order Status" />
 
     <!-- TableView -->
-    <TableView layoutX="50.0" layoutY="70.0" prefWidth="600.0" prefHeight="300.0" fx:id="orderTable">
+    <TableView fx:id="orderTable" layoutX="50.0" layoutY="70.0" prefHeight="300.0" prefWidth="600.0">
         <columns>
-            <TableColumn text="Order ID" prefWidth="100.0" fx:id="colOrderId" />
-            <TableColumn text="Customer Name" prefWidth="150.0" fx:id="colCustomerName" />
-            <TableColumn text="Product" prefWidth="150.0" fx:id="colProduct" />
-            <TableColumn text="Quantity" prefWidth="80.0" fx:id="colQuantity" />
-            <TableColumn text="Status" prefWidth="120.0" fx:id="colStatus" />
+            <TableColumn fx:id="colOrderId" prefWidth="100.0" text="Order ID" />
+            <TableColumn fx:id="colCustomerName" prefWidth="150.0" text="Customer Name" />
+            <TableColumn fx:id="colProduct" prefWidth="150.0" text="Product" />
+            <TableColumn fx:id="colQuantity" prefWidth="80.0" text="Quantity" />
+            <TableColumn fx:id="colStatus" prefWidth="120.0" text="Status" />
         </columns>
     </TableView>
 
     <!-- Refresh Button -->
-    <Button layoutX="300.0" layoutY="390.0"
-            prefWidth="100.0" prefHeight="35.0"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;"
-            text="Refresh"
-            onAction="#handleRefresh" />
+    <Button layoutX="300.0" layoutY="403.0" onAction="#handleRefresh" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Refresh" />
+   <Button layoutX="14.0" layoutY="408.0" onAction="#handleBack" prefHeight="18.0" prefWidth="51.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Back" />
 
 </AnchorPane>

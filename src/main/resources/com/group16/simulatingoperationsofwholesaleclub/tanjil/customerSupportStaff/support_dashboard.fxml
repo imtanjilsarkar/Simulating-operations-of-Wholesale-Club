@@ -5,73 +5,34 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0"
-            style="-fx-background-color: white;"
-            xmlns="http://javafx.com/javafx/25"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller.SupportDashboardController">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller.SupportDashboardController">
 
     <!-- Title -->
-    <Label layoutX="250.0" layoutY="50.0"
-           style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #0078D7;"
-           text="Customer Support Dashboard" />
+    <Label layoutX="250.0" layoutY="50.0" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #0078D7;" text="Customer Support Dashboard" />
 
     <!-- Decorative Line -->
-    <Line layoutX="150.0" layoutY="90.0" startX="0.0" endX="500.0"
-          stroke="#0078D7" strokeWidth="2.0" />
+    <Line endX="500.0" layoutX="150.0" layoutY="90.0" startX="0.0" stroke="#0078D7" strokeWidth="2.0" />
 
     <!-- Buttons -->
-    <Button layoutX="150.0" layoutY="130.0"
-            prefWidth="200.0" prefHeight="40.0"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;"
-            text="Add Complaint"
-            onAction="#handleAddComplaint" />
+    <Button layoutX="150.0" layoutY="130.0" onAction="#handleAddComplaint" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Add Complaint" />
 
-    <Button layoutX="450.0" layoutY="130.0"
-            prefWidth="200.0" prefHeight="40.0"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;"
-            text="Update Complaint"
-            onAction="#handleUpdateComplaint" />
+    <Button layoutX="450.0" layoutY="130.0" onAction="#handleUpdateComplaint" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Update Complaint" />
 
-    <Button layoutX="150.0" layoutY="200.0"
-            prefWidth="200.0" prefHeight="40.0"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;"
-            text="Close Complaint"
-            onAction="#handleCloseComplaint" />
+    <Button layoutX="150.0" layoutY="200.0" onAction="#handleCloseComplaint" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Close Complaint" />
 
-    <Button layoutX="450.0" layoutY="200.0"
-            prefWidth="200.0" prefHeight="40.0"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;"
-            text="Order Status"
-            onAction="#handleOrderStatus" />
+    <Button layoutX="450.0" layoutY="200.0" onAction="#handleOrderStatus" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Order Status" />
 
-    <Button layoutX="150.0" layoutY="270.0"
-            prefWidth="200.0" prefHeight="40.0"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;"
-            text="New Membership"
-            onAction="#handleNewMembership" />
+    <Button layoutX="150.0" layoutY="270.0" onAction="#handleNewMembership" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="New Membership" />
 
-    <Button layoutX="450.0" layoutY="270.0"
-            prefWidth="200.0" prefHeight="40.0"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;"
-            text="Update Customer"
-            onAction="#handleUpdateCustomer" />
+    <Button layoutX="450.0" layoutY="270.0" onAction="#handleUpdateCustomer" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Update Customer" />
 
-    <Button layoutX="150.0" layoutY="340.0"
-            prefWidth="200.0" prefHeight="40.0"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;"
-            text="Feedback"
-            onAction="#handleFeedback" />
+    <Button layoutX="150.0" layoutY="340.0" onAction="#handleFeedback" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Feedback" />
 
-    <Button layoutX="450.0" layoutY="340.0"
-            prefWidth="200.0" prefHeight="40.0"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;"
-            text="Support Report"
-            onAction="#handleSupportReport" />
+    <Button layoutX="450.0" layoutY="340.0" onAction="#handleSupportReport" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Support Report" />
 
     <!-- Footer -->
-    <Label layoutX="280.0" layoutY="460.0"
-           style="-fx-font-size: 12px; -fx-text-fill: #999999;"
-           text="© 2025 Customer Support Staff" />
+    <Label layoutX="304.0" layoutY="475.0" style="-fx-font-size: 12px; -fx-text-fill: #999999;" text="© 2025 Customer Support Staff" />
+   <Button layoutX="705.0" layoutY="448.0" onAction="#handleLogout" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Logout" />
+   <Button layoutX="25.0" layoutY="448.0" onAction="#handleBack" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Back" />
 
 </AnchorPane>

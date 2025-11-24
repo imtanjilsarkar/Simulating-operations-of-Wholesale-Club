@@ -5,42 +5,25 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0"
-            style="-fx-background-color: white;"
-            xmlns="http://javafx.com/javafx/25"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.ShiftController">
+<AnchorPane prefHeight="400.0" prefWidth="666.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.ShiftController">
 
     <!-- Title -->
-    <Label layoutX="180.0" layoutY="30.0"
-           style="-fx-font-size: 22px; -fx-font-weight: bold;"
-           text="Shift Assignment"/>
+    <Label layoutX="238.0" layoutY="64.0" style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Shift Assignment" />
 
     <!-- Select Employee Label -->
-    <Label layoutX="50.0" layoutY="100.0"
-           style="-fx-font-size: 14px;"
-           text="Select Employee:"/>
+    <Label layoutX="108.0" layoutY="134.0" style="-fx-font-size: 14px;" text="Select Employee:" />
 
     <!-- Employee ComboBox -->
-    <ComboBox fx:id="employeeComboBox"
-              layoutX="200.0" layoutY="95.0"
-              prefWidth="200.0" prefHeight="25.0"/>
+    <ComboBox fx:id="employeeComboBox" layoutX="258.0" layoutY="129.0" prefHeight="25.0" prefWidth="200.0" />
 
     <!-- Select Shift Label -->
-    <Label layoutX="50.0" layoutY="150.0"
-           style="-fx-font-size: 14px;"
-           text="Select Shift:"/>
+    <Label layoutX="108.0" layoutY="184.0" style="-fx-font-size: 14px;" text="Select Shift:" />
 
     <!-- Shift ComboBox -->
-    <ComboBox fx:id="shiftComboBox"
-              layoutX="200.0" layoutY="145.0"
-              prefWidth="200.0" prefHeight="25.0"/>
+    <ComboBox fx:id="shiftComboBox" layoutX="258.0" layoutY="179.0" prefHeight="25.0" prefWidth="200.0" />
 
     <!-- Assign Button -->
-    <Button layoutX="200.0" layoutY="200.0"
-            prefWidth="100.0" prefHeight="30.0"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white;"
-            text="Assign"
-            onAction="#handleAssignShift"/>
+    <Button layoutX="258.0" layoutY="234.0" onAction="#handleAssignShift" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Assign" />
+   <Button layoutX="24.0" layoutY="30.0" onAction="#handleBack" prefHeight="26.0" prefWidth="38.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="←" />
 
 </AnchorPane>

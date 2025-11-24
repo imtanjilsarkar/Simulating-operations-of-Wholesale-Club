@@ -6,59 +6,33 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0"
-            style="-fx-background-color: white;"
-            xmlns="http://javafx.com/javafx/25"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller.UpdateComplaintController">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller.UpdateComplaintController">
 
     <!-- Title -->
-    <Label layoutX="260.0" layoutY="40.0"
-           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;"
-           text="Update Complaint" />
+    <Label layoutX="260.0" layoutY="40.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;" text="Update Complaint" />
 
     <!-- Search Complaint by ID -->
-    <Label layoutX="150.0" layoutY="100.0"
-           text="Complaint ID:" />
-    <TextField layoutX="300.0" layoutY="95.0"
-               prefWidth="200.0" fx:id="complaintIdField" />
-    <Button layoutX="520.0" layoutY="95.0"
-            prefWidth="80.0"
-            text="Search"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;"
-            onAction="#handleSearchComplaint" />
+    <Label layoutX="150.0" layoutY="100.0" text="Complaint ID:" />
+    <TextField fx:id="complaintIdField" layoutX="300.0" layoutY="95.0" prefWidth="200.0" />
+    <Button layoutX="520.0" layoutY="95.0" onAction="#handleSearchComplaint" prefWidth="80.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Search" />
 
     <!-- Customer Name -->
-    <Label layoutX="150.0" layoutY="150.0"
-           text="Customer Name:" />
-    <TextField layoutX="300.0" layoutY="145.0"
-               prefWidth="300.0" fx:id="customerNameField" />
+    <Label layoutX="150.0" layoutY="150.0" text="Customer Name:" />
+    <TextField fx:id="customerNameField" layoutX="300.0" layoutY="145.0" prefWidth="300.0" />
 
     <!-- Complaint Title -->
-    <Label layoutX="150.0" layoutY="200.0"
-           text="Complaint Title:" />
-    <TextField layoutX="300.0" layoutY="195.0"
-               prefWidth="300.0" fx:id="complaintTitleField" />
+    <Label layoutX="150.0" layoutY="200.0" text="Complaint Title:" />
+    <TextField fx:id="complaintTitleField" layoutX="300.0" layoutY="195.0" prefWidth="300.0" />
 
     <!-- Complaint Description -->
-    <Label layoutX="150.0" layoutY="250.0"
-           text="Description:" />
-    <TextArea layoutX="300.0" layoutY="245.0"
-              prefWidth="300.0" prefHeight="150.0"
-              fx:id="descriptionArea" />
+    <Label layoutX="150.0" layoutY="250.0" text="Description:" />
+    <TextArea fx:id="descriptionArea" layoutX="300.0" layoutY="245.0" prefHeight="150.0" prefWidth="300.0" />
 
     <!-- Update Button -->
-    <Button layoutX="300.0" layoutY="410.0"
-            prefWidth="120.0" prefHeight="40.0"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;"
-            text="Update"
-            onAction="#handleUpdateComplaint" />
+    <Button layoutX="303.0" layoutY="443.0" onAction="#handleUpdateComplaint" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Update" />
 
     <!-- Cancel Button -->
-    <Button layoutX="480.0" layoutY="410.0"
-            prefWidth="120.0" prefHeight="40.0"
-            style="-fx-background-color: white; -fx-border-color: #0078D7; -fx-text-fill: #0078D7; -fx-background-radius: 8;"
-            text="Cancel"
-            onAction="#handleCancel" />
+    <Button layoutX="480.0" layoutY="443.0" onAction="#handleCancel" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #0078D7; -fx-text-fill: #0078D7; -fx-background-radius: 8;" text="Cancel" />
+   <Button layoutX="14.0" layoutY="450.0" onAction="#handleBack" prefHeight="18.0" prefWidth="63.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Back" />
 
 </AnchorPane>
