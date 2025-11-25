@@ -1,56 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller.CustomerComplaintGoalController"
-            prefHeight="400.0" prefWidth="600.0"
-            style="-fx-background-color: white;">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller.CustomerComplaintGoalController">
 
-    <!-- Title -->
-    <Label text="Customer Complaint Form"
-           layoutX="20" layoutY="20"
-           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #004aad;"/>
 
-    <!-- Customer ID -->
-    <Label text="Customer ID:"
-           layoutX="20" layoutY="80"
-           style="-fx-text-fill: #004aad;"/>
-    <TextField fx:id="customerIdField"
-               layoutX="150" layoutY="75"
-               prefWidth="200"
-               style="-fx-border-color: #007bff;"/>
+    <Label layoutX="20" layoutY="20" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #004aad;" text="Customer Complaint Form" />
 
-    <!-- Complaint Details -->
-    <Label text="Complaint Details:"
-           layoutX="20" layoutY="130"
-           style="-fx-text-fill: #004aad;"/>
-    <TextArea fx:id="complaintDetailsField"
-              layoutX="150" layoutY="125"
-              prefWidth="300" prefHeight="120"
-              style="-fx-border-color: #007bff;"/>
 
-    <!-- Submit Button -->
-    <Button text="Submit Complaint"
-            fx:id="submitBtn"
-            layoutX="150" layoutY="270"
-            prefWidth="150"
-            style="-fx-background-color: #007bff; -fx-text-fill:white; -fx-background-radius: 5;"/>
+    <Label layoutX="20" layoutY="80" style="-fx-text-fill: #004aad;" text="Customer ID:" />
+    <TextField fx:id="customerIdTF" layoutX="150" layoutY="75" prefWidth="200" style="-fx-border-color: #007bff;" />
 
-    <!-- Clear Button -->
-    <Button text="Clear"
-            fx:id="clearBtn"
-            layoutX="320" layoutY="270"
-            prefWidth="80"
-            style="-fx-background-color: #007bff; -fx-text-fill:white; -fx-background-radius: 5;"/>
 
-    <!-- ✅ Back Button -->
-    <Button text="Back"
-            fx:id="backBtn"
-            layoutX="260" layoutY="330"
-            prefWidth="80"
-            style="-fx-background-color: #007bff; -fx-text-fill:white; -fx-background-radius: 5;"/>
+    <Label layoutX="20" layoutY="130" style="-fx-text-fill: #004aad;" text="Complaint Details:" />
+    <TextArea fx:id="complaintDetailsTF" layoutX="150" layoutY="125" prefHeight="120" prefWidth="300" style="-fx-border-color: #007bff;" />
+
+
+    <Button layoutX="150" layoutY="270" onAction="#submitBTN" prefWidth="150" style="-fx-background-color: #007bff; -fx-text-fill:white; -fx-background-radius: 5;" text="Submit Complaint" />
+
+
+    <Button layoutX="320" layoutY="270" onAction="#clearBTN" prefWidth="80" style="-fx-background-color: #007bff; -fx-text-fill:white; -fx-background-radius: 5;" text="Clear" />
+
+
+    <Button layoutX="260" layoutY="330" onAction="#backBTN" prefWidth="80" style="-fx-background-color: #007bff; -fx-text-fill:white; -fx-background-radius: 5;" text="Back" />
 
 </AnchorPane>

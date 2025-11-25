@@ -1,20 +1,31 @@
 package com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller;
 
+import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
+import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+
 public class Discount_PromotionController {
     @javafx.fxml.FXML
-    private TextField budgetImpactField;
+    private TextField promoTitleTF;
     @javafx.fxml.FXML
-    private TextField promoTitleField;
+    private TextArea promoDetailsTF;
     @javafx.fxml.FXML
-    private Button approveBtn;
+    private TextField budgetImpactTF;
+
     @javafx.fxml.FXML
-    private TextArea promoDetailsField;
+    public void backBTN(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/storemanager_dashboard.fxml",actionEvent);
+    }
+
     @javafx.fxml.FXML
-    private Button rejectBtn;
+    public void approveBTN(ActionEvent actionEvent) {
+    }
+
     @javafx.fxml.FXML
-    private Button backBtn;
+    public void rejectBTN(ActionEvent actionEvent) {
+    }
 }

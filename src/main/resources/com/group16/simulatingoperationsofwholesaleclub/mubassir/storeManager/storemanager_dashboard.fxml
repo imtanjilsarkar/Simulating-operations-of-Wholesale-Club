@@ -10,7 +10,6 @@
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller.StoreManagerDashboardController">
 
-    <!-- Title -->
     <Label layoutX="180" layoutY="20"
            text="Store Manager Dashboard"
            textFill="#004aad">
@@ -19,7 +18,6 @@
         </font>
     </Label>
 
-    <!-- Left Column -->
     <Button layoutX="100" layoutY="100"
             onAction="#DailyOperationsBTN"
             prefWidth="180"
@@ -44,7 +42,6 @@
             style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
             text="Sales Performance"/>
 
-    <!-- Right Column -->
     <Button layoutX="430" layoutY="100"
             onAction="#CustomerComplaintsBTN"
             prefWidth="180"
@@ -69,7 +66,7 @@
             style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
             text="Audit Staff Activities"/>
 
-    <!-- ✅ Back Button -->
+
     <Button layoutX="310" layoutY="380"
             prefWidth="90"
             onAction="#BackBTN"

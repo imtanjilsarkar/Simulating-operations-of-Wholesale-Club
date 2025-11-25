@@ -2,7 +2,7 @@ module project.simulatingoperationsofwholesaleclub {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.graphics;
-
+    //requires project.simulatingoperationsofwholesaleclub;
 
 
     opens com.group16.simulatingoperationsofwholesaleclub to javafx.fxml;
