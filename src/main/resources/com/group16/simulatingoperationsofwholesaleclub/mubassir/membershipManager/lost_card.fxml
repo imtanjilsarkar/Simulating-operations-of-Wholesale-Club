@@ -1,14 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManager.controller.LostCardController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: white;">
+
+    <Label text="Lost Card Request"
+           layoutX="20" layoutY="20"
+           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill:#004aad;"/>
+
+    <Label text="Member ID:"
+           layoutX="20" layoutY="80"
+           style="-fx-text-fill:#004aad;"/>
+    <TextField fx:id="memberIdTF"
+               layoutX="150" layoutY="75"
+               prefWidth="200"
+               style="-fx-border-color:#007bff;"/>
+
+    <Label text="Report Date:"
+           layoutX="20" layoutY="130"
+           style="-fx-text-fill:#004aad;"/>
+    <DatePicker fx:id="reportDateDP"
+                layoutX="150" layoutY="125"
+                prefWidth="200"
+                style="-fx-border-color:#007bff;"/>
+
+    <Label text="Details:"
+           layoutX="20" layoutY="180"
+           style="-fx-text-fill:#004aad;"/>
+    <TextArea fx:id="detailsTA"
+              layoutX="150" layoutY="175"
+              prefWidth="300" prefHeight="120"
+              style="-fx-border-color:#007bff;"/>
+
+    <Button text="Submit Request"
+            layoutX="150" layoutY="310"
+            prefWidth="150"
+            onAction="#SubmitLostCardBTN"
+            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;"/>
+
+    <Button text="Back"
+            layoutX="320" layoutY="310"
+            prefWidth="80"
+            onAction="#BackBTN"
+            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;"/>
 
 </AnchorPane>
