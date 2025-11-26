@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManager.controller.CancelMembershipController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: white;">
+
+    <Label text="Cancel Membership"
+           layoutX="20" layoutY="20"
+           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill:#004aad;"/>
+
+    <Label text="Membership ID:"
+           layoutX="20" layoutY="80"
+           style="-fx-text-fill:#004aad;"/>
+    <TextField fx:id="membershipIdTF"
+               layoutX="150" layoutY="75"
+               prefWidth="200"
+               style="-fx-border-color:#007bff;"/>
+
+    <Label text="Reason:"
+           layoutX="20" layoutY="130"
+           style="-fx-text-fill:#004aad;"/>
+    <TextArea fx:id="reasonTA"
+              layoutX="150" layoutY="125"
+              prefWidth="300" prefHeight="120"
+              style="-fx-border-color:#007bff;"/>
+
+    <Button text="Cancel Membership"
+            layoutX="150" layoutY="270"
+            prefWidth="160"
+            onAction="#CancelMembershipBTN"
+            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;"/>
+
+    <Button text="Back"
+            layoutX="330" layoutY="270"
+            prefWidth="80"
+            onAction="#BackBTN"
+            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;"/>
 
 </AnchorPane>

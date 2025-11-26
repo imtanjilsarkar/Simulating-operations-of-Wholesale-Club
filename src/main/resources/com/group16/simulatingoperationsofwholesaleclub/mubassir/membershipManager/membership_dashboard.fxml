@@ -1,57 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 
+<AnchorPane prefHeight="400.0" prefWidth="693.0"
+            style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManager.controller.MembershipManagerDashboardController">
 
-<AnchorPane prefHeight="400.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManager.controller.MembershipManagerDashboardController">
-   <children>
-      <Label layoutX="82.0" layoutY="7.0" text="Membership Manager Dashboard" textAlignment="CENTER" textFill="#0075ff" underline="true">
-         <font>
-            <Font name="Bell MT Bold" size="36.0" />
-         </font>
-      </Label>
-      <Button layoutX="57.0" layoutY="106.0" mnemonicParsing="false" onAction="#NewMembershipBTn" text="New Membership">
-         <font>
-            <Font name="Baskerville Old Face" size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="57.0" layoutY="175.0" mnemonicParsing="false" onAction="#RenewMembershipsBTN" text="Renew Memberships">
-         <font>
-            <Font name="Baskerville Old Face" size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="57.0" layoutY="247.0" mnemonicParsing="false" onAction="#CancelMembershipsBTN" text="Cancel Memberships">
-         <font>
-            <Font name="Baskerville Old Face" size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="57.0" layoutY="325.0" mnemonicParsing="false" onAction="#LostCardBTN" text="Lost Card Requests">
-         <font>
-            <Font name="Baskerville Old Face" size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="419.0" layoutY="106.0" mnemonicParsing="false" onAction="#BenefitsBTN" text="Membership Benefits">
-         <font>
-            <Font name="Baskerville Old Face" size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="419.0" layoutY="175.0" mnemonicParsing="false" onAction="#MembershipReportsBTN" text="Membership Reports">
-         <font>
-            <Font name="Baskerville Old Face" size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="419.0" layoutY="247.0" mnemonicParsing="false" onAction="#VerifyMembershipBTN" text="Verify Membership">
-         <font>
-            <Font name="Baskerville Old Face" size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="419.0" layoutY="325.0" mnemonicParsing="false" onAction="#MembershipIssuesBTN" text="Membership Issues">
-         <font>
-            <Font name="Baskerville Old Face" size="16.0" />
-         </font>
-      </Button>
-   </children>
+    <Label layoutX="120" layoutY="20"
+           text="Membership Manager Dashboard"
+           textFill="#004aad">
+        <font>
+            <Font size="28.0" />
+        </font>
+    </Label>
+
+    <Button layoutX="80" layoutY="100"
+            prefWidth="180"
+            onAction="#NewMembershipBTN"
+            text="New Membership"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" />
+
+    <Button layoutX="80" layoutY="160"
+            prefWidth="180"
+            onAction="#RenewMembershipsBTN"
+            text="Renew Memberships"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" />
+
+    <Button layoutX="80" layoutY="220"
+            prefWidth="180"
+            onAction="#CancelMembershipsBTN"
+            text="Cancel Memberships"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" />
+
+    <Button layoutX="80" layoutY="280"
+            prefWidth="180"
+            onAction="#LostCardBTN"
+            text="Lost Card Requests"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" />
+
+    <Button layoutX="430" layoutY="100"
+            prefWidth="180"
+            onAction="#BenefitsBTN"
+            text="Membership Benefits"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" />
+
+    <Button layoutX="430" layoutY="160"
+            prefWidth="180"
+            onAction="#MembershipReportsBTN"
+            text="Membership Reports"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" />
+
+    <Button layoutX="430" layoutY="220"
+            prefWidth="180"
+            onAction="#VerifyMembershipBTN"
+            text="Verify Membership"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" />
+
+    <Button layoutX="430" layoutY="280"
+            prefWidth="180"
+            onAction="#MembershipIssuesBTN"
+            text="Membership Issues"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" />
+
+    <Button layoutX="300" layoutY="340"
+            prefWidth="90"
+            onAction="#BackBTN"
+            text="Back"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" />
+
 </AnchorPane>

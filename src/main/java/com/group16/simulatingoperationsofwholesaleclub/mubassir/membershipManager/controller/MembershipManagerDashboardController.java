@@ -27,11 +27,19 @@ public class MembershipManagerDashboardController {
     public void VerifyMembershipBTN(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void NewMembershipBTn(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
     public void BenefitsBTN(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void BackBTN(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void NewMembershipBTN(ActionEvent actionEvent) {
     }
 }
