@@ -21,6 +21,6 @@
     </TableView>
 
     <Button layoutX="300.0" layoutY="440.0" onAction="#handleGeneratePayroll" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Generate Payroll" />
-   <Button layoutX="14.0" layoutY="22.0" onAction="#handleBack" prefHeight="26.0" prefWidth="38.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="←" />
+   <Button layoutX="14.0" layoutY="444.0" onAction="#handleBackHRMD" prefHeight="31.0" prefWidth="52.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Back" />
 
 </AnchorPane>

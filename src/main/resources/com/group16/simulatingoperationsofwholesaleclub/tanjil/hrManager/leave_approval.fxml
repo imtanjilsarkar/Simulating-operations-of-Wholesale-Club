@@ -24,6 +24,6 @@
     <Button layoutX="250.0" layoutY="440.0" onAction="#handleApprove" prefWidth="120.0" style="-fx-background-color: #28a745; -fx-text-fill: white;" text="Approve" />
 
     <Button layoutX="430.0" layoutY="440.0" onAction="#handleReject" prefWidth="120.0" style="-fx-background-color: #dc3545; -fx-text-fill: white;" text="Reject" />
-   <Button layoutX="11.0" layoutY="22.0" onAction="#handleBack" prefHeight="26.0" prefWidth="38.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="←" />
+   <Button layoutX="14.0" layoutY="437.0" onAction="#handleBackHRMD" prefHeight="31.0" prefWidth="60.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Back" />
 
 </AnchorPane>
