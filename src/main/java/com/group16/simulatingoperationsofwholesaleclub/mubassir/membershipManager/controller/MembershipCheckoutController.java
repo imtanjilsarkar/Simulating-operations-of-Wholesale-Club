@@ -1,5 +1,9 @@
 package com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManager.controller;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
+
 public class MembershipCheckoutController {
     @javafx.fxml.FXML
     private ComboBox membershipTypeCB;
