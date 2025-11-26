@@ -2,6 +2,9 @@ module project.simulatingoperationsofwholesaleclub {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.graphics;
+    requires javafx.base;
+   // requires project.simulatingoperationsofwholesaleclub;
+    //requires project.simulatingoperationsofwholesaleclub;
     //requires project.simulatingoperationsofwholesaleclub;
 
 

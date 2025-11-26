@@ -1,5 +1,6 @@
 package com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller;
 
+import com.group16.simulatingoperationsofwholesaleclub.BaseController;
 import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
@@ -7,7 +8,7 @@ import javafx.scene.control.TableView;
 
 import java.io.IOException;
 
-public class HRReportController {
+public class HRReportController extends BaseController {
     @javafx.fxml.FXML
     private TableView reportTable;
     @javafx.fxml.FXML
@@ -27,9 +28,4 @@ public class HRReportController {
     public void handleRefreshReport(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void handleBack(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/hrManager/hr_manager_dashboard.fxml", actionEvent);
-    }
-    //generate HR summary report
 }
