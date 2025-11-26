@@ -1,5 +1,6 @@
 package com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller;
 
+import com.group16.simulatingoperationsofwholesaleclub.BaseController;
 import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
@@ -7,7 +8,7 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
-public class UpdateComplaintController {
+public class UpdateComplaintController  extends BaseController {
     @javafx.fxml.FXML
     private TextArea descriptionArea;
     @javafx.fxml.FXML
@@ -29,9 +30,4 @@ public class UpdateComplaintController {
     public void handleCancel(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void handleBack(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/customerSupportStaff/support_dashboard.fxml", actionEvent);
-    }
-    //update complaint info
 }

@@ -14,13 +14,13 @@
         <columns>
             <TableColumn fx:id="colEmployeeName" prefWidth="150.0" text="Employee Name" />
             <TableColumn fx:id="colDate" prefWidth="120.0" text="Date" />
-            <TableColumn fx:id="colCheckIn" prefWidth="120.0" text="Check-In" />
-            <TableColumn fx:id="colCheckOut" prefWidth="120.0" text="Check-Out" />
-            <TableColumn fx:id="colStatus" prefWidth="100.0" text="Status" />
+            <TableColumn fx:id="colCheckIn" prefWidth="150.4000244140625" text="Check-In" />
+            <TableColumn fx:id="colCheckOut" prefWidth="145.5999755859375" text="Check-Out" />
+            <TableColumn fx:id="colStatus" prefWidth="132.79998779296875" text="Status" />
         </columns>
     </TableView>
 
     <Button layoutX="300.0" layoutY="440.0" onAction="#handleMarkAttendance" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Mark Attendance" />
-   <Button layoutX="14.0" layoutY="22.0" onAction="#handleBack" prefHeight="26.0" prefWidth="38.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="←" />
+   <Button layoutX="23.0" layoutY="444.0" onAction="#handleBackHRMD" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Back" />
 
 </AnchorPane>

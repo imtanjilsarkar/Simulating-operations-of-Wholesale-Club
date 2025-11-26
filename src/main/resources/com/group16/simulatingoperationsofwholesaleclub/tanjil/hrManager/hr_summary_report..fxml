@@ -27,5 +27,5 @@
 
     <!-- Refresh Button -->
     <Button layoutX="350.0" layoutY="440.0" onAction="#handleRefreshReport" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Refresh" />
-   <Button layoutX="14.0" layoutY="20.0" onAction="#handleBack" prefHeight="26.0" prefWidth="38.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="←" />
+   <Button layoutX="11.0" layoutY="439.0" onAction="#handleBackHRMD" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Back" />
 </AnchorPane>
