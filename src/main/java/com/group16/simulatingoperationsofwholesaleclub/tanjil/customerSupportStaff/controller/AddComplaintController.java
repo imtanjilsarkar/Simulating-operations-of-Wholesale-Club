@@ -3,6 +3,7 @@ package com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportSt
 import com.group16.simulatingoperationsofwholesaleclub.BaseController;
 import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
@@ -15,6 +16,8 @@ public class AddComplaintController extends BaseController {
     private TextField customerNameField;
     @javafx.fxml.FXML
     private TextField complaintTitleField;
+    @javafx.fxml.FXML
+    private Label messageLabel;
 
     @javafx.fxml.FXML
     public void handleCancel(ActionEvent actionEvent) {
@@ -22,6 +25,12 @@ public class AddComplaintController extends BaseController {
 
     @javafx.fxml.FXML
     public void handleSubmitComplaint(ActionEvent actionEvent) {
+        String customerName = customerNameField.getText();
+        String complaintTitle = complaintTitleField.getText();
+        String description = descriptionArea.getText();
+
+        messageLabel.setText("Complaint Add Successfully");
     }
-    //add new complaint
+
+
 }
