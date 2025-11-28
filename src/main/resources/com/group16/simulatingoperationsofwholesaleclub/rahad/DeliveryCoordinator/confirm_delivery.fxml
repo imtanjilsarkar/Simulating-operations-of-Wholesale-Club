@@ -7,20 +7,16 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.rahad.deliveryCoordinator.controller.ConfirmCompletedDeliveriesController">
 
-    <!-- Title -->
     <Label layoutX="139.0" layoutY="42.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;" text="Confirm Completed Delivery" />
 
-    <!-- Order ID Input -->
     <Label layoutX="72.0" layoutY="167.0" text="Order ID:" />
     <TextField fx:id="orderIdField" layoutX="153.0" layoutY="163.0" prefWidth="200.0" />
 
-    <!-- Confirm Delivery Button -->
     <Button layoutX="74.0" layoutY="315.0" onAction="#handleConfirmDelivery" prefWidth="130.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Confirm Delivery" />
 
-    <!-- Status Message Label -->
     <Label fx:id="statusLabel" layoutX="74.0" layoutY="252.0" prefWidth="470.0" text="message" textFill="RED" wrapText="true" />
 
-    <!-- Back Button -->
+
     <Button layoutX="253.0" layoutY="315.0" onAction="#handleBack" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Back" />
 
 </AnchorPane>
