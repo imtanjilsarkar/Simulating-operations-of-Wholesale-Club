@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.rahad.deliveryCoordinator.controller.AssignDeliveryTasksController">
 
 
-    <Button layoutX="165.0" layoutY="325.0" onAction="#ViewOrdersBTN" prefWidth="120" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;" text="View Orders" />
+    <Button layoutX="14.0" layoutY="27.0" onAction="#ViewOrdersBTN" prefWidth="120" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;" text="View Orders" />
 
 
     <TableView fx:id="ordersTable" layoutX="10.0" layoutY="60.0" prefHeight="190.0" prefWidth="550.0">
@@ -31,6 +31,6 @@
 
     <Button layoutX="380.0" layoutY="275.0" onAction="#AssignDeliveryBTN" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;" text="Assign Delivery" />
 
-    <Label fx:id="statusLabel" layoutX="20.0" layoutY="320.0" prefWidth="560.0" text="" textFill="RED" wrapText="true" />
+    <Label fx:id="statusLabel" layoutX="5.0" layoutY="357.0" prefWidth="560.0" text="" textFill="RED" wrapText="true" />
 
 </AnchorPane>
