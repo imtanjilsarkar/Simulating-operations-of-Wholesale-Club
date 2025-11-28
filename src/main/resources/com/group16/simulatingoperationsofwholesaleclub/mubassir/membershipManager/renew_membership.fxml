@@ -1,14 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManager.controller.RenewMembershipController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: white;">
+
+    <Label text="Renew Membership"
+           layoutX="200" layoutY="20"
+           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill:#004aad;"/>
+
+    <Label text="Membership ID:"
+           layoutX="40" layoutY="80"
+           style="-fx-text-fill:#004aad;"/>
+    <TextField fx:id="membershipIdTF"
+               layoutX="170" layoutY="75"
+               prefWidth="200"
+               style="-fx-border-color:#007bff;"/>
+
+    <Label text="Renewal Period:"
+           layoutX="40" layoutY="130"
+           style="-fx-text-fill:#004aad;"/>
+    <ComboBox fx:id="renewPeriodCB"
+              layoutX="170" layoutY="125"
+              prefWidth="200"
+              style="-fx-border-color:#007bff;"/>
+
+    <Label text="New Expiry Date:"
+           layoutX="40" layoutY="180"
+           style="-fx-text-fill:#004aad;"/>
+    <DatePicker fx:id="expiryDP"
+                layoutX="170" layoutY="175"
+                prefWidth="200"
+                style="-fx-border-color:#007bff;"/>
+
+    <Button text="Renew"
+            layoutX="170" layoutY="250"
+            prefWidth="120"
+            onAction="#RenewBTN"
+            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;"/>
+
+    <Button text="Back"
+            layoutX="310" layoutY="250"
+            prefWidth="80"
+            onAction="#BackBTN"
+            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;"/>
 
 </AnchorPane>
