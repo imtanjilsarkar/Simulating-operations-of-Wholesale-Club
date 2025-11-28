@@ -10,10 +10,10 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.rahad.deliveryCoordinator.controller.AssignDeliveryTasksController">
 
 
-    <Button fx:id="viewOrdersButton" layoutX="20.0" layoutY="20.0" onAction="#ViewOrdersBTN" prefWidth="120" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;" text="View Orders" />
+    <Button layoutX="165.0" layoutY="325.0" onAction="#ViewOrdersBTN" prefWidth="120" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;" text="View Orders" />
 
 
-    <TableView fx:id="ordersTable" layoutX="10.0" layoutY="60.0" prefHeight="190.0" prefWidth="570.0">
+    <TableView fx:id="ordersTable" layoutX="10.0" layoutY="60.0" prefHeight="190.0" prefWidth="550.0">
         <columns>
             <TableColumn fx:id="orderIdCol" prefWidth="100" text="Order ID" />
             <TableColumn fx:id="customerNameCol" prefWidth="150" text="Customer Name" />
@@ -29,7 +29,7 @@
     <ComboBox fx:id="staffComboBox" layoutX="150.0" layoutY="275.0" prefWidth="200.0" style="-fx-border-color:#007bff;" />
 
 
-    <Button fx:id="assignButton" layoutX="380.0" layoutY="275.0" onAction="#AssignDeliveryBTN" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;" text="Assign Delivery" />
+    <Button layoutX="380.0" layoutY="275.0" onAction="#AssignDeliveryBTN" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;" text="Assign Delivery" />
 
     <Label fx:id="statusLabel" layoutX="20.0" layoutY="320.0" prefWidth="560.0" text="" textFill="RED" wrapText="true" />
 
