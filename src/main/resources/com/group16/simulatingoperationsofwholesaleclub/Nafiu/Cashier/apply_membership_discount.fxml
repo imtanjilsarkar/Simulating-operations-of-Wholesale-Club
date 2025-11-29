@@ -7,20 +7,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F9FAFB;"
-            xmlns="http://javafx.com/javafx/24.0.1"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Cashier.Controller.Apply_Membership_Discount">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F9FAFB;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Cashier.Controller.Apply_Membership_Discount">
 
     <!-- Back Button -->
-    <Button layoutX="30.0" layoutY="30.0" prefWidth="100.0" text="Back"
-            onAction="#handleBack"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" />
+    <Button layoutX="14.0" layoutY="561.0" onAction="#handleBack" prefWidth="100.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Back" />
 
     <!-- Header -->
-    <Label layoutX="160.0" layoutY="40.0"
-           style="-fx-font-size: 22px; -fx-text-fill: #0078D7; -fx-font-weight: bold;"
-           text="Apply Membership Discount" />
+    <Label layoutX="160.0" layoutY="40.0" style="-fx-font-size: 22px; -fx-text-fill: #0078D7; -fx-font-weight: bold;" text="Apply Membership Discount" />
 
     <Line endX="600.0" layoutX="160.0" layoutY="80.0" stroke="#0078D7" strokeWidth="2" />
 
@@ -28,32 +21,23 @@
     <VBox layoutX="160.0" layoutY="120.0" spacing="20.0">
 
         <!-- Step 1: Apply Membership -->
-        <Button text="Apply Membership" prefWidth="250.0"
-                onAction="#handleApplyMembership"
-                style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" />
+        <Button onAction="#handleApplyMembership" prefWidth="250.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Apply Membership" />
 
         <!-- Step 2: Membership ID Input -->
         <VBox spacing="5.0">
-            <Label text="Enter Membership ID:"
-                   style="-fx-text-fill: #0078D7; -fx-font-size: 14px; -fx-font-weight: bold;" />
+            <Label style="-fx-text-fill: #0078D7; -fx-font-size: 14px; -fx-font-weight: bold;" text="Enter Membership ID:" />
             <TextField fx:id="membershipIdField" prefWidth="300.0" />
-            <Button text="Verify" prefWidth="120.0"
-                    onAction="#handleVerifyMembership"
-                    style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" />
+            <Button onAction="#handleVerifyMembership" prefWidth="120.0" style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Verify" />
         </VBox>
 
         <!-- Step 3: Membership Validity -->
-        <Label fx:id="validityLabel" text="Membership Status: Not Checked"
-               style="-fx-text-fill: #333; -fx-font-size: 16px;" />
+        <Label fx:id="validityLabel" style="-fx-text-fill: #333; -fx-font-size: 16px;" text="Membership Status: Not Checked" />
 
         <!-- Step 4: Recalculate Total -->
-        <Button text="Recalculate Total With Discount" prefWidth="300.0"
-                onAction="#handleRecalculateTotal"
-                style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" />
+        <Button onAction="#handleRecalculateTotal" prefWidth="300.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Recalculate Total With Discount" />
 
         <!-- Step 5: Updated Bill -->
-        <Label fx:id="updatedBillLabel" text="Updated Bill: 0"
-               style="-fx-text-fill: #333; -fx-font-size: 16px;" />
+        <Label fx:id="updatedBillLabel" style="-fx-text-fill: #333; -fx-font-size: 16px;" text="Updated Bill: 0" />
 
     </VBox>
 
