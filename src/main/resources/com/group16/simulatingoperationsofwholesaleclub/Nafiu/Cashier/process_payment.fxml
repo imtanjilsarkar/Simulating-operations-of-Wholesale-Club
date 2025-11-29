@@ -1,14 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Cashier.Controller.Process_Payment"
-            prefHeight="400.0" prefWidth="600.0">
+<?import java.lang.String?>
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F9FAFB;"
+            xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Cashier.Controller.Process_Payment">
+
+    <!-- Back Button -->
+    <Button layoutX="30.0" layoutY="30.0" prefWidth="100.0" text="Back"
+            onAction="#handleBack"
+            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" />
+
+    <!-- Header -->
+    <Label layoutX="160.0" layoutY="40.0"
+           style="-fx-font-size: 22px; -fx-text-fill: #0078D7; -fx-font-weight: bold;"
+           text="Process Payment" />
+
+    <Line endX="600.0" layoutX="160.0" layoutY="80.0" stroke="#0078D7" strokeWidth="2" />
+
+    <!-- Content Section -->
+    <VBox layoutX="160.0" layoutY="120.0" spacing="20.0">
+
+        <!-- Step 1: Select Payment Method -->
+        <VBox spacing="5.0">
+            <Label text="Select Payment Method:"
+                   style="-fx-text-fill: #0078D7; -fx-font-size: 14px; -fx-font-weight: bold;" />
+            <ComboBox fx:id="paymentMethodBox" prefWidth="250.0">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Cash" />
+                        <String fx:value="Card" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+        </VBox>
+
+        <!-- Step 2: Enter Payment Details -->
+        <VBox spacing="5.0">
+            <Label text="Payment Details / Cash Received:"
+                   style="-fx-text-fill: #0078D7; -fx-font-size: 14px; -fx-font-weight: bold;" />
+            <TextField fx:id="paymentDetailsField" prefWidth="300.0" />
+            <Button prefWidth="150.0" text="Submit Payment Info"
+                    onAction="#handleSubmitPaymentInfo"
+                    style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" />
+        </VBox>
+
+        <!-- Step 3: Validation -->
+        <Label fx:id="validationLabel" text="Validation: Pending"
+               style="-fx-text-fill: #333; -fx-font-size: 16px;" />
+
+        <!-- Step 4: Balance or Confirmation -->
+        <Label fx:id="balanceLabel" text="Balance / Confirmation: Not Calculated"
+               style="-fx-text-fill: #333; -fx-font-size: 16px;" />
+
+        <!-- Step 5: Payment Success or Failure -->
+        <Label fx:id="paymentStatusLabel" text="Payment Status: Not Completed"
+               style="-fx-text-fill: #333; -fx-font-size: 16px;" />
+
+    </VBox>
 
 </AnchorPane>
