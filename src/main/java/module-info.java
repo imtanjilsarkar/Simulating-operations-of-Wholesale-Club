@@ -26,4 +26,7 @@ module project.simulatingoperationsofwholesaleclub {
     opens com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller to javafx.fxml;
     exports com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller;
 
+    opens com.group16.simulatingoperationsofwholesaleclub.nafiu.Cashier.Controller to javafx.fxml;
+    exports com.group16.simulatingoperationsofwholesaleclub.nafiu.Cashier.Controller;
+
 }

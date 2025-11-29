@@ -33,7 +33,8 @@ public class DashboardController {
     }
 
     @javafx.fxml.FXML
-    public void handleCashier(ActionEvent actionEvent) {
+    public void handleCashier(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/Nafiu/Cashier/cashier_dashboard.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML

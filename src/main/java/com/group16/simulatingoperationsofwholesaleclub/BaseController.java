@@ -13,5 +13,7 @@ public class BaseController {
     @javafx.fxml.FXML
     public void handleBackHRMD(ActionEvent actionEvent) throws IOException {   // back to HRManagerDashboard (Tanjil)
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/hrManager/hr_manager_dashboard.fxml", actionEvent);
-    } //im really sorry sir for the incovenience
-} // now all is okay
+    }
+
+
+}
