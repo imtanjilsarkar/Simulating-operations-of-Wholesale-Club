@@ -24,6 +24,6 @@ public class AttendanceController extends BaseController {
 
     @javafx.fxml.FXML
     public void handleMarkAttendance(ActionEvent actionEvent) {
-    }
+    } //amni
 
 }

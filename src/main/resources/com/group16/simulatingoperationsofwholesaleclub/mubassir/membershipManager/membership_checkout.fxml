@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManager.controller.MembershipCheckoutController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: white;">
+
+    <Label text="Membership Checkout"
+           layoutX="20" layoutY="20"
+           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill:#004aad;"/>
+
+    <Label text="Member ID:"
+           layoutX="20" layoutY="80"
+           style="-fx-text-fill:#004aad;"/>
+    <TextField fx:id="memberIdTF"
+               layoutX="150" layoutY="75"
+               prefWidth="200"
+               style="-fx-border-color:#007bff;"/>
+
+    <Label text="Membership Type:"
+           layoutX="20" layoutY="130"
+           style="-fx-text-fill:#004aad;"/>
+    <ComboBox fx:id="membershipTypeCB"
+              layoutX="150" layoutY="125"
+              prefWidth="200"
+              style="-fx-border-color:#007bff;"/>
+
+    <Label text="Total Amount:"
+           layoutX="20" layoutY="180"
+           style="-fx-text-fill:#004aad;"/>
+    <TextField fx:id="amountTF"
+               layoutX="150" layoutY="175"
+               prefWidth="200"
+               style="-fx-border-color:#007bff;"
+               promptText="BDT 0.00"/>
+
+    <Button text="Checkout"
+            layoutX="150" layoutY="240"
+            prefWidth="120"
+            onAction="#CheckoutBTN"
+            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;"/>
+
+    <Button text="Back"
+            layoutX="290" layoutY="240"
+            prefWidth="80"
+            onAction="#BackBTN"
+            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;"/>
 
 </AnchorPane>

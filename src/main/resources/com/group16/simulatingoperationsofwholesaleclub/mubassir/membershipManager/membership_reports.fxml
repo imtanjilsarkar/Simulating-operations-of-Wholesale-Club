@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManager.controller.MembershipReportsController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: white;">
+
+    <Label text="Membership Reports"
+           layoutX="200" layoutY="20"
+           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill:#004aad;"/>
+
+    <Label text="From:"
+           layoutX="80" layoutY="90"
+           style="-fx-text-fill:#004aad;"/>
+    <DatePicker fx:id="fromDP"
+                layoutX="130" layoutY="85"
+                prefWidth="150"
+                style="-fx-border-color:#007bff;"/>
+
+    <Label text="To:"
+           layoutX="310" layoutY="90"
+           style="-fx-text-fill:#004aad;"/>
+    <DatePicker fx:id="toDP"
+                layoutX="350" layoutY="85"
+                prefWidth="150"
+                style="-fx-border-color:#007bff;"/>
+
+    <Button text="Show Report"
+            layoutX="240" layoutY="140"
+            prefWidth="120"
+            onAction="#ShowReportBTN"
+            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;"/>
+
+    <TextArea fx:id="reportTA"
+              layoutX="80" layoutY="190"
+              prefWidth="440" prefHeight="150"
+              promptText="Report will appear here..."
+              style="-fx-border-color:#007bff;"/>
+
+    <Button text="Back"
+            layoutX="260" layoutY="350"
+            prefWidth="80"
+            onAction="#BackBTN"
+            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;"/>
 
 </AnchorPane>
