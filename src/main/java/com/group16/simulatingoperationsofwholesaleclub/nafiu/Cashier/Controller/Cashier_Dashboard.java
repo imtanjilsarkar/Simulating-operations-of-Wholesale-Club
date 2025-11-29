@@ -1,6 +1,9 @@
 package com.group16.simulatingoperationsofwholesaleclub.nafiu.Cashier.Controller;
 
+import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import javafx.event.ActionEvent;
+
+import java.io.IOException;
 
 public class Cashier_Dashboard {
     @javafx.fxml.FXML
@@ -12,7 +15,8 @@ public class Cashier_Dashboard {
     }
 
     @javafx.fxml.FXML
-    public void handleBack(ActionEvent actionEvent) {
+    public void handleBack(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/initial/dashboard.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
