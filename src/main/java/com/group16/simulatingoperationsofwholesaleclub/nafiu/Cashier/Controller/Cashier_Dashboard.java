@@ -7,7 +7,8 @@ import java.io.IOException;
 
 public class Cashier_Dashboard {
     @javafx.fxml.FXML
-    public void handleSuspiciousActivity(ActionEvent actionEvent) {
+    public void handleSuspiciousActivity(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/Nafiu/Cashier/flag_suspicious_activity.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
