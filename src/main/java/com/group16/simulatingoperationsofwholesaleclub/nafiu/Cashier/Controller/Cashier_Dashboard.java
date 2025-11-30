@@ -12,7 +12,8 @@ public class Cashier_Dashboard {
     }
 
     @javafx.fxml.FXML
-    public void handleDailyReport(ActionEvent actionEvent) {
+    public void handleDailyReport(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/Nafiu/Cashier/generate_daily_sales_report.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -21,7 +22,8 @@ public class Cashier_Dashboard {
     }
 
     @javafx.fxml.FXML
-    public void handleQueueManagement(ActionEvent actionEvent) {
+    public void handleQueueManagement(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/Nafiu/Cashier/queue_management.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML

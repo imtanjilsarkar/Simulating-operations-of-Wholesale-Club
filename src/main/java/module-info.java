@@ -3,7 +3,8 @@ module project.simulatingoperationsofwholesaleclub {
     requires javafx.fxml;
     requires javafx.graphics;
     requires javafx.base;
-   // requires project.simulatingoperationsofwholesaleclub;
+    requires java.desktop;
+    // requires project.simulatingoperationsofwholesaleclub;
     //requires project.simulatingoperationsofwholesaleclub;
     //requires project.simulatingoperationsofwholesaleclub;
 
