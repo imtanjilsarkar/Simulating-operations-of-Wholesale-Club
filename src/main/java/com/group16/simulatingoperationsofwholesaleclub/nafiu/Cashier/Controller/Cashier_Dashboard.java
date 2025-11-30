@@ -27,26 +27,32 @@ public class Cashier_Dashboard {
     }
 
     @javafx.fxml.FXML
-    public void handlePayment(ActionEvent actionEvent) {
+    public void handlePayment(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/Nafiu/Cashier/process_payment.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void handleMembershipDiscount(ActionEvent actionEvent) {
+    public void handleMembershipDiscount(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/Nafiu/Cashier/apply_membership_discount.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void handleLogout(ActionEvent actionEvent) {
+    public void handleLogout(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/initial/dashboard.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void handleCashDrawer(ActionEvent actionEvent) {
+    public void handleCashDrawer(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/Nafiu/Cashier/balance_cash_drawer.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void handleReturns(ActionEvent actionEvent) {
+    public void handleReturns(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/Nafiu/Cashier/handle_returns_or_refunds.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void handleProcessCheckout(ActionEvent actionEvent) {
+    public void handleProcessCheckout(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/Nafiu/Cashier/process_customer_checkout.fxml",actionEvent);
     }
 }

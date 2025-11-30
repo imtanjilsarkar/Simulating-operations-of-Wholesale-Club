@@ -1,8 +1,11 @@
 package com.group16.simulatingoperationsofwholesaleclub.nafiu.Cashier.Controller;
 
+import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+
+import java.io.IOException;
 
 public class Handle_Returns_or_Refunds {
     @javafx.fxml.FXML
@@ -21,7 +24,8 @@ public class Handle_Returns_or_Refunds {
     }
 
     @javafx.fxml.FXML
-    public void handleBack(ActionEvent actionEvent) {
+    public void handleBack(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/Nafiu/Cashier/cashier_dashboard.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
