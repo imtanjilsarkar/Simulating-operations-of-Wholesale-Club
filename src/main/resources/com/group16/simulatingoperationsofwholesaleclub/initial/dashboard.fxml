@@ -43,5 +43,6 @@
 
     <!-- Footer -->
     <Label layoutX="339.0" layoutY="559.0" style="-fx-font-size: 12px; -fx-text-fill: #999999;" text="© 2025 Wholesale Club Management System" />
+   <Button layoutX="403.0" layoutY="503.0" onAction="#handleLogout" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 10;" text="LogOut" />
 
 </AnchorPane>

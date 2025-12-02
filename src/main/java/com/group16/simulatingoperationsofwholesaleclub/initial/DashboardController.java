@@ -16,8 +16,9 @@ public class DashboardController {
     public void handleSupport(ActionEvent actionEvent) {
     }
 
-    @Deprecated
-    public void handleLogout(ActionEvent actionEvent) {
+    @javafx.fxml.FXML
+    public void handleLogout(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/initial/login.fxml", actionEvent);
     }
 
     @Deprecated
