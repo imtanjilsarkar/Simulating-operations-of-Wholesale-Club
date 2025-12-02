@@ -2,31 +2,60 @@ package com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.co
 
 import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class DailyOperationController {
 
-    @javafx.fxml.FXML
+    @FXML
     private TextField lowStockTF;
-    @javafx.fxml.FXML
+    @FXML
     private TextField staffTF;
-    @javafx.fxml.FXML
-    private TextArea activityTA;
-    @javafx.fxml.FXML
+    @FXML
     private TextField salesTF;
+    @FXML
+    private Label successLabel;
 
-    @javafx.fxml.FXML
-    public void exportBTN(ActionEvent actionEvent) {
+    private final String FILE_PATH = "C:\\Users\\MUBASSIR_MOHI\\IdeaProjects\\Simulating-operations-of-Wholesale-Club\\daily_operations.txt";
+
+    @FXML
+    public void addActivityBTN() {
+        String sales = salesTF.getText().trim();
+        String lowStock = lowStockTF.getText().trim();
+        String staff = staffTF.getText().trim();
+
+        if (sales.isEmpty() || lowStock.isEmpty() || staff.isEmpty()) {
+            successLabel.setText("Please fill in all fields!");
+            successLabel.setStyle("-fx-text-fill: red;");
+            return;
+        }
+
+        String activityLine = "Sales: " + sales + ", Low Stock: " + lowStock + ", Active Staff: " + staff;
+
+        try (FileWriter writer = new FileWriter(FILE_PATH, true)) {
+            writer.write(activityLine + "\n");
+            successLabel.setText("Activity added successfully!");
+            successLabel.setStyle("-fx-text-fill: green;");
+
+            // Clear input fields
+            salesTF.clear();
+            lowStockTF.clear();
+            staffTF.clear();
+        } catch (IOException e) {
+            successLabel.setText("Error saving activity!");
+            successLabel.setStyle("-fx-text-fill: red;");
+            e.printStackTrace();
+        }
     }
 
-    @javafx.fxml.FXML
-    public void addActivityBTN(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
+    @FXML
     public void backBTN(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/storemanager_dashboard.fxml",actionEvent);
+        SceneSwitcher.switchTo(
+                "/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/storemanager_dashboard.fxml",
+                actionEvent
+        );
     }
 }

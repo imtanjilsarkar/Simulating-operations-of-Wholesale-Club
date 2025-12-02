@@ -20,7 +20,7 @@
 
     <!-- Complaints List for Customer -->
     <Label layoutX="150.0" layoutY="150.0" text="Customer Complaints:" />
-    <TextArea fx:id="complaintTitlesArea" layoutX="300.0" layoutY="145.0" prefHeight="100.0" prefWidth="300.0" editable="false" />
+    <TextArea fx:id="complaintTitlesArea" editable="false" layoutX="300.0" layoutY="145.0" prefHeight="100.0" prefWidth="300.0" />
 
     <!-- Complaint Title to Update -->
     <Label layoutX="150.0" layoutY="270.0" text="Complaint Title:" />

@@ -101,8 +101,7 @@ public class UpdateComplaintController  extends BaseController {
         complaintTitlesArea.clear();
         descriptionArea.clear();
         messageLabel.setText("");
-}
-
+    }
 }
 
 
