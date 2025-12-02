@@ -2,7 +2,6 @@ package com.group16.simulatingoperationsofwholesaleclub.initial;
 
 import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import javafx.event.ActionEvent;
-import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
@@ -26,7 +25,8 @@ public class DashboardController {
     }
 
     @javafx.fxml.FXML
-    public void handleDeliveryCoordinator(ActionEvent actionEvent) {
+    public void handleDeliveryCoordinator(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/DeliveryCoordinator/controller/deliveryCoordinatorDashboardController.java",actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -35,7 +35,7 @@ public class DashboardController {
 
     @javafx.fxml.FXML
     public void handleCashier(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/Nafiu/Cashier/cashier_dashboard.fxml", actionEvent);
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Cashier/cashier_dashboard.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML

@@ -17,7 +17,7 @@ public class Apply_Membership_Discount {
 
     @javafx.fxml.FXML
     public void handleBack(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/Nafiu/Cashier/cashier_dashboard.fxml",actionEvent);
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Cashier/cashier_dashboard.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
