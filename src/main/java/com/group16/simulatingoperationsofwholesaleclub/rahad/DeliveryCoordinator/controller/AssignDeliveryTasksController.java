@@ -1,4 +1,4 @@
-package com.group16.simulatingoperationsofwholesaleclub.rahad.deliveryCoordinator.controller;
+package com.group16.simulatingoperationsofwholesaleclub.rahad.DeliveryCoordinator.controller;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
@@ -18,10 +18,6 @@ public class AssignDeliveryTasksController {
     private Label statusLabel;
     @javafx.fxml.FXML
     private TableColumn orderIdCol;
-    @javafx.fxml.FXML
-    private Button assignButton;
-    @javafx.fxml.FXML
-    private Button viewOrdersButton;
 
     @Deprecated
     public void assigndelivery(ActionEvent actionEvent) {

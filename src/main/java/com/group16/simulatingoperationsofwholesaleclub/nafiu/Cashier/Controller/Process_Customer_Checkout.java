@@ -7,13 +7,13 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
-public class Apply_Membership_Discount {
+public class Process_Customer_Checkout {
     @javafx.fxml.FXML
-    private Label updatedBillLabel;
+    private TextField productIdField;
     @javafx.fxml.FXML
-    private Label validityLabel;
+    private Label totalPriceLabel;
     @javafx.fxml.FXML
-    private TextField membershipIdField;
+    private Label finalBillLabel;
 
     @javafx.fxml.FXML
     public void handleBack(ActionEvent actionEvent) throws IOException {
@@ -21,14 +21,15 @@ public class Apply_Membership_Discount {
     }
 
     @javafx.fxml.FXML
-    public void handleRecalculateTotal(ActionEvent actionEvent) {
+    public void handleMembershipCheck(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void handleVerifyMembership(ActionEvent actionEvent) {
+    public void handleStartCheckout(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void handleApplyMembership(ActionEvent actionEvent) {
+    public void handleAddProduct(ActionEvent actionEvent) {
     }
+    // hhhh
 }

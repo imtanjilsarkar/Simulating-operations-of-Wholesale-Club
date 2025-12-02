@@ -3,7 +3,8 @@ module project.simulatingoperationsofwholesaleclub {
     requires javafx.fxml;
     requires javafx.graphics;
     requires javafx.base;
-   // requires project.simulatingoperationsofwholesaleclub;
+    requires java.desktop;
+    // requires project.simulatingoperationsofwholesaleclub;
     //requires project.simulatingoperationsofwholesaleclub;
     //requires project.simulatingoperationsofwholesaleclub;
 
@@ -25,5 +26,21 @@ module project.simulatingoperationsofwholesaleclub {
 
     opens com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller to javafx.fxml;
     exports com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller;
+
+    opens com.group16.simulatingoperationsofwholesaleclub.nafiu.Cashier.Controller to javafx.fxml;
+    exports com.group16.simulatingoperationsofwholesaleclub.nafiu.Cashier.Controller;
+
+    opens com.group16.simulatingoperationsofwholesaleclub.rahad.ProcurementOfficer.controller to javafx.fxml;
+    exports com.group16.simulatingoperationsofwholesaleclub.rahad.ProcurementOfficer.controller;
+
+    opens com.group16.simulatingoperationsofwholesaleclub.rahad.DeliveryCoordinator.controller to javafx.fxml;
+    exports com.group16.simulatingoperationsofwholesaleclub.rahad.DeliveryCoordinator.controller;
+//    opens com.group16.simulatingoperationsofwholesaleclub.rahad.DeliveryCoordinator.controller to javafx.fxml;
+//    exports com.group16.simulatingoperationsofwholesaleclub.rahad.DeliveryCoordinator.controller;
+
+//    opens com.group16.simulatingoperationsofwholesaleclub.rahad.ProcurementOfficer.controller to javafx.fxml;
+//    exports com.group16.simulatingoperationsofwholesaleclub.rahad.ProcurementOfficer.controller;
+
+
 
 }
