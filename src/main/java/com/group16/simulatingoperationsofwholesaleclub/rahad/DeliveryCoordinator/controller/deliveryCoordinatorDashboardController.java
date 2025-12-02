@@ -3,55 +3,61 @@ package com.group16.simulatingoperationsofwholesaleclub.rahad.DeliveryCoordinato
 import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import javafx.event.ActionEvent;
 
+import javax.imageio.event.IIOWriteProgressListener;
 import java.io.IOException;
 
 public class deliveryCoordinatorDashboardController {
-    @Deprecated
-    public void handleReportDeliveryProblems(ActionEvent actionEvent) {
-    }
 
-    @Deprecated
-    public void handleLogout(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleConfirmCompletedDeliveries(ActionEvent actionEvent) {
+    @javafx.fxml.FXML
+    public void handleBack(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/initial/dashboard.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void handleTrackDelivery(ActionEvent actionEvent) {
+    public void returnedOrders(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/DeliveryCoordinator/verify_returned_orders.fxml",actionEvent);
+
     }
 
     @javafx.fxml.FXML
-    public void handleConfirmDelivery(ActionEvent actionEvent) {
+    public void confirmDelivery(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/DeliveryCoordinator/confirm_delivery.fxml",actionEvent);
+
     }
 
     @javafx.fxml.FXML
-    public void handleReturnedOrders(ActionEvent actionEvent) {
+    public void requestReDelivery(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/DeliveryCoordinator/re_delivery.fxml",actionEvent);
+
     }
 
     @javafx.fxml.FXML
-    public void handleDeliverySchedule(ActionEvent actionEvent) throws IOException {
+    public void reportProblems(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/DeliveryCoordinator/report_problems.fxml",actionEvent);
+    }
+
+
+
+    @javafx.fxml.FXML
+    public void trackDelivery(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/DeliveryCoordinator/track_delivery.fxml",actionEvent);
+
+    }
+
+    @javafx.fxml.FXML
+    public void deliveryReport(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/DeliveryCoordinator/generate_report.fxml",actionEvent);
+
+    }
+
+    @javafx.fxml.FXML
+    public void deliverySchedule(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/DeliveryCoordinator/manage_schedule.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void handleRequestReDelivery(ActionEvent actionEvent) {
-    }
+    public void assignDelivery(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/DeliveryCoordinator/assigndelivery.fxml",actionEvent);
 
-    @javafx.fxml.FXML
-    public void handleAssignTasks(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void handleReportProblems(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void handleDeliveryReport(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void handleBack(ActionEvent actionEvent) {
     }
 }
