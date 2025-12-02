@@ -22,5 +22,6 @@
     <Button layoutX="80.0" layoutY="208.0" onAction="#assignShiftBTN" prefWidth="150" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" text="Assign Shift" />
 
     <Button layoutX="260" layoutY="340" onAction="#backBTN" prefWidth="80" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" text="Back" />
+   <Label fx:id="successLabel" layoutX="312.0" layoutY="270.0" prefHeight="18.0" prefWidth="198.0" />
 
 </AnchorPane>

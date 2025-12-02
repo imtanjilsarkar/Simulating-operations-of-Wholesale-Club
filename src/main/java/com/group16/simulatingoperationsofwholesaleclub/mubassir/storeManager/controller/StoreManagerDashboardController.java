@@ -13,7 +13,7 @@ public class StoreManagerDashboardController {
 
     @javafx.fxml.FXML
     public void ApprovePurchaseBTN(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/purchase_order.fxml",actionEvent);
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/purchase_request.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -28,7 +28,7 @@ public class StoreManagerDashboardController {
 
     @javafx.fxml.FXML
     public void AuditStaffBTN(ActionEvent actionEvent) throws  IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/staff_activities.fxml",actionEvent);
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/staff_task.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -37,13 +37,13 @@ public class StoreManagerDashboardController {
     }
 
     @javafx.fxml.FXML
-    public void CustomerComplaintsBTN(ActionEvent actionEvent)throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/customer_complaints.fxml",actionEvent);
+    public void StaffComplaintsBTN(ActionEvent actionEvent)throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/Staff_complaints.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
     public void DisC_PromBTN(ActionEvent actionEvent) throws IOException{
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/discount_promotions.fxml",actionEvent);
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/promotions.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML

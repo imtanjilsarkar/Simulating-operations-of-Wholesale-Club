@@ -1,76 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="451.0" prefWidth="715.0"
-            style="-fx-background-color: white;"
-            xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller.StoreManagerDashboardController">
+<AnchorPane prefHeight="451.0" prefWidth="715.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller.StoreManagerDashboardController">
 
-    <Label layoutX="180" layoutY="20"
-           text="Store Manager Dashboard"
-           textFill="#004aad">
+    <Label layoutX="180" layoutY="20" text="Store Manager Dashboard" textFill="#004aad">
         <font>
             <Font size="28.0" />
         </font>
     </Label>
 
-    <Button layoutX="100" layoutY="100"
-            onAction="#DailyOperationsBTN"
-            prefWidth="180"
-            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
-            text="Daily Operations"/>
+    <Button layoutX="100" layoutY="100" onAction="#DailyOperationsBTN" prefWidth="180" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" text="Daily Operations" />
 
-    <Button layoutX="100" layoutY="170"
-            onAction="#ApprovePurchaseBTN"
-            prefWidth="180"
-            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
-            text="Approve Purchase"/>
+    <Button layoutX="100" layoutY="170" onAction="#ApprovePurchaseBTN" prefWidth="180" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" text="Approve Purchase" />
 
-    <Button layoutX="100" layoutY="240"
-            onAction="#StaffShiftsBTN"
-            prefWidth="180"
-            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
-            text="Staff Shifts"/>
+    <Button layoutX="100" layoutY="240" onAction="#StaffShiftsBTN" prefWidth="180" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" text="Staff Shifts" />
 
-    <Button layoutX="100" layoutY="310"
-            onAction="#SalesPerformanceBTN"
-            prefWidth="180"
-            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
-            text="Sales Performance"/>
+    <Button layoutX="100" layoutY="310" onAction="#SalesPerformanceBTN" prefWidth="180" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" text="Sales Performance" />
 
-    <Button layoutX="430" layoutY="100"
-            onAction="#CustomerComplaintsBTN"
-            prefWidth="180"
-            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
-            text="Customer Complaints"/>
+    <Button layoutX="430" layoutY="100" onAction="#StaffComplaintsBTN" prefWidth="180" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" text="Staff Complaints" />
 
-    <Button layoutX="430" layoutY="170"
-            onAction="#DisC_PromBTN"
-            prefWidth="180"
-            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
-            text="Discounts_Promotions"/>
+    <Button layoutX="430" layoutY="170" onAction="#DisC_PromBTN" prefWidth="180" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" text="Discounts_Promotions" />
 
-    <Button layoutX="430" layoutY="240"
-            onAction="#ReportsBTN"
-            prefWidth="180"
-            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
-            text="Top Management Reports"/>
+    <Button layoutX="430" layoutY="240" onAction="#ReportsBTN" prefWidth="180" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" text="Top Management Reports" />
 
-    <Button layoutX="430" layoutY="310"
-            onAction="#AuditStaffBTN"
-            prefWidth="180"
-            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"
-            text="Audit Staff Activities"/>
+    <Button layoutX="430" layoutY="310" onAction="#AuditStaffBTN" prefWidth="180" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" text="Staff Task" />
 
 
-    <Button layoutX="310" layoutY="380"
-            prefWidth="90"
-            onAction="#BackBTN"
-            text="Back"
-            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;"/>
+    <Button layoutX="310" layoutY="380" onAction="#BackBTN" prefWidth="90" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" text="Back" />
 
 </AnchorPane>
