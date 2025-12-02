@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.initial.DashboardController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.initial.DashboardController">
 
     <!-- Title -->
     <Label layoutX="271.0" layoutY="60.0" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #0078D7;" text="Select Your Role to Continue" />
@@ -43,5 +43,6 @@
 
     <!-- Footer -->
     <Label layoutX="339.0" layoutY="559.0" style="-fx-font-size: 12px; -fx-text-fill: #999999;" text="© 2025 Wholesale Club Management System" />
+   <Button layoutX="77.0" layoutY="506.0" mnemonicParsing="false" onAction="#logOutButton" prefHeight="40.0" prefWidth="96.0" style="-fx-background-color: Red;" text="Log Out" />
 
 </AnchorPane>
