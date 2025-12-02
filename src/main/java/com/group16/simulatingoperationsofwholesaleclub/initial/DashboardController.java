@@ -64,5 +64,10 @@ public class DashboardController {
 
 
     }
+
+    @javafx.fxml.FXML
+    public void logOutButton(ActionEvent actionEvent) throws  IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/initial/login.fxml",actionEvent);
+    }
     //common dashboard for scene switching
 }
