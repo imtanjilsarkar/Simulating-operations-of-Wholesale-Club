@@ -26,7 +26,7 @@ public class DashboardController {
 
     @javafx.fxml.FXML
     public void handleDeliveryCoordinator(ActionEvent actionEvent) throws IOException{
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/DeliveryCoordinator/controller/deliveryCoordinatorDashboardController.java",actionEvent);
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/DeliveryCoordinator/delivery_Dashboard.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
