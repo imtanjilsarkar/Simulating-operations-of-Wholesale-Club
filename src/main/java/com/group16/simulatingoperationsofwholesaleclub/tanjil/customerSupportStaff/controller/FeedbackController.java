@@ -25,8 +25,7 @@ public class FeedbackController extends BaseController {
         String feedback = txtFeedback.getText().trim();
 
         if (customerName.isEmpty() || feedback.isEmpty()) {
-            // Simple validation
-            System.out.println("Please enter customer name and feedback.");
+            outputMessage.setText("Please enter customer name and feedback.");
             return;
         }
 
@@ -41,7 +40,6 @@ public class FeedbackController extends BaseController {
             //System.out.println("Feedback submitted successfully!");
             outputMessage.setText("Feedback submitted successfully!");
 
-            // Clear text areas after submission
             txtCustomerName.clear();
             txtFeedback.clear();
 
