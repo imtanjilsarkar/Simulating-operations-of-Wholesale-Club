@@ -4,23 +4,25 @@ import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
 
 import java.io.IOException;
 
-public class TrackPendingSupplierDeliveriesController {
+public class ViewSupplierContactsController
+{
     @javafx.fxml.FXML
-    private TableView pendingTable;
+    private TableView supplierTable;
     @javafx.fxml.FXML
-    private TableColumn colDeliveryID;
+    private TableColumn suppName;
     @javafx.fxml.FXML
-    private TableColumn colDueDate;
+    private TableColumn suppPhone;
     @javafx.fxml.FXML
-    private TableColumn colProduct;
+    private TableColumn suppaddress;
     @javafx.fxml.FXML
-    private TextArea remarksArea;
+    private TableColumn suppID;
+
     @javafx.fxml.FXML
-    private TableColumn colSupplierName;
+    public void initialize() {
+    }
 
     @javafx.fxml.FXML
     public void handleBack(ActionEvent actionEvent) throws IOException {
@@ -29,6 +31,6 @@ public class TrackPendingSupplierDeliveriesController {
     }
 
     @javafx.fxml.FXML
-    public void loadPendingDeliveries(ActionEvent actionEvent) {
+    public void loadContacts(ActionEvent actionEvent) {
     }
 }

@@ -1,36 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.rahad.DeliveryCoordinator.controller.AssignDeliveryTasksController">
+<AnchorPane prefHeight="375.0" prefWidth="575.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.rahad.deliveryCoordinator.controller.AssignDeliveryTasksController">
 
+    <!-- Headline -->
+    <Label layoutX="140.0" layoutY="10.0" style="-fx-font-size:18px; -fx-font-weight:bold; -fx-text-fill:#004aad;" text="Assign Delivery Task" />
 
-    <Button layoutX="14.0" layoutY="27.0" onAction="#ViewOrdersBTN" prefWidth="120" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;" text="View Orders" />
+    <!-- Staff ID -->
+    <Label layoutX="20.0" layoutY="60.0" style="-fx-text-fill:#004aad;" text="Staff ID:" />
+    <TextField fx:id="staffIdField" layoutX="130.0" layoutY="55.0" prefWidth="200.0" style="-fx-border-color:#007bff;" />
 
+    <!-- Delivery Number -->
+    <Label layoutX="20.0" layoutY="100.0" style="-fx-text-fill:#004aad;" text="Delivery No:" />
+    <TextField fx:id="deliveryNoField" layoutX="130.0" layoutY="95.0" prefWidth="200.0" style="-fx-border-color:#007bff;" />
 
-    <TableView fx:id="ordersTable" layoutX="10.0" layoutY="60.0" prefHeight="190.0" prefWidth="550.0">
-        <columns>
-            <TableColumn fx:id="orderIdCol" prefWidth="100" text="Order ID" />
-            <TableColumn fx:id="customerNameCol" prefWidth="150" text="Customer Name" />
-            <TableColumn fx:id="productListCol" prefWidth="200" text="Product List" />
-            <TableColumn fx:id="quantityCol" prefWidth="100" text="Quantity" />
-        </columns>
-    </TableView>
+    <!-- Delivery Date -->
+    <Label layoutX="20.0" layoutY="140.0" style="-fx-text-fill:#004aad;" text="Delivery Date:" />
+    <DatePicker fx:id="deliveryDatePicker" layoutX="130.0" layoutY="135.0" prefWidth="200.0" style="-fx-border-color:#007bff;" />
 
+    <!-- Assign Delivery Button -->
+    <Button layoutX="80.0" layoutY="276.0" onAction="#AssignDeliveryBTN" prefWidth="120" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;" text="Assign Delivery" />
 
-    <Label layoutX="20.0" layoutY="280.0" style="-fx-text-fill:#004aad;" text="Select Delivery Staff:" />
+    <!-- Success / Error Message Label -->
+    <Label fx:id="successLabel" layoutX="20.0" layoutY="180.0" prefWidth="450.0" style="-fx-text-fill: green; -fx-font-weight: bold;" text="" wrapText="true" />
 
-
-    <ComboBox fx:id="staffComboBox" layoutX="150.0" layoutY="275.0" prefWidth="200.0" style="-fx-border-color:#007bff;" />
-
-
-    <Button layoutX="380.0" layoutY="275.0" onAction="#AssignDeliveryBTN" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;" text="Assign Delivery" />
-
-    <Label fx:id="statusLabel" layoutX="5.0" layoutY="357.0" prefWidth="560.0" text="" textFill="RED" wrapText="true" />
+    <!-- Back Button -->
+    <Button layoutX="300.0" layoutY="276.0" onAction="#handleBack" prefWidth="80" style="-fx-background-color:#6c757d; -fx-text-fill:white; -fx-background-radius:5;" text="Back" />
 
 </AnchorPane>

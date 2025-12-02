@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.rahad.ProcurementOfficer.controller.ResolveIssuesWithSupplierController">
+
+    <!-- Title -->
+    <Label layoutX="150.0" layoutY="20.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #004aad;" text="Resolve Supplier Issues" />
+
+    <!-- Load Damaged Products Button -->
+    <Button layoutX="20.0" layoutY="61.0" onAction="#loadDamagedProducts" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius: 8;" text="Load Damaged Products" />
+
+    
+    <TableView fx:id="damagedTable" layoutX="50.0" layoutY="110.0" prefHeight="180.0" prefWidth="500.0">
+
+        <columns>
+            <TableColumn fx:id="colProductID" prefWidth="120.0" text="Product ID" />
+            <TableColumn fx:id="colProductName" prefWidth="215.20001220703125" text="Product Name" />
+            <TableColumn fx:id="colQuantity" prefWidth="164.79998779296875" text="Quantity Damaged" />
+        </columns>
+    </TableView>
+
+
+    <TextArea fx:id="remarksArea" layoutX="50.0" layoutY="300.0" prefHeight="50.0" prefWidth="500.0" promptText="Optional remarks for replacement request..." style="-fx-border-color:#007bff; -fx-border-radius:5;" />
+
+
+    <Button layoutX="230.0" layoutY="352.0" onAction="#sendReplacementRequest" prefHeight="35.0" prefWidth="138.0" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius: 8;" text="Send Request" />
+
+
+    <Label fx:id="confirmationLabel" layoutX="180.0" layoutY="320.0" style="-fx-text-fill: green; -fx-font-weight: bold;" text="" />
+
+
+    <Button layoutX="20.0" layoutY="355.0" onAction="#handleBack" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius: 8;" text="Back" />
+
+</AnchorPane>
