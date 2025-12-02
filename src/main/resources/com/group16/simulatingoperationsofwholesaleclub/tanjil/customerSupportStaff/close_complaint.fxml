@@ -5,28 +5,48 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller.CloseComplaintController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller.CloseComplaintController">
 
     <!-- Title -->
-    <Label layoutX="200.0" layoutY="40.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;" text="Close Complaint" />
+    <Label layoutX="200.0" layoutY="40.0"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;"
+           text="Close Complaint" />
 
-    <!-- Search Complaint by ID -->
-    <Label layoutX="100.0" layoutY="120.0" text="Complaint ID:" />
-    <TextField fx:id="complaintIdField" layoutX="250.0" layoutY="115.0" prefWidth="200.0" />
-    <Button layoutX="470.0" layoutY="115.0" onAction="#handleSearchComplaint" prefWidth="80.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Search" />
+    <!-- Search Complaint -->
+    <Label layoutX="100.0" layoutY="120.0" text="Customer Name:" />
+    <TextField fx:id="customerNameField" layoutX="250.0" layoutY="115.0" prefWidth="200.0" />
 
-    <!-- Complaint Details -->
-    <Label layoutX="100.0" layoutY="180.0" text="Complaint Title:" />
-    <TextField fx:id="complaintTitleField" editable="false" layoutX="250.0" layoutY="175.0" prefWidth="300.0" />
+    <Label layoutX="100.0" layoutY="160.0" text="Complaint Title:" />
+    <TextField fx:id="complaintTitleField" layoutX="250.0" layoutY="155.0" prefWidth="200.0" />
 
-    <Label layoutX="100.0" layoutY="220.0" text="Customer Name:" />
-    <TextField fx:id="customerNameField" editable="false" layoutX="250.0" layoutY="215.0" prefWidth="300.0" />
+    <Button layoutX="470.0" layoutY="115.0" onAction="#handleSearchComplaint"
+            prefWidth="80.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;"
+            text="Search" />
+
+    <!-- Message Label -->
+    <Label fx:id="messageLabel" layoutX="250.0" layoutY="200.0" prefWidth="300.0"
+           style="-fx-text-fill: green; -fx-font-size: 13px;" />
 
     <!-- Close Button -->
-    <Button layoutX="200.0" layoutY="300.0" onAction="#handleCloseComplaint" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Close Complaint" />
+    <Button layoutX="200.0" layoutY="250.0" onAction="#handleCloseComplaint"
+            prefHeight="40.0" prefWidth="120.0"
+            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;"
+            text="Close Complaint" />
 
     <!-- Cancel Button -->
-    <Button layoutX="360.0" layoutY="300.0" onAction="#handleCancel" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #0078D7; -fx-text-fill: #0078D7; -fx-background-radius: 8;" text="Cancel" />
-   <Button layoutX="14.0" layoutY="360.0" onAction="#handleBackCSD" prefHeight="18.0" prefWidth="51.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Back" />
+    <Button layoutX="360.0" layoutY="250.0" onAction="#handleCancel"
+            prefHeight="40.0" prefWidth="120.0"
+            style="-fx-background-color: white; -fx-border-color: #0078D7; -fx-text-fill: #0078D7; -fx-background-radius: 8;"
+            text="Cancel" />
+
+    <!-- Back Button -->
+    <Button layoutX="14.0" layoutY="360.0" onAction="#handleBackCSD"
+            prefHeight="18.0" prefWidth="51.0"
+            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;"
+            text="Back" />
 
 </AnchorPane>
