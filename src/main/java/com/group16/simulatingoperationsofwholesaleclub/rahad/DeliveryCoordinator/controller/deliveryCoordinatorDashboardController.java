@@ -1,6 +1,9 @@
-package com.group16.simulatingoperationsofwholesaleclub.rahad.deliveryCoordinator.controller;
+package com.group16.simulatingoperationsofwholesaleclub.rahad.DeliveryCoordinator.controller;
 
+import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import javafx.event.ActionEvent;
+
+import java.io.IOException;
 
 public class deliveryCoordinatorDashboardController {
     @Deprecated
@@ -28,7 +31,8 @@ public class deliveryCoordinatorDashboardController {
     }
 
     @javafx.fxml.FXML
-    public void handleDeliverySchedule(ActionEvent actionEvent) {
+    public void handleDeliverySchedule(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/DeliveryCoordinator/manage_schedule.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
