@@ -1,33 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.rahad.ProcurementOfficer.controller.CreateSupplierOrderController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.group16.simulatingoperationsofwholesaleclub.rahad.ProcurementOfficer.controller.CreateSupplierOrderController">
 
 
-    <Label layoutX="168.0" layoutY="14.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #004aad;" text="Create Supplier Order" />
+    <Label layoutX="168.0" layoutY="14.0"
+           style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #004aad;"
+           text="Create Supplier Order" />
 
 
     <Label layoutX="20" layoutY="70" style="-fx-font-size: 14px;" text="Supplier ID:" />
+    <TextField fx:id="supplierIdField" layoutX="120.0" layoutY="67.0" prefWidth="200"
+               promptText="Enter Supplier ID" />
 
 
     <Label layoutX="20" layoutY="110" style="-fx-font-size: 14px;" text="Product:" />
-    <TextField layoutX="120" layoutY="105" prefWidth="200" promptText="Enter Product Name" />
+    <TextField fx:id="productField" layoutX="120" layoutY="105" prefWidth="200"
+               promptText="Enter Product Name" />
 
 
     <Label layoutX="20" layoutY="150" style="-fx-font-size: 14px;" text="Quantity:" />
-    <TextField layoutX="120" layoutY="145" prefWidth="100" promptText="Quantity" />
+    <TextField fx:id="quantityField" layoutX="120" layoutY="145" prefWidth="100"
+               promptText="Quantity" />
 
 
-    <Button layoutX="120" layoutY="200" onAction="#handleSaveOrderButton" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 120px;" text="Save Order" />
+    <Label layoutX="22.0" layoutY="191.0" text="Due date:" />
+    <DatePicker fx:id="dueDatePicker" layoutX="120.0" layoutY="187.0" />
 
-    <Button layoutX="260" layoutY="200" onAction="#handleBack" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 120px;" text="Back" />
+
+    <Button layoutX="17.0" layoutY="280.0"
+            onAction="#handleSaveOrderButton"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 120px;"
+            text="Save Order" />
+
+    <Button layoutX="160.0" layoutY="280.0"
+            onAction="#handleBack"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 120px;"
+            text="Back" />
 
 
-    <Label layoutX="20" layoutY="250" prefWidth="560" style="-fx-text-fill: green;" text="" />
-   <TextField layoutX="120.0" layoutY="67.0" prefWidth="200" promptText="Enter Supplier ID" />
+    <Label fx:id="messageLabel"
+           layoutX="20" layoutY="250" prefWidth="560"
+           style="-fx-text-fill: green;" text="" />
 
 </AnchorPane>
