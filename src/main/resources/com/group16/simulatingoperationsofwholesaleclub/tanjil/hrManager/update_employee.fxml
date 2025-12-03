@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500" prefWidth="600" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/24.0.1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.UpdateEmployeeController">
+<AnchorPane prefHeight="500" prefWidth="600" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.UpdateEmployeeController">
 
     <!-- Search Employee -->
     <Label layoutX="50" layoutY="20" text="Employee Name:" />
@@ -33,7 +33,7 @@
     <Label fx:id="outputMessage" layoutX="50" layoutY="220" prefWidth="500" style="-fx-text-fill: black;" />
 
     <!-- TableView -->
-    <TableView fx:id="employeeTable" layoutX="50" layoutY="260" prefHeight="200" prefWidth="500">
+    <TableView fx:id="employeeTable" layoutX="44.0" layoutY="250.0" prefHeight="200" prefWidth="500">
         <columns>
             <TableColumn fx:id="colId" prefWidth="80" text="ID" />
             <TableColumn fx:id="colName" prefWidth="150" text="Name" />
@@ -41,5 +41,6 @@
             <TableColumn fx:id="colPosition" prefWidth="130" text="Position" />
         </columns>
     </TableView>
+   <Button layoutX="6.0" layoutY="464.0" onAction="#handleBackHRMD" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Back" />
 
 </AnchorPane>

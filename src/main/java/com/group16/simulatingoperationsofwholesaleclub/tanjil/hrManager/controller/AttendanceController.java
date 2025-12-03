@@ -111,4 +111,5 @@ public class AttendanceController extends BaseController {
             outputMessage.setText("Error loading employees.");
         }
     }
+
 }

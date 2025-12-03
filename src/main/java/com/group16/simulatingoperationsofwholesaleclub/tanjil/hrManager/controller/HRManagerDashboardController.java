@@ -47,13 +47,12 @@ public class HRManagerDashboardController {
     }
 
     @javafx.fxml.FXML
-    public void handleShift(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/hrManager/shift.fxml", actionEvent);
-    }
-
-    @javafx.fxml.FXML
     public void handleBack(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/initial/dashboard.fxml", actionEvent);
     }
-    //main HR dashboard
+
+    @javafx.fxml.FXML
+    public void handleLeaveRequest(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/hrManager/leave_Request.fxml", actionEvent);
+    }
 }

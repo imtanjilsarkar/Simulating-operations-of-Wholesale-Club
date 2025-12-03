@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500" prefWidth="700" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/24.0.1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.LeaveRequestController">
+
+    <!-- Employee Name -->
+    <Label layoutX="20.0" layoutY="17.0" text="Employee Name:" />
+    <TextField fx:id="txtEmployeeName" layoutX="120.0" layoutY="16.0" prefWidth="200" promptText="Enter Employee Name" />
+
+
+    <!-- Leave Type -->
+    <Label layoutX="380" layoutY="20" text="Leave Type:" />
+    <ComboBox fx:id="cmbLeaveType" layoutX="460" layoutY="15" prefWidth="150" />
+
+    <!-- Start Date -->
+    <Label layoutX="20" layoutY="60" text="Start Date:" />
+    <DatePicker fx:id="dpStart" layoutX="120.0" layoutY="56.0" prefWidth="200" />
+
+    <!-- End Date -->
+    <Label layoutX="380" layoutY="60" text="End Date:" />
+    <DatePicker fx:id="dpEnd" layoutX="460" layoutY="55" prefWidth="150" />
+
+    <!-- Buttons -->
+    <Button layoutX="150" layoutY="100" onAction="#handleLoadRequests" prefHeight="30" prefWidth="120" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Load Requests" />
+    <Button layoutX="290" layoutY="100" onAction="#handleSubmitRequest" prefHeight="30" prefWidth="120" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Submit Request" />
+    <Button layoutX="430" layoutY="100" onAction="#handleClearTable" prefHeight="30" prefWidth="120" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Clear Table" />
+
+    <!-- Output Label -->
+    <Label fx:id="outputMessage" layoutX="20" layoutY="140" prefWidth="660" style="-fx-text-fill: black;" />
+
+    <!-- TableView -->
+    <TableView fx:id="leaveTable" layoutX="20" layoutY="170" prefHeight="300" prefWidth="660">
+        <columns>
+            <TableColumn fx:id="colEmpName" prefWidth="150" text="Employee Name" />
+            <TableColumn fx:id="colLeaveType" prefWidth="150" text="Leave Type" />
+            <TableColumn fx:id="colStartDate" prefWidth="120" text="Start Date" />
+            <TableColumn fx:id="colEndDate" prefWidth="120" text="End Date" />
+            <TableColumn fx:id="colStatus" prefWidth="120" text="Status" />
+        </columns>
+    </TableView>
+
+</AnchorPane>

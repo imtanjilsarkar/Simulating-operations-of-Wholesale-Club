@@ -74,6 +74,7 @@ public class RecruitmentController extends BaseController {
             outputMessage.setText("Error saving employee data.");
         }
     }
+
 }
 
 

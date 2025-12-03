@@ -1,35 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.RemoveEmployeeController"
-            prefWidth="600" prefHeight="400" style="-fx-background-color: white;">
+<AnchorPane prefHeight="400" prefWidth="600" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/24.0.1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.RemoveEmployeeController">
 
     <!-- TableView -->
-    <TableView fx:id="employeeTable" layoutX="20" layoutY="20" prefWidth="560" prefHeight="280">
+    <TableView fx:id="employeeTable" layoutX="20" layoutY="20" prefHeight="280" prefWidth="560">
         <columns>
-            <TableColumn fx:id="colId" text="ID" prefWidth="80"/>
-            <TableColumn fx:id="colName" text="Name" prefWidth="150"/>
-            <TableColumn fx:id="colDepartment" text="Department" prefWidth="160"/>
-            <TableColumn fx:id="colPosition" text="Position" prefWidth="160"/>
+            <TableColumn fx:id="colId" prefWidth="80" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="150" text="Name" />
+            <TableColumn fx:id="colDepartment" prefWidth="160" text="Department" />
+            <TableColumn fx:id="colPosition" prefWidth="160" text="Position" />
         </columns>
     </TableView>
 
     <!-- Buttons -->
-    <Button text="Load" layoutX="100" layoutY="320" prefWidth="100" prefHeight="30"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white;"
-            onAction="#handleLoadEmployees"/>
-    <Button text="Remove" layoutX="250" layoutY="320" prefWidth="100" prefHeight="30"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white;"
-            onAction="#handleRemoveEmployee"/>
-    <Button text="Clear Table" layoutX="400" layoutY="320" prefWidth="100" prefHeight="30"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white;"
-            onAction="#handleClearTable"/>
+    <Button layoutX="52.0" layoutY="320.0" onAction="#handleLoadEmployees" prefHeight="30" prefWidth="100" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Load" />
+    <Button layoutX="188.0" layoutY="320.0" onAction="#handleRemoveEmployee" prefHeight="30" prefWidth="100" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Remove" />
+    <Button layoutX="314.0" layoutY="320.0" onAction="#handleClearTable" prefHeight="30" prefWidth="100" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Clear Table" />
 
     <!-- Output Label -->
-    <Label fx:id="outputMessage" layoutX="20" layoutY="360" prefWidth="560" style="-fx-text-fill: black;"/>
+    <Label fx:id="outputMessage" layoutX="20" layoutY="360" prefWidth="560" style="-fx-text-fill: black;" />
+   <Button layoutX="451.0" layoutY="320.0" onAction="#handleBackHRMD" prefHeight="30" prefWidth="100" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Back" />
 
 </AnchorPane>
