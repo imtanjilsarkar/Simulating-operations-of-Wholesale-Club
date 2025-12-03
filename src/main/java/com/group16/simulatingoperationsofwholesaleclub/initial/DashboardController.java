@@ -30,7 +30,9 @@ public class DashboardController {
     }
 
     @javafx.fxml.FXML
-    public void handleProcurementOfficer(ActionEvent actionEvent) {
+    public void handleProcurementOfficer(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/ProcurementOfficer/procurementOff_dashboard.fxml",actionEvent);
+
     }
 
     @javafx.fxml.FXML

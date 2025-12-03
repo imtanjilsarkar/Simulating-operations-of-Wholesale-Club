@@ -12,8 +12,6 @@ public class ManageDeliveryScheduleController {
     @javafx.fxml.FXML
     private Label statusLabel;
     @javafx.fxml.FXML
-    private TableColumn colTime;
-    @javafx.fxml.FXML
     private TableColumn colDriver;
     @javafx.fxml.FXML
     private TableView scheduleTable;

@@ -4,26 +4,21 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
 public class AssignDeliveryTasksController {
-    @javafx.fxml.FXML
-    private TableColumn customerNameCol;
-    @javafx.fxml.FXML
-    private TableColumn quantityCol;
-    @javafx.fxml.FXML
-    private ComboBox staffComboBox;
-    @javafx.fxml.FXML
-    private TableView ordersTable;
-    @javafx.fxml.FXML
-    private TableColumn productListCol;
-    @javafx.fxml.FXML
-    private Label statusLabel;
-    @javafx.fxml.FXML
-    private TableColumn orderIdCol;
 
-    @Deprecated
-    public void assigndelivery(ActionEvent actionEvent) {
+    @javafx.fxml.FXML
+    private DatePicker deliveryDatePicker;
+    @javafx.fxml.FXML
+    private TextField deliveryNoField;
+    @javafx.fxml.FXML
+    private TextField staffIdField;
+    @javafx.fxml.FXML
+    private Label successLabel;
+
+    @javafx.fxml.FXML
+    public void handleBack(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void ViewOrdersBTN(ActionEvent actionEvent) {
     }
 

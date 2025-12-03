@@ -1,30 +1,77 @@
 package com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller;
 
 import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
+import com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.modelClass.PurchaseRequest;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
 
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class ApprovePurchaseController {
 
-    @javafx.fxml.FXML
+    @FXML
     private TextArea requestDetailsTF;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextField requestIdTF;
 
-    @javafx.fxml.FXML
-    public void backBTN(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/storemanager_dashboard.fxml",actionEvent);
+    @FXML
+    private Label messageLabel;
+
+    private final String FILE_PATH =
+            "C:/Users/MUBASSIR_MOHI/IdeaProjects/Simulating-operations-of-Wholesale-Club/purchase_requests.txt";
+
+    @FXML
+    public void backBTN(ActionEvent actionEvent) {
+        try {
+            SceneSwitcher.switchTo(
+                    "/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/storemanager_dashboard.fxml",
+                    actionEvent
+            );
+        } catch (IOException e) {
+            messageLabel.setStyle("-fx-text-fill: red;");
+            messageLabel.setText("Error returning to dashboard.");
+        }
     }
 
-    @javafx.fxml.FXML
-    public void approveBTN(ActionEvent actionEvent) {
+    @FXML
+    public void approveRequest(ActionEvent actionEvent) {
+        saveRequest("Approved");
     }
 
-    @javafx.fxml.FXML
-    public void rejectBTN(ActionEvent actionEvent) {
+    @FXML
+    public void rejectRequest(ActionEvent actionEvent) {
+        saveRequest("Rejected");
+    }
+
+    private void saveRequest(String status) {
+        String requestId = requestIdTF.getText().trim();
+        String details = requestDetailsTF.getText().trim();
+
+        if (requestId.isEmpty() || details.isEmpty()) {
+            messageLabel.setStyle("-fx-text-fill: red;");
+            messageLabel.setText("Please enter both Request ID and Details.");
+            return;
+        }
+
+        PurchaseRequest request = new PurchaseRequest(requestId, details, status, "");
+
+        try (FileWriter writer = new FileWriter(FILE_PATH, true)) {
+            writer.write(request.getRequestId() + "," +
+                    request.getDetails() + "," +
+                    request.getStatus() + "\n");
+
+            messageLabel.setStyle("-fx-text-fill: green;");
+            messageLabel.setText("Request " + status.toLowerCase() + " successfully.");
+
+            requestIdTF.clear();
+            requestDetailsTF.clear();
+
+        } catch (IOException e) {
+            messageLabel.setStyle("-fx-text-fill: red;");
+            messageLabel.setText("Error saving request.");
+        }
     }
 }

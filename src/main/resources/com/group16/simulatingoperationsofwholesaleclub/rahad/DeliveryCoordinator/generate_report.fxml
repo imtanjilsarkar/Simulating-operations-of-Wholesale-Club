@@ -17,10 +17,10 @@
     <TableView fx:id="reportTable" layoutX="5.0" layoutY="49.0" prefHeight="254.0" prefWidth="684.0" style="-fx-border-color: #007bff; -fx-border-width: 1px;">
         <columns>
             <TableColumn fx:id="colOrderID" prefWidth="120" text="Order ID" />
-            <TableColumn fx:id="colDriver" prefWidth="150" text="Driver Name" />
-            <TableColumn fx:id="colStatus" prefWidth="150" text="Status" />
-            <TableColumn fx:id="colDate" prefWidth="130" text="Delivery Date" />
-            <TableColumn fx:id="colTime" prefWidth="130" text="Delivery Time" />
+            <TableColumn fx:id="colDriver" prefWidth="191.99998474121094" text="Driver Name" />
+            <TableColumn fx:id="colStatus" prefWidth="186.4000244140625" text="Status" />
+            <TableColumn fx:id="colDate" prefWidth="183.99993896484375" text="Delivery Date" />
+
         </columns>
     </TableView>
 
