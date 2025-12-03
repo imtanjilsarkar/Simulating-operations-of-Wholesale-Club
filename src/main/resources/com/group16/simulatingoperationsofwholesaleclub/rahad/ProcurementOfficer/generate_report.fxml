@@ -26,5 +26,6 @@
 
     <!-- Back Button -->
     <Button layoutX="20.0" layoutY="355.0" onAction="#handleBack" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius: 8;" text="Back" />
+   <Label fx:id="successLabel" layoutX="109.0" layoutY="326.0" prefHeight="18.0" prefWidth="366.0" text="Label" />
 
 </AnchorPane>
