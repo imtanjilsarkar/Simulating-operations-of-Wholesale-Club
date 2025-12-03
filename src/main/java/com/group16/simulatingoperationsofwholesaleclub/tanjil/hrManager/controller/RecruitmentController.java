@@ -55,8 +55,9 @@ public class RecruitmentController extends BaseController {
 
         // Generate unique ID
         String id = UUID.randomUUID().toString();
+        double initialSalary = 0.0;
 
-        Employee emp = new Employee(id, fullName, department, position);
+        Employee emp = new Employee(id, fullName, department, position, initialSalary);
         employeeList.add(emp);
 
         outputMessage.setText("Employee added successfully!");
