@@ -1,0 +1,50 @@
+package com.group16.simulatingoperationsofwholesaleclub.nafiu.Inventory.Controller;
+
+import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
+import javafx.event.ActionEvent;
+
+import java.io.IOException;
+
+public class Inventory_Dashboard {
+    @javafx.fxml.FXML
+    public void handleReceiveDelivery(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleBack(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/initial/dashboard.fxml",actionEvent);
+    }
+
+    @javafx.fxml.FXML
+    public void handleSupplierReturns(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleForecastDemand(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handlePurchaseRequest(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleStockReport(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleUpdateDamaged(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleLogout(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/initial/dashboard.fxml",actionEvent);
+    }
+
+    @javafx.fxml.FXML
+    public void handleOrganizeWarehouse(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleMonitorStock(ActionEvent actionEvent) {
+    }
+}
