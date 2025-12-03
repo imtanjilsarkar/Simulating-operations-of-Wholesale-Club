@@ -10,7 +10,7 @@ public class ProcurementOfficerDashboardController {
 
     @javafx.fxml.FXML
     public void handleBack(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/ProcurementOfficer/procurementOff_dashboard.fxml",actionEvent);
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/initial/dashboard.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -52,6 +52,6 @@ public class ProcurementOfficerDashboardController {
     @javafx.fxml.FXML
     public void createSupOrder(ActionEvent actionEvent) throws IOException {
 
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/ProcurementOfficer/track_pen_del.fxml",actionEvent);
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/ProcurementOfficer/supplier_order.fxml",actionEvent);
     }
 }
