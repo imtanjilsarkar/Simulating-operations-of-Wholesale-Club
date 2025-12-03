@@ -12,70 +12,71 @@ import javafx.scene.control.TextField;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class RecruitmentController extends BaseController {
     @javafx.fxml.FXML
-    private TextField txtPhone;
-    @javafx.fxml.FXML
     private TextField txtFullName;
     @javafx.fxml.FXML
-    private TextField txtEmail;
+    private ComboBox<String> cmbDepartment;
     @javafx.fxml.FXML
-    private ComboBox <String> cmbDepartment;
-    @javafx.fxml.FXML
-    private ComboBox <String> cmbPosition;
+    private ComboBox<String> cmbPosition;
     @javafx.fxml.FXML
     private Label outputMessage;
 
     List<Employee> employeeList = new ArrayList<>();
 
-    @javafx.fxml.FXML    public void initialize() {
-        cmbDepartment.getItems().addAll(
-                "Store Operations", "Inventory & Procurement", "Membership Services", "Delivery & Logistics", "Human Resources", "Customer Service");
-        cmbPosition.getItems().addAll(
-                "Cashier", "Store Manager", "Inventory Manager", "Procurement Officer", "Membership Manager", "Delivery Coordinator", "HR Manager", "Customer Support Staff");
+    public void initialize() {
+        cmbDepartment.getItems().addAll("Store Operations", "Inventory & Procurement", "Membership Services", "Delivery & Logistics", "Human Resources", "Customer Service");
+
+        cmbPosition.getItems().addAll("Cashier", "Store Manager", "Inventory Manager", "Procurement Officer", "Membership Manager", "Delivery Coordinator", "HR Manager", "Customer Support Staff");
+
+
     }
 
     @javafx.fxml.FXML
     public void handleClearForm(ActionEvent actionEvent) {
         txtFullName.clear();
-        txtEmail.clear();
-        txtPhone.clear();
         cmbDepartment.getSelectionModel().clearSelection();
         cmbPosition.getSelectionModel().clearSelection();
+        outputMessage.setText("");
     }
 
     @javafx.fxml.FXML
     public void handleAddEmployee(ActionEvent actionEvent) {
         String fullName = txtFullName.getText().trim();
-        String email = txtEmail.getText().trim();
-        String phone = txtPhone.getText().trim();
         String department = cmbDepartment.getValue();
         String position = cmbPosition.getValue();
 
-        if(fullName.isEmpty() || email.isEmpty() || phone.isEmpty() || department == null || position == null){
+        if (fullName.isEmpty() || department == null || position == null) {
             outputMessage.setText("Please fill in all fields.");
             return;
         }
 
-        Employee emp = new Employee(fullName, department, position); // keep your model as-is
+        // Generate unique ID
+        String id = UUID.randomUUID().toString();
+
+        Employee emp = new Employee(id, fullName, department, position);
         employeeList.add(emp);
 
         outputMessage.setText("Employee added successfully!");
         handleClearForm(actionEvent);
-        }
+    }
+
 
     @javafx.fxml.FXML
     public void handleSaveToFile(ActionEvent actionEvent) {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("employee.bin"))) {
             out.writeObject(employeeList);
-            outputMessage.setText("Employee data saved to employee.bin");
+            outputMessage.setText("Employee data saved successfully!");
         } catch (IOException e) {
             e.printStackTrace();
-            outputMessage.setText("Something went wrong while saving!");
+            outputMessage.setText("Error saving employee data.");
         }
     }
 }
+
+
 
 
 

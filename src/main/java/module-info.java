@@ -21,6 +21,9 @@ module project.simulatingoperationsofwholesaleclub {
     opens com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.modelClass to javafx.fxml;
     exports com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.modelClass;
 
+    opens com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.modelClass to javafx.fxml;
+    exports com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.modelClass;
+
 
 
     opens com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller to javafx.fxml;

@@ -19,45 +19,34 @@ import java.util.stream.Collectors;
 
 public class RemoveEmployeeController extends BaseController {
     @javafx.fxml.FXML
-    private TableColumn<Employee, String> colName;
-    @javafx.fxml.FXML
-    private TableView<Employee> employeeTable;
-    @javafx.fxml.FXML
-    private TextField txtSearch;
-    @javafx.fxml.FXML
-    private TableColumn<Employee, String> colPosition;
-    @javafx.fxml.FXML
-    private TableColumn<Employee, String> colDepartment;
+    private TableColumn <Employee, String> colName;
     @javafx.fxml.FXML
     private Label outputMessage;
+    @javafx.fxml.FXML
+    private TableView <Employee> employeeTable;
+    @javafx.fxml.FXML
+    private TableColumn <Employee, String> colId;
+    @javafx.fxml.FXML
+    private TableColumn <Employee, String> colPosition;
+    @javafx.fxml.FXML
+    private TableColumn <Employee, String> colDepartment;
 
     List<Employee> employeeList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
-
+        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colDepartment.setCellValueFactory(new PropertyValueFactory<>("department"));
         colPosition.setCellValueFactory(new PropertyValueFactory<>("position"));
-
-        // Load all employees from file at start
-        //loadEmployeesFromFile();
     }
 
     @javafx.fxml.FXML
-    public void handleSearch(ActionEvent actionEvent) {
-
-        String searchText = txtSearch.getText().trim();
-        if (searchText.isEmpty()) {
-            employeeTable.setItems(FXCollections.observableArrayList(employeeList));
-            return;
-        }
-        List<Employee> filtered = employeeList.stream()
-                .filter(e -> e.getName().toLowerCase().contains(searchText))
-                .collect(Collectors.toList());
-
-        employeeTable.setItems(FXCollections.observableArrayList(filtered));
+    public void handleClearTable(ActionEvent actionEvent) {
+        employeeTable.getItems().clear();
+        outputMessage.setText("Table cleared.");
     }
+
 
     @javafx.fxml.FXML
     public void handleRemoveEmployee(ActionEvent actionEvent) {
@@ -67,11 +56,11 @@ public class RemoveEmployeeController extends BaseController {
             return;
         }
 
-        employeeList.remove(selected); // remove from List
-        employeeTable.setItems(FXCollections.observableArrayList(employeeList)); // refresh table
+        employeeList.remove(selected);
+        employeeTable.setItems(FXCollections.observableArrayList(employeeList));
 
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("employee.bin"))) {
-            out.writeObject(employeeList); // save updated list
+            out.writeObject(employeeList);
         } catch (IOException e) {
             e.printStackTrace();
             outputMessage.setText("Error saving updated employee list.");
@@ -81,16 +70,15 @@ public class RemoveEmployeeController extends BaseController {
         outputMessage.setText("Employee removed successfully!");
     }
 
-
     @javafx.fxml.FXML
     public void handleLoadEmployees(ActionEvent actionEvent) {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("employee.bin"))) {
-            employeeList = (List<Employee>) in.readObject(); // load list
-            employeeTable.setItems(FXCollections.observableArrayList(employeeList)); // refresh TableView
+            employeeList = (List<Employee>) in.readObject();
+            employeeTable.setItems(FXCollections.observableArrayList(employeeList));
             outputMessage.setText("Employee list loaded successfully!");
         } catch (FileNotFoundException e) {
             employeeList = new ArrayList<>();
-            employeeTable.setItems(FXCollections.observableArrayList(employeeList));
+            employeeTable.setItems(FXCollections.observableArrayList());
             outputMessage.setText("No employees found.");
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -98,3 +86,4 @@ public class RemoveEmployeeController extends BaseController {
         }
     }
 }
+
