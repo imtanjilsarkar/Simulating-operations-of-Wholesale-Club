@@ -10,9 +10,9 @@
     <Label layoutX="150.0" layoutY="25.0" style="-fx-font-size:22px; -fx-font-weight:bold; -fx-text-fill:#0078D7;" text="Procurement Officer Dashboard" />
 
 
-    <Button layoutX="60.0" layoutY="90.0" onAction="#reviewRequests" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color:#0078D7; -fx-text-fill:white; -fx-background-radius:8;" text="Review Purchase Requests" />
+    <Button layoutX="60.0" layoutY="90.0" onAction="#reviewPurchaseRequests" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color:#0078D7; -fx-text-fill:white; -fx-background-radius:8;" text="Review Purchase Requests" />
 
-    <Button layoutX="330.0" layoutY="90.0" onAction="#createOrder" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color:#0078D7; -fx-text-fill:white; -fx-background-radius:8;" text="Create Supplier Order" />
+    <Button layoutX="330.0" layoutY="90.0" onAction="#createSupOrder" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color:#0078D7; -fx-text-fill:white; -fx-background-radius:8;" text="Create Supplier Order" />
 
 
     <Button layoutX="60.0" layoutY="150.0" onAction="#approveQuotation" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color:#0078D7; -fx-text-fill:white; -fx-background-radius:8;" text="Approve Supplier Quotation" />
