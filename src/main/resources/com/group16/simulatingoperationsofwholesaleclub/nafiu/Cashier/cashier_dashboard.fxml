@@ -21,7 +21,7 @@
 
             <Button onAction="#handlePayment" prefWidth="180" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Process Payment" />
 
-            <Button onAction="#handleReturns" prefWidth="180" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Returns / Refunds" />
+            <Button onAction="#handleReturns" prefWidth="180" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Return Item" />
 
             <Button onAction="#handleDailyReport" prefWidth="180" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Daily Sales Report" />
 
