@@ -11,6 +11,7 @@ public class Queue_Management {
     private Label readyStatusLabel;
     @javafx.fxml.FXML
     private Label transactionLogLabel;
+    private int customerCount = 0;
 
     @javafx.fxml.FXML
     public void handleBack(ActionEvent actionEvent) throws IOException {
@@ -19,5 +20,12 @@ public class Queue_Management {
 
     @javafx.fxml.FXML
     public void handleNextCustomer(ActionEvent actionEvent) {
+        customerCount++;
+
+        // Log the transaction order
+        transactionLogLabel.setText("Customer " + customerCount + " served");
+
+        // Show ready status
+        readyStatusLabel.setText("Ready for Next Customer");
     }
 }

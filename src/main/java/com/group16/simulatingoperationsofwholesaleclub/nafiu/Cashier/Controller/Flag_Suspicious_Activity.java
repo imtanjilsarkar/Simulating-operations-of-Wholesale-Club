@@ -17,11 +17,17 @@ public class Flag_Suspicious_Activity {
 
     @javafx.fxml.FXML
     public void handleSubmitReport(ActionEvent actionEvent) {
+        String reason = reasonField.getText();
+
+        if (reason == null || reason.trim().isEmpty()) {
+            confirmationLabel.setText("Please enter a reason");
+            return;
+        }
+        recordStatusLabel.setText("Record Saved");
+        confirmationLabel.setText("Manager Notified");
     }
 
-    @javafx.fxml.FXML
-    public void handleReportTransaction(ActionEvent actionEvent) {
-    }
+
 
     @javafx.fxml.FXML
     public void handleBack(ActionEvent actionEvent) throws IOException {
