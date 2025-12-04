@@ -17,7 +17,8 @@ public class Inventory_Dashboard {
     }
 
     @javafx.fxml.FXML
-    public void handleSupplierReturns(ActionEvent actionEvent) {
+    public void handleSupplierReturns(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/handle_supplier_Returns.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML

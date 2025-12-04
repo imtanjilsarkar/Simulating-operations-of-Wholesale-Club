@@ -1,14 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
+<AnchorPane prefHeight="500" prefWidth="850"
+            xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Inventory.Controller.Handle_Supplier_Returns"
-            prefHeight="400.0" prefWidth="600.0">
+            fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Inventory.Controller.Handle_Supplier_Returns">
+
+    <children>
+
+        <!-- Title -->
+        <Label text="Handle Supplier Returns"
+               layoutX="280" layoutY="20"
+               style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+        <!-- Step 1: Enter Product ID and Quantity -->
+        <Label text="Product ID:" layoutX="60" layoutY="100" />
+        <TextField fx:id="productIdField"
+                   layoutX="160" layoutY="95"
+                   prefWidth="250" />
+
+        <Label text="Quantity:" layoutX="60" layoutY="150" />
+        <TextField fx:id="quantityField"
+                   layoutX="160" layoutY="145"
+                   prefWidth="150" />
+
+        <!-- Step 2: Verify Return Eligibility -->
+        <Button text="Verify Return"
+                layoutX="60" layoutY="200"
+                prefWidth="180"
+                onAction="#verifyReturn"
+                style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+
+        <!-- Step 3: Update Stock & Mark as Returned -->
+        <Button text="Process Return"
+                layoutX="260" layoutY="200"
+                prefWidth="180"
+                onAction="#processReturn"
+                style="-fx-background-color: #FF9800; -fx-text-fill: white;" />
+
+        <!-- Step 4: Display Return Confirmation -->
+        <Label text="Return Confirmation:" layoutX="60" layoutY="260" />
+        <TextArea fx:id="confirmationArea"
+                  layoutX="60" layoutY="290"
+                  prefWidth="720" prefHeight="140"
+                  editable="false"
+                  style="-fx-control-inner-background: #f0f0f0;" />
+
+        <!-- Back Button -->
+        <Button text="Back"
+                layoutX="60" layoutY="450"
+                prefWidth="100"
+                onAction="#goBack"
+                style="-fx-background-color: #777; -fx-text-fill: white;" />
+
+    </children>
 
 </AnchorPane>
