@@ -21,5 +21,10 @@ public class Generate_Daily_Sales_Report {
 
     @javafx.fxml.FXML
     public void handleGenerateReport(ActionEvent actionEvent) {
+        int totalTransactions = 5;
+        int totalSales = 500;
+        transactionDataLabel.setText("Total Transactions: " + totalTransactions);
+        netSalesLabel.setText("Net Sales: " + totalSales + " taka");
+        reportStatusLabel.setText("Report Generated Successfully");
     }
 }
