@@ -7,7 +7,8 @@ import java.io.IOException;
 
 public class Inventory_Dashboard {
     @javafx.fxml.FXML
-    public void handleReceiveDelivery(ActionEvent actionEvent) {
+    public void handleReceiveDelivery(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/receive_supplier_delivery.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML

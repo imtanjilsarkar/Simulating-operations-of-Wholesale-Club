@@ -1,14 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<AnchorPane prefHeight="600" prefWidth="900" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Inventory.Controller.Receive_Supplier_Delivery">
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+    <children>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Inventory.Controller.Receive_Supplier_Delivery"
-            prefHeight="400.0" prefWidth="600.0">
+        <!-- Title -->
+        <Label text="Receive Supplier Delivery" layoutX="320" layoutY="20"
+               style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
 
+        <!-- Invoice Number -->
+        <Label text="Invoice Number:" layoutX="60" layoutY="90"/>
+        <TextField fx:id="invoiceField" layoutX="200" layoutY="85" prefWidth="250"/>
+
+        <!-- Product List -->
+        <Label text="Product List (ProductID - Quantity):" layoutX="60" layoutY="150"/>
+        <TextArea fx:id="productListArea" layoutX="60" layoutY="180" prefWidth="780" prefHeight="120"/>
+
+        <!-- Verify Button -->
+        <Button text="Verify With Purchase Order" layoutX="60" layoutY="320" prefWidth="250"
+                style="-fx-background-color: #2d8cff; -fx-text-fill: white; -fx-font-weight: bold;"
+                onAction="#verifyPurchaseOrder"/>
+
+        <!-- Update Stock Button -->
+        <Button text="Update Stock Quantities" layoutX="340" layoutY="320" prefWidth="250"
+                style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-weight: bold;"
+                onAction="#updateStock"/>
+
+        <!-- Display Updated Inventory -->
+        <Label text="Updated Inventory:" layoutX="60" layoutY="380"/>
+        <TextArea fx:id="inventoryDisplayArea" layoutX="60" layoutY="410" prefWidth="780" prefHeight="150"
+                  editable="false" style="-fx-control-inner-background: #f4f4f4;"/>
+
+        <!-- Back Button -->
+        <Button text="Back" layoutX="60" layoutY="570" prefWidth="100"
+                onAction="#goBack"
+                style="-fx-background-color: #6c757d; -fx-text-fill: white;"/>
+
+    </children>
 </AnchorPane>
