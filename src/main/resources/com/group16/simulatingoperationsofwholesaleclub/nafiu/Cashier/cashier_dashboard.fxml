@@ -25,7 +25,7 @@
 
             <Button onAction="#handleDailyReport" prefWidth="180" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Generate Report" />
 
-            <Button onAction="#handleCashDrawer" prefWidth="180" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Balance Cash Drawer" />
+            <Button onAction="#handleCashDrawer" prefWidth="180" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="End Shift" />
 
             <Button onAction="#handleQueueManagement" prefWidth="180" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Queue Management" />
 

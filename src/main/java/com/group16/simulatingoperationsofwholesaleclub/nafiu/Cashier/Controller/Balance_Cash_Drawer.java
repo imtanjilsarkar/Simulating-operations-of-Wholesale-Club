@@ -22,11 +22,20 @@ public class Balance_Cash_Drawer {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Cashier/cashier_dashboard.fxml",actionEvent);
     }
 
-    @javafx.fxml.FXML
-    public void handleEndShift(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void handleSubmitCash(ActionEvent actionEvent) {
+        int expectedCash = 100;
+        int actualCash = Integer.parseInt(actualCashField.getText());
+        int difference = actualCash - expectedCash;
+
+        comparisonLabel.setText("Expected: " + expectedCash + " taka, Actual: " + actualCash + " taka");
+        differenceLabel.setText("Difference: " + difference + " taka");
+
+        if (difference == 0) {
+            balanceStatusLabel.setText("Cash Drawer Balanced");
+        } else {
+            balanceStatusLabel.setText("Mismatch Found");
+        }
     }
 }

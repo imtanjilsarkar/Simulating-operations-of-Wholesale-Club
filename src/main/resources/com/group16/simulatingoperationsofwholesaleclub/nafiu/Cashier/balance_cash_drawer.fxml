@@ -20,9 +20,6 @@
     <!-- Content Section -->
     <VBox layoutX="160.0" layoutY="120.0" spacing="20.0">
 
-        <!-- Step 1: End Shift -->
-        <Button onAction="#handleEndShift" prefWidth="200.0" style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="End Shift" />
-
         <!-- Step 2: Enter Actual Cash -->
         <VBox spacing="5.0">
             <Label style="-fx-text-fill: #0078D7; -fx-font-size: 14px; -fx-font-weight: bold;" text="Enter Actual Counted Cash:" />
