@@ -20,8 +20,8 @@ public class Forecast_Demand {
 
     @javafx.fxml.FXML
     public void handleForecast(ActionEvent actionEvent) {
-        String pastData = pastdata.getText(); // "10,20,30,40"
-        String[] numbers = pastData.split(","); // split by comma
+        String pastData = pastdata.getText();
+        String[] numbers = pastData.split(",");
 
         StringBuilder forecast = new StringBuilder();
 
