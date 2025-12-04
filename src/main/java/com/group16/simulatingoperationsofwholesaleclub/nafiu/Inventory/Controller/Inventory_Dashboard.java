@@ -46,7 +46,8 @@ public class Inventory_Dashboard {
     }
 
     @javafx.fxml.FXML
-    public void handleOrganizeWarehouse(ActionEvent actionEvent) {
+    public void handleOrganizeWarehouse(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/organize_warehouse.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
