@@ -24,7 +24,8 @@ public class Inventory_Dashboard {
     }
 
     @javafx.fxml.FXML
-    public void handlePurchaseRequest(ActionEvent actionEvent) {
+    public void handlePurchaseRequest(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/raise_purchase_request.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -45,6 +46,7 @@ public class Inventory_Dashboard {
     }
 
     @javafx.fxml.FXML
-    public void handleMonitorStock(ActionEvent actionEvent) {
+    public void handleMonitorStock(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/monitor_stock_level.fxml",actionEvent);
     }
 }

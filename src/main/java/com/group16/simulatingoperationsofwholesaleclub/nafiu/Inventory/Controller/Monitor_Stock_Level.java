@@ -2,20 +2,15 @@ package com.group16.simulatingoperationsofwholesaleclub.nafiu.Inventory.Controll
 
 import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
-public class Raise_Purchase_Request {
+public class Monitor_Stock_Level {
     @javafx.fxml.FXML
-    private TextField productIdField;
-    @javafx.fxml.FXML
-    private Label validationMessage;
+    private TextField productNameField;
     @javafx.fxml.FXML
     private TextField quantityField;
-    @javafx.fxml.FXML
-    private Label confirmationMessage;
 
     @javafx.fxml.FXML
     public void handleBack(ActionEvent actionEvent) throws IOException {
@@ -23,10 +18,6 @@ public class Raise_Purchase_Request {
     }
 
     @javafx.fxml.FXML
-    public void handleSubmitRequest(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void handleNewPurchaseRequest(ActionEvent actionEvent) {
+    public void handleCheckInventory(ActionEvent actionEvent) {
     }
 }

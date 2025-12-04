@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F9FAFB;"
             xmlns="http://javafx.com/javafx/25"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Inventory.Controller.Raise_Purchase_Request">
+            fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Inventory.Controller.Monitor_Stock_Level">
 
     <!-- Back Button -->
     <Button layoutX="14.0" layoutY="561.0" onAction="#handleBack" prefWidth="100.0"
@@ -20,46 +20,32 @@
     <!-- Header -->
     <Label layoutX="160.0" layoutY="40.0"
            style="-fx-font-size: 22px; -fx-text-fill: #0078D7; -fx-font-weight: bold;"
-           text="Raise Purchase Request" />
+           text="Monitor Stock Levels" />
 
     <Line endX="600.0" layoutX="160.0" layoutY="80.0" stroke="#0078D7" strokeWidth="2" />
 
     <!-- Content Section -->
     <VBox layoutX="160.0" layoutY="120.0" spacing="20.0">
 
-        <!-- Step 1: Start New Purchase Request -->
-        <Button onAction="#handleNewPurchaseRequest" prefWidth="300.0"
+        <!-- Step 1: Select “Check Inventory” -->
+        <Button onAction="#handleCheckInventory" prefWidth="300.0"
                 style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;"
-                text="New Purchase Request" />
+                text="Check Inventory" />
 
-        <!-- Step 2: Enter Product ID -->
+        <!-- Step 2: Enter Product Name -->
         <VBox spacing="5.0">
             <Label style="-fx-text-fill: #0078D7; -fx-font-size: 14px; -fx-font-weight: bold;"
-                   text="Enter Product ID:" />
-            <TextField fx:id="productIdField" prefWidth="300.0" />
+                   text="Enter Product Name:" />
+            <TextField fx:id="productNameField" prefWidth="300.0" />
         </VBox>
 
-        <!-- Step 3: Enter Quantity -->
+        <!-- Step 3: Display Stock Quantity -->
         <VBox spacing="5.0">
             <Label style="-fx-text-fill: #0078D7; -fx-font-size: 14px; -fx-font-weight: bold;"
-                   text="Required Quantity:" />
-            <TextField fx:id="quantityField" prefWidth="300.0" />
+                   text="Available Quantity:" />
+            <TextField fx:id="quantityField" prefWidth="300.0" editable="false"
+                       style="-fx-background-color: #EFEFEF;" />
         </VBox>
-
-        <!-- Step 4: Validation Message -->
-        <Label fx:id="validationMessage"
-               style="-fx-text-fill: #333; -fx-font-size: 14px;"
-               text="" />
-
-        <!-- Step 5: Submit Purchase Request -->
-        <Button onAction="#handleSubmitRequest" prefWidth="250.0"
-                style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;"
-                text="Submit Request" />
-
-        <!-- Step 6: Confirmation Message -->
-        <Label fx:id="confirmationMessage"
-               style="-fx-text-fill: #0078D7; -fx-font-size: 16px; -fx-font-weight: bold;"
-               text="" />
 
     </VBox>
 
