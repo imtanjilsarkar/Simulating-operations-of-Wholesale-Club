@@ -15,9 +15,9 @@
 
         <VBox layoutX="20.0" layoutY="100.0" spacing="15.0">
 
-            <Button onAction="#handleProcessCheckout" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Process Checkout" />
+            <Button onAction="#handleProcessCheckout" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Start Checkout" />
 
-            <Button onAction="#handleMembershipDiscount" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Apply Membership Discount" />
+            <Button onAction="#handleMembershipDiscount" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Apply Membership" />
 
             <Button onAction="#handlePayment" prefWidth="180" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Process Payment" />
 

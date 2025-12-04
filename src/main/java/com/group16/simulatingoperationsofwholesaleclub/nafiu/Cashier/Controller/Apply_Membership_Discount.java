@@ -14,6 +14,8 @@ public class Apply_Membership_Discount {
     private Label validityLabel;
     @javafx.fxml.FXML
     private TextField membershipIdField;
+    int productPrice = 100;
+    boolean isMember = false;
 
     @javafx.fxml.FXML
     public void handleBack(ActionEvent actionEvent) throws IOException {
@@ -22,13 +24,23 @@ public class Apply_Membership_Discount {
 
     @javafx.fxml.FXML
     public void handleRecalculateTotal(ActionEvent actionEvent) {
+        if (isMember) {
+            int discountedPrice = productPrice / 2;
+            updatedBillLabel.setText("Updated Bill: " + discountedPrice + " taka");
+        } else {
+            updatedBillLabel.setText("Membership not valid!");
+        }
     }
 
     @javafx.fxml.FXML
     public void handleVerifyMembership(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void handleApplyMembership(ActionEvent actionEvent) {
+        String enteredId = membershipIdField.getText();
+        if (enteredId.equals("111")) {
+            isMember = true;
+            validityLabel.setText("Positive");
+        } else {
+            isMember = false;
+            validityLabel.setText("Invalid ID");
+        }
     }
 }
