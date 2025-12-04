@@ -1,6 +1,7 @@
 package com.group16.simulatingoperationsofwholesaleclub.rahad.DeliveryCoordinator.controller;
 
 import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
+import com.group16.simulatingoperationsofwholesaleclub.rahad.DeliveryCoordinator.modelClass.ReDeliveryRequest;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -10,27 +11,6 @@ import javafx.scene.control.TextField;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-
-// Model class for Re-Delivery Request
-class ReDeliveryRequest implements Serializable {
-    private static final long serialVersionUID = 1L;
-
-    private String orderId;
-    private String reason;
-
-    public ReDeliveryRequest(String orderId, String reason) {
-        this.orderId = orderId;
-        this.reason = reason;
-    }
-
-    public String getOrderId() {
-        return orderId;
-    }
-
-    public String getReason() {
-        return reason;
-    }
-}
 
 public class ReDeliveryRequestController {
 
@@ -61,7 +41,7 @@ public class ReDeliveryRequestController {
         statusLabel.setText("");
 
         if (orderId.isEmpty() || reason.isEmpty()) {
-            statusLabel.setText("⚠ Please enter both Order ID and reason.");
+            statusLabel.setText("⚠ Please enter both Order ID and Reason.");
             return;
         }
 
@@ -71,11 +51,10 @@ public class ReDeliveryRequestController {
         // Add new request
         requests.add(new ReDeliveryRequest(orderId, reason));
 
-        // Save back to file
+        // Save updated requests list
         saveRequests(requests);
 
-        // Show confirmation and clear fields
-        statusLabel.setText("✅ Re-delivery request submitted successfully!");
+        statusLabel.setText("✅ Re-Delivery request submitted successfully!");
         orderIdField.clear();
         reasonField.clear();
     }
@@ -95,7 +74,6 @@ public class ReDeliveryRequestController {
             oos.writeObject(requests);
         } catch (IOException e) {
             e.printStackTrace();
-            statusLabel.setText("❌ Error saving re-delivery request.");
         }
     }
 }
