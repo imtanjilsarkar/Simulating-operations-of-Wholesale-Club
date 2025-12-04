@@ -18,7 +18,7 @@ public class SupportDashboardController {
 
     @javafx.fxml.FXML
     public void handleNewMembership(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/customerSupportStaff/new_membership.fxml", actionEvent);
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/customerSupportStaff/register_membership_request.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
