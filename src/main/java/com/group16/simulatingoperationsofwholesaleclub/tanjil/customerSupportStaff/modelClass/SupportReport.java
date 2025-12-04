@@ -6,26 +6,32 @@ public class SupportReport {
     private String status;  // Solved / Unsolved / Updated
 
     public String getCustomerName() {
+
         return customerName;
     }
 
     public void setCustomerName(String customerName) {
+
         this.customerName = customerName;
     }
 
     public String getComplaintTitle() {
+
         return complaintTitle;
     }
 
     public void setComplaintTitle(String complaintTitle) {
+
         this.complaintTitle = complaintTitle;
     }
 
     public String getStatus() {
+
         return status;
     }
 
     public void setStatus(String status) {
+
         this.status = status;
     }
 

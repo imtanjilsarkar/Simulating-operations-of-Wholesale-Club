@@ -2,98 +2,103 @@ package com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportSt
 
 import com.group16.simulatingoperationsofwholesaleclub.BaseController;
 import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
+import com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.modelClass.Complaint;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class CloseComplaintController extends BaseController {
+
+
     @javafx.fxml.FXML
-    private TextField customerNameField;
+    private TableView<Complaint> tblSolvedComplaints;
     @javafx.fxml.FXML
-    private TextField complaintTitleField;
+    private TableColumn<Complaint, String> colCustomerName;
+    @javafx.fxml.FXML
+    private TableColumn<Complaint, String> colComplaintTitle;
+    @javafx.fxml.FXML
+    private TableColumn<Complaint, String> colDescription;
     @javafx.fxml.FXML
     private Label messageLabel;
     @javafx.fxml.FXML
-    private TextArea complaintListArea;
+    private TableColumn<Complaint, String> colStatus;
+
+    ObservableList<Complaint> solvedComplaints = FXCollections.observableArrayList();
 
     @javafx.fxml.FXML
-    public void handleSearchComplaint(ActionEvent actionEvent) {
+    public void initialize() {
+        colCustomerName.setCellValueFactory(new PropertyValueFactory<>("customerName"));
+        colComplaintTitle.setCellValueFactory(new PropertyValueFactory<>("complaintTitle"));
+        colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
+        colStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+    }
+
+
+    @javafx.fxml.FXML
+    public void handleLoadComplaints(ActionEvent actionEvent) {
+        solvedComplaints.clear();
         try (BufferedReader reader = new BufferedReader(new FileReader("complaints.txt"))) {
-        String line;
-        String foundComplaints = "";
-        while ((line = reader.readLine()) != null) {
-            if (line.contains(customerNameField.getText())) {
-                int start = line.indexOf("complaintTitle='") + 16;
-                int end = line.indexOf("'", start);
-                String title = line.substring(start, end);
-                foundComplaints += title + "\n";
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split("\\|");
+                if (parts.length == 4) {
+                    String customerName = parts[0].trim();
+                    String complaintTitle = parts[1].trim();
+                    String description = parts[2].trim();
+                    String status = parts[3].trim();
+
+                    if (status.equalsIgnoreCase("Solved")) {
+                        solvedComplaints.add(new Complaint(customerName, complaintTitle, description, status));
+                    }
+                }
             }
+            tblSolvedComplaints.setItems(solvedComplaints);
+            messageLabel.setText("Solved complaints loaded successfully.");
+        } catch (IOException e) {
+            messageLabel.setText("Failed to load complaints.");
+            e.printStackTrace();
         }
-        if (!foundComplaints.isEmpty()) {
-            complaintListArea.setText(foundComplaints);
-            messageLabel.setText("Complaints found for customer!");
-        } else {
-            complaintListArea.setText("");
-            messageLabel.setText("No complaints found for this customer.");
-        }
-    } catch (IOException e) {
-        messageLabel.setText("Something went wrong!");
-    }
-
-    }
-
-    @javafx.fxml.FXML
-    public void handleCancel(ActionEvent actionEvent) {
-        customerNameField.clear();
-        complaintTitleField.clear();
-        messageLabel.setText("");
     }
 
     @javafx.fxml.FXML
     public void handleCloseComplaint(ActionEvent actionEvent) {
-        String customerName = customerNameField.getText();
-        String complaintTitle = complaintTitleField.getText();
-
-        try {
-            File inputFile = new File("complaints.txt");
-            File tempFile = new File("temp_complaint.txt");
-
-            boolean removed = false;
-            try (BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-                 BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile))) {
-
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    if (line.contains(customerName) && line.contains(complaintTitle)) {
-                        removed = true; // skip this line
-                        continue;
-                    }
-                    writer.write(line);
-                    writer.newLine();
-                }
-            }
-
-            if (removed) {
-                if (inputFile.delete()) {
-                    tempFile.renameTo(inputFile);
-                    messageLabel.setText("Complaint closed successfully!");
-                    complaintListArea.clear();
-                    complaintTitleField.clear();
-                    customerNameField.clear();
-                } else {
-                    messageLabel.setText("Could not close complaint!");
-                }
-            } else {
-                messageLabel.setText("Complaint not found!");
-                tempFile.delete();
-            }
-
-        } catch (IOException e) {
-            messageLabel.setText("Something went wrong!");
+        Complaint selected = tblSolvedComplaints.getSelectionModel().getSelectedItem();
+        if (selected == null) {
+            messageLabel.setText("Please select a complaint to close.");
+            return;
         }
-    }
 
+        ArrayList<String> lines = new ArrayList<>();
+        try (BufferedReader reader = new BufferedReader(new FileReader("complaints.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (!line.contains(selected.getCustomerName()) || !line.contains(selected.getComplaintTitle())) {
+                    lines.add(line);
+                }
+            }
+        } catch (IOException e) {
+            messageLabel.setText("Error reading complaints file.");
+            e.printStackTrace();
+            return;
+        }
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("complaints.txt"))) {
+            for (String l : lines) {
+                writer.write(l);
+                writer.newLine();
+            }
+            messageLabel.setText("Complaint closed successfully!");
+        } catch (IOException e) {
+            messageLabel.setText("Error updating complaints file.");
+            e.printStackTrace();
+        }
+
+        handleLoadComplaints(null);
+
+
+    }
 }

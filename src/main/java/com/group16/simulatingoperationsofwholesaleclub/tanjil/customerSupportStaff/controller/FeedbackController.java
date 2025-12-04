@@ -30,14 +30,9 @@ public class FeedbackController extends BaseController {
         }
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("feedback.txt", true))) {
-            writer.write("Customer: " + customerName);
-            writer.newLine();
-            writer.write("Feedback: " + feedback);
-            writer.newLine();
-            writer.write("---------------");
+            writer.write(customerName + " | " + feedback);
             writer.newLine();
 
-            //System.out.println("Feedback submitted successfully!");
             outputMessage.setText("Feedback submitted successfully!");
 
             txtCustomerName.clear();
@@ -45,6 +40,7 @@ public class FeedbackController extends BaseController {
 
         } catch (IOException e) {
             e.printStackTrace();
+            outputMessage.setText("Something went wrong!");
         }
     }
 }

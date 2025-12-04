@@ -4,12 +4,19 @@ public class Complaint {
     private String customerName;
     private String complaintTitle;
     private String description;
+    private String status;
 
-    public Complaint(String customerName, String complaintTitle, String description) {
+    public Complaint(String customerName, String complaintTitle, String description, String status) {
         this.customerName = customerName;
         this.complaintTitle = complaintTitle;
         this.description = description;
+        this.status = status;
     }
+
+    public Complaint(String customerName, String complaintTitle, String description) {
+        this(customerName, complaintTitle, description, "Pending");
+    }
+
 
     public String getCustomerName() {
         return customerName;
@@ -35,12 +42,16 @@ public class Complaint {
         this.description = description;
     }
 
-    @Override
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    @Override   
     public String toString() {
-        return "Complaint{" +
-                "customerName='" + customerName + '\'' +
-                ", complaintTitle='" + complaintTitle + '\'' +
-                ", description='" + description + '\'' +
-                '}';
+        return customerName + " | " + complaintTitle + " | " + description + " | " + status;
     }
 }
