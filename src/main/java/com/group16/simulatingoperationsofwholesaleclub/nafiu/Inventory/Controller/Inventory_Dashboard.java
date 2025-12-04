@@ -31,7 +31,8 @@ public class Inventory_Dashboard {
     }
 
     @javafx.fxml.FXML
-    public void handleStockReport(ActionEvent actionEvent) {
+    public void handleStockReport(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/generate_stock_report.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
