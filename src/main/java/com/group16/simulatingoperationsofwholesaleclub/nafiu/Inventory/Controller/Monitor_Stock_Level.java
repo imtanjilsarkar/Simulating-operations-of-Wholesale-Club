@@ -17,7 +17,4 @@ public class Monitor_Stock_Level {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/inventory_dashboard.fxml",actionEvent);
     }
 
-    @javafx.fxml.FXML
-    public void handleCheckInventory(ActionEvent actionEvent) {
-    }
 }

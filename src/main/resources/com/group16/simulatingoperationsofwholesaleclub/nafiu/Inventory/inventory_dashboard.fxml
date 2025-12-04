@@ -15,7 +15,7 @@
 
         <VBox layoutX="20.0" layoutY="100.0" spacing="15.0">
 
-            <Button onAction="#handleMonitorStock" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Monitor Stock Levels" />
+            <Button onAction="#handleMonitorStock" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Check Inventory" />
 
             <Button onAction="#handlePurchaseRequest" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Raise Purchase Request" />
 
