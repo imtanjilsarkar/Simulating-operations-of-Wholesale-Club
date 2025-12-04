@@ -34,7 +34,8 @@ public class Inventory_Dashboard {
     }
 
     @javafx.fxml.FXML
-    public void handleUpdateDamaged(ActionEvent actionEvent) {
+    public void handleUpdateDamaged(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/update_damaged_or_expired goods.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
