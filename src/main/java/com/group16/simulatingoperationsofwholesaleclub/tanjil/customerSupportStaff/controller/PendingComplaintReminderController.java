@@ -13,18 +13,19 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 
-public class SupportReportController extends BaseController {
-
+public class PendingComplaintReminderController extends BaseController
+{
     @javafx.fxml.FXML
-    private TableColumn<SupportReport, String> colCustomerName;
+    private TableColumn <SupportReport, String> colCustomerName;
     @javafx.fxml.FXML
-    private TableView<SupportReport> tblReports;
+    private TableColumn <SupportReport, String>  colComplaintTitle;
+    @javafx.fxml.FXML
+    private TableView <SupportReport> tblPendingComplaints;
     @javafx.fxml.FXML
     private Label messageLabel;
     @javafx.fxml.FXML
-    private TableColumn<SupportReport, String> colStatus;
+    private TableColumn <SupportReport, String> colStatus;
 
     ObservableList<SupportReport> data = FXCollections.observableArrayList();
 
@@ -32,33 +33,34 @@ public class SupportReportController extends BaseController {
     @javafx.fxml.FXML
     public void initialize() {
         colCustomerName.setCellValueFactory(new PropertyValueFactory<>("customerName"));
+        colComplaintTitle.setCellValueFactory(new PropertyValueFactory<>("complaintTitle"));
         colStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
-        tblReports.setItems(data);
     }
 
     @javafx.fxml.FXML
-    public void handleLoadComplaints(ActionEvent actionEvent) {
+    public void handleLoadPending(ActionEvent actionEvent) {
         data.clear();
 
         try (BufferedReader reader = new BufferedReader(new FileReader("complaints.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
+                // Format: Customer | Title | Description | Status
                 String[] parts = line.split("\\|");
+                if (parts.length != 4) continue;
 
-                if (parts.length < 4) continue; // skip invalid lines
-
-                String customerName = parts[0].trim();
+                String customer = parts[0].trim();
+                String title = parts[1].trim();
                 String status = parts[3].trim();
 
-                data.add(new SupportReport(customerName, "", status));
+                if (!status.equalsIgnoreCase("Closed")) {
+                    data.add(new SupportReport(customer, title, status));
+                }
             }
 
-            if (data.isEmpty()) {
-                messageLabel.setText("No complaints found.");
-            } else {
-                messageLabel.setText("Complaints loaded successfully.");
-            }
+            tblPendingComplaints.getItems().clear();
+            tblPendingComplaints.getItems().addAll(data);
 
+            messageLabel.setText("Loaded pending complaints.");
         } catch (IOException e) {
             messageLabel.setText("Failed to load complaints.");
             e.printStackTrace();
@@ -66,6 +68,3 @@ public class SupportReportController extends BaseController {
     }
 
 }
-
-
-

@@ -16,14 +16,9 @@ public class SupportDashboardController {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/customerSupportStaff/support_report.fxml", actionEvent);
     }
 
-    @javafx.fxml.FXML
-    public void handleNewMembership(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/customerSupportStaff/register_membership_request.fxml", actionEvent);
-    }
-
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleUpdateCustomer(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/customerSupportStaff/update_customer.fxml", actionEvent);
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/customerSupportStaff/pending-complaint_reminder.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -55,5 +50,15 @@ public class SupportDashboardController {
     public void handleLogout(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/initial/initial.fxml", actionEvent);
     }
-    //main support dashboard
+
+    @javafx.fxml.FXML
+    public void handlePendingComplaint(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/customerSupportStaff/pending-complaint_reminder.fxml", actionEvent);
+
+    }
+
+    @javafx.fxml.FXML
+    public void handleNewMembership(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/customerSupportStaff/register_membership_request.fxml", actionEvent);
+    }
 }

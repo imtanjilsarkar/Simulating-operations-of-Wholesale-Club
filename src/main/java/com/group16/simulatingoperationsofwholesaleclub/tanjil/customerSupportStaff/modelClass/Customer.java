@@ -1,5 +1,0 @@
-package com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.modelClass;
-
-public class Customer {
-    //stores customer info (ID, name, contact)
-}

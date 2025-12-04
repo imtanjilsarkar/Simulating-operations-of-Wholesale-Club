@@ -6,26 +6,24 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: white;"
-            xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller.SupportReportController">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller.CloseComplaintController">
 
     <!-- Title -->
     <Label layoutX="280.0" layoutY="40.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;" text="Pending Complaints" />
 
     <!-- TableView -->
-    <TableView fx:id="tblReports" layoutX="100.0" layoutY="100.0" prefWidth="600.0" prefHeight="300.0">
+    <TableView fx:id="tblReports" layoutX="100.0" layoutY="100.0" prefHeight="300.0" prefWidth="600.0">
         <columns>
-            <TableColumn fx:id="colCustomerName" text="Customer Name" prefWidth="300.0"/>
-            <TableColumn fx:id="colStatus" text="Status" prefWidth="300.0"/>
+            <TableColumn fx:id="colCustomerName" prefWidth="300.0" text="Customer Name" />
+            <TableColumn fx:id="colStatus" prefWidth="300.0" text="Status" />
         </columns>
     </TableView>
 
     <!-- Load Button -->
-    <Button layoutX="300.0" layoutY="420.0" prefWidth="200.0" prefHeight="40.0"
-            style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;"
-            text="Load Pending Complaints" onAction="#handleLoadComplaints"/>
+    <Button layoutX="202.0" layoutY="420.0" onAction="#handleLoadComplaints" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Load Pending Complaints" />
 
     <!-- Message Label -->
-    <Label fx:id="messageLabel" layoutX="200.0" layoutY="470.0" prefWidth="400.0" style="-fx-text-fill: #0078D7; -fx-font-weight: bold;"/>
+    <Label fx:id="messageLabel" layoutX="200.0" layoutY="470.0" prefWidth="400.0" style="-fx-text-fill: #0078D7; -fx-font-weight: bold;" />
+   <Button layoutX="16.0" layoutY="457.0" onAction="#handleBackCSD" prefHeight="18.0" prefWidth="63.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Back" />
+   <Button layoutX="422.0" layoutY="420.0" onAction="#handleCloseComplaint" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Close" />
 </AnchorPane>

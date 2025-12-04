@@ -22,9 +22,9 @@
 
     <Button layoutX="450.0" layoutY="200.0" onAction="#handleOrderStatus" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Order Status" />
 
-    <Button layoutX="150.0" layoutY="270.0" onAction="#handleNewMembership" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="New Membership" />
+    <Button layoutX="150.0" layoutY="270.0" onAction="#handleNewMembership" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="New Membership Request" />
 
-    <Button layoutX="450.0" layoutY="270.0" onAction="#handleUpdateCustomer" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Update Customer" />
+    <Button layoutX="450.0" layoutY="270.0" onAction="#handlePendingComplaint" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Pending Complaint" />
 
     <Button layoutX="150.0" layoutY="340.0" onAction="#handleFeedback" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Feedback" />
 

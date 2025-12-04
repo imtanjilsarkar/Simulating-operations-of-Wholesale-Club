@@ -16,49 +16,46 @@ public class CloseComplaintController extends BaseController {
 
 
     @javafx.fxml.FXML
-    private TableView<Complaint> tblSolvedComplaints;
-    @javafx.fxml.FXML
     private TableColumn<Complaint, String> colCustomerName;
-    @javafx.fxml.FXML
-    private TableColumn<Complaint, String> colComplaintTitle;
-    @javafx.fxml.FXML
-    private TableColumn<Complaint, String> colDescription;
     @javafx.fxml.FXML
     private Label messageLabel;
     @javafx.fxml.FXML
     private TableColumn<Complaint, String> colStatus;
+    @javafx.fxml.FXML
+    private TableView <Complaint> tblReports;
 
-    ObservableList<Complaint> solvedComplaints = FXCollections.observableArrayList();
+
+    ObservableList<Complaint> pendingComplaints = FXCollections.observableArrayList();
 
     @javafx.fxml.FXML
     public void initialize() {
         colCustomerName.setCellValueFactory(new PropertyValueFactory<>("customerName"));
-        colComplaintTitle.setCellValueFactory(new PropertyValueFactory<>("complaintTitle"));
-        colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
         colStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+        tblReports.setItems(pendingComplaints);
     }
 
 
     @javafx.fxml.FXML
     public void handleLoadComplaints(ActionEvent actionEvent) {
-        solvedComplaints.clear();
+        pendingComplaints.clear();
+
         try (BufferedReader reader = new BufferedReader(new FileReader("complaints.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split("\\|");
                 if (parts.length == 4) {
                     String customerName = parts[0].trim();
-                    String complaintTitle = parts[1].trim();
-                    String description = parts[2].trim();
                     String status = parts[3].trim();
 
-                    if (status.equalsIgnoreCase("Solved")) {
-                        solvedComplaints.add(new Complaint(customerName, complaintTitle, description, status));
+                    // Only load complaints that are not closed
+                    if (!status.equalsIgnoreCase("Closed")) {
+                        pendingComplaints.add(new Complaint(customerName, "", "", status));
                     }
                 }
             }
-            tblSolvedComplaints.setItems(solvedComplaints);
-            messageLabel.setText("Solved complaints loaded successfully.");
+
+            messageLabel.setText(pendingComplaints.isEmpty() ? "No pending complaints." : "Pending complaints loaded.");
+
         } catch (IOException e) {
             messageLabel.setText("Failed to load complaints.");
             e.printStackTrace();
@@ -67,7 +64,7 @@ public class CloseComplaintController extends BaseController {
 
     @javafx.fxml.FXML
     public void handleCloseComplaint(ActionEvent actionEvent) {
-        Complaint selected = tblSolvedComplaints.getSelectionModel().getSelectedItem();
+        Complaint selected = tblReports.getSelectionModel().getSelectedItem();
         if (selected == null) {
             messageLabel.setText("Please select a complaint to close.");
             return;
@@ -77,7 +74,7 @@ public class CloseComplaintController extends BaseController {
         try (BufferedReader reader = new BufferedReader(new FileReader("complaints.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                if (!line.contains(selected.getCustomerName()) || !line.contains(selected.getComplaintTitle())) {
+                if (!line.contains(selected.getCustomerName())) {
                     lines.add(line);
                 }
             }
@@ -86,6 +83,7 @@ public class CloseComplaintController extends BaseController {
             e.printStackTrace();
             return;
         }
+
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("complaints.txt"))) {
             for (String l : lines) {
                 writer.write(l);
@@ -97,8 +95,6 @@ public class CloseComplaintController extends BaseController {
             e.printStackTrace();
         }
 
-        handleLoadComplaints(null);
-
-
+        handleLoadComplaints(null); // refresh table
     }
 }
