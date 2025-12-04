@@ -14,6 +14,7 @@ public class Update_Damaged_or_Expired_Goods {
     private TextField productIdField;
     @javafx.fxml.FXML
     private TextField quantityField;
+    private int fishStock = 50;
 
     @javafx.fxml.FXML
     public void goBack(ActionEvent actionEvent) throws IOException {
@@ -22,9 +23,32 @@ public class Update_Damaged_or_Expired_Goods {
 
     @javafx.fxml.FXML
     public void deductStock(ActionEvent actionEvent) {
+        String qtyText = quantityField.getText();
+
+        if (qtyText == null || qtyText.isEmpty()) {
+            statusArea.setText("Enter Quantity!");
+            return;
+        }
+
+        int qty;
+        try {
+            qty = Integer.parseInt(qtyText);
+        } catch (NumberFormatException e) {
+            statusArea.setText("Enter a valid number!");
+            return;
+        }
+
+        if (qty > fishStock) {
+            statusArea.setText("Cannot deduct more than available stock! Current: " + fishStock);
+            return;
+        }
+
+        fishStock -= qty;
+        statusArea.setText("Stock Deducted: " + qty + "\nUpdated Stock: " + fishStock);
     }
 
     @javafx.fxml.FXML
     public void verifyStock(ActionEvent actionEvent) {
+        statusArea.setText("Stock Verified");
     }
 }
