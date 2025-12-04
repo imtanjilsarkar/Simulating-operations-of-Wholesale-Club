@@ -7,7 +7,8 @@ import java.io.IOException;
 
 public class Inventory_Dashboard {
     @javafx.fxml.FXML
-    public void handleReceiveDelivery(ActionEvent actionEvent) {
+    public void handleReceiveDelivery(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/receive_supplier_delivery.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -16,11 +17,13 @@ public class Inventory_Dashboard {
     }
 
     @javafx.fxml.FXML
-    public void handleSupplierReturns(ActionEvent actionEvent) {
+    public void handleSupplierReturns(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/handle_supplier_Returns.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void handleForecastDemand(ActionEvent actionEvent) {
+    public void handleForecastDemand(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/forecast_Demand.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -29,11 +32,13 @@ public class Inventory_Dashboard {
     }
 
     @javafx.fxml.FXML
-    public void handleStockReport(ActionEvent actionEvent) {
+    public void handleStockReport(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/generate_stock_report.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
-    public void handleUpdateDamaged(ActionEvent actionEvent) {
+    public void handleUpdateDamaged(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/update_damaged_or_expired goods.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -42,7 +47,8 @@ public class Inventory_Dashboard {
     }
 
     @javafx.fxml.FXML
-    public void handleOrganizeWarehouse(ActionEvent actionEvent) {
+    public void handleOrganizeWarehouse(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/organize_warehouse.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML

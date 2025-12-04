@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
+<AnchorPane prefHeight="500" prefWidth="850"
+            xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Inventory.Controller.Update_Damaged_or_Expired_Goods"
-            prefHeight="400.0" prefWidth="600.0">
+            fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Inventory.Controller.Update_Damaged_or_Expired_Goods">
+
+    <children>
+
+        <!-- Title -->
+        <Label text="Update Damaged / Expired Goods"
+               layoutX="250" layoutY="20"
+               style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+        <!-- Product ID -->
+        <Label text="Product ID:" layoutX="60" layoutY="100" />
+        <TextField fx:id="productIdField"
+                   layoutX="160" layoutY="95"
+                   prefWidth="250" />
+
+        <!-- Quantity -->
+        <Label text="Damaged Quantity:" layoutX="60" layoutY="150" />
+        <TextField fx:id="quantityField"
+                   layoutX="200" layoutY="145"
+                   prefWidth="150" />
+
+        <!-- Verify Stock -->
+        <Button text="Verify Stock"
+                layoutX="60" layoutY="200"
+                prefWidth="150"
+                onAction="#verifyStock"
+                style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+
+        <!-- Deduct Stock -->
+        <Button text="Deduct from Stock"
+                layoutX="230" layoutY="200"
+                prefWidth="180"
+                onAction="#deductStock"
+                style="-fx-background-color: #FF9800; -fx-text-fill: white;" />
+
+        <!-- Updated Stock Status -->
+        <Label text="Updated Stock Status:" layoutX="60" layoutY="260" />
+        <TextArea fx:id="statusArea"
+                  layoutX="60" layoutY="290"
+                  prefWidth="720" prefHeight="140"
+                  editable="false"
+                  style="-fx-control-inner-background: #f0f0f0;" />
+
+        <!-- Back Button -->
+        <Button text="Back"
+                layoutX="60" layoutY="450"
+                prefWidth="100"
+                onAction="#goBack"
+                style="-fx-background-color: #777; -fx-text-fill: white;" />
+
+    </children>
 
 </AnchorPane>

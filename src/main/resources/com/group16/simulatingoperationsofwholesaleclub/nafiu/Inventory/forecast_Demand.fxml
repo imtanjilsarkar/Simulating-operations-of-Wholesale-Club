@@ -1,14 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
+<AnchorPane prefHeight="500" prefWidth="850"
+            xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Inventory.Controller.Forecast_Demand"
-            prefHeight="400.0" prefWidth="600.0">
+            fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Inventory.Controller.Forecast_Demand">
+
+    <children>
+
+        <!-- Title -->
+        <Label text="Forecast Demand"
+               layoutX="310" layoutY="20"
+               style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+        <!-- Step 1: Forecast Button -->
+        <Button text="Generate Forecast Report"
+                layoutX="60" layoutY="100"
+                prefWidth="250"
+                onAction="#handleForecast"
+                style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+
+        <!-- Step 2: Fetch Past Data -->
+        <Label text="Past Sales Data:" layoutX="60" layoutY="160" />
+        <TextArea fx:id="pastDataArea"
+                  layoutX="60" layoutY="190"
+                  prefWidth="720" prefHeight="80"
+                  editable="false"
+                  style="-fx-control-inner-background: #f0f0f0;" />
+
+        <!-- Step 3: Prediction Output -->
+        <Label text="Demand Forecast (Next 30 Days):"
+               layoutX="60" layoutY="290" />
+
+        <TextArea fx:id="forecastArea"
+                  layoutX="60" layoutY="320"
+                  prefWidth="720" prefHeight="110"
+                  editable="false"
+                  style="-fx-control-inner-background: #f0f0f0;" />
+
+        <!-- Back Button -->
+        <Button text="Back"
+                layoutX="60" layoutY="450"
+                prefWidth="100"
+                onAction="#goBack"
+                style="-fx-background-color: #777; -fx-text-fill: white;" />
+
+    </children>
 
 </AnchorPane>
