@@ -44,7 +44,7 @@ public class Raise_Purchase_Request {
             confirmationMessage.setText("Request Successfully Submitted");
             validationMessage.setText("");
         } else {
-            confirmationMessage.setText("Request Submitted");
+            confirmationMessage.setText("Request not Submitted");
             validationMessage.setText("");
         }
     }

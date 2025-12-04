@@ -22,9 +22,26 @@ public class Receive_Supplier_Delivery {
 
     @javafx.fxml.FXML
     public void verifyPurchaseOrder(ActionEvent actionEvent) {
+        String invoice = invoiceField.getText();
+        if (invoice == null || invoice.isEmpty()) {
+            inventoryDisplayArea.setText("Enter a valid invoice number!");
+            return;
+        }
+        inventoryDisplayArea.setText("Product Verified for Invoice: " + invoice);
     }
-
     @javafx.fxml.FXML
     public void updateStock(ActionEvent actionEvent) {
+        String productList = productListArea.getText();
+        if (productList == null || productList.isEmpty()) {
+            inventoryDisplayArea.setText("Enter product list to update stock!");
+            return;
+        }
+        StringBuilder inventoryText = new StringBuilder();
+        String[] products = productList.split("\n");
+        for (String p : products) {
+
+            inventoryText.append(p).append(" → Stock Updated\n");
+        }
+        inventoryDisplayArea.setText(inventoryText.toString());
     }
 }
