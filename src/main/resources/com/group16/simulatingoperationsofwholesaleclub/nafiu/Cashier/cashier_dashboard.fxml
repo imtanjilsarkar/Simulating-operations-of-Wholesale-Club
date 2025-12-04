@@ -6,76 +6,44 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F9FAFB;"
-            xmlns="http://javafx.com/javafx/24.0.1"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Cashier.Controller.Cashier_Dashboard">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F9FAFB;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Cashier.Controller.Cashier_Dashboard">
 
     <!-- Sidebar -->
-    <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="600.0" prefWidth="220.0"
-                style="-fx-background-color: #0078D7;">
+    <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="600.0" prefWidth="220.0" style="-fx-background-color: #0078D7;">
 
-        <Label layoutX="40.0" layoutY="40.0"
-               style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;"
-               text="Cashier" />
+        <Label layoutX="40.0" layoutY="40.0" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="Cashier" />
 
         <VBox layoutX="20.0" layoutY="100.0" spacing="15.0">
 
-            <Button onAction="#handleProcessCheckout" prefWidth="180.0"
-                    style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;"
-                    text="Process Checkout" />
+            <Button onAction="#handleProcessCheckout" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Process Checkout" />
 
-            <Button onAction="#handleMembershipDiscount" prefWidth="180.0"
-                    style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;"
-                    text="Apply Membership Discount" />
+            <Button onAction="#handleMembershipDiscount" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Apply Membership Discount" />
 
-            <Button onAction="#handlePayment" prefWidth="180"
-                    style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;"
-                    text="Process Payment" />
+            <Button onAction="#handlePayment" prefWidth="180" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Process Payment" />
 
-            <Button onAction="#handleReturns" prefWidth="180"
-                    style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;"
-                    text="Returns / Refunds" />
+            <Button onAction="#handleReturns" prefWidth="180" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Returns / Refunds" />
 
-            <Button onAction="#handleDailyReport" prefWidth="180"
-                    style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;"
-                    text="Daily Sales Report" />
+            <Button onAction="#handleDailyReport" prefWidth="180" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Daily Sales Report" />
 
-            <Button onAction="#handleCashDrawer" prefWidth="180"
-                    style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;"
-                    text="Balance Cash Drawer" />
+            <Button onAction="#handleCashDrawer" prefWidth="180" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Balance Cash Drawer" />
 
-            <Button onAction="#handleQueueManagement" prefWidth="180"
-                    style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;"
-                    text="Queue Management" />
+            <Button onAction="#handleQueueManagement" prefWidth="180" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Queue Management" />
 
-            <Button onAction="#handleSuspiciousActivity" prefWidth="180"
-                    style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;"
-                    text="Flag Suspicious Activity" />
+            <Button onAction="#handleSuspiciousActivity" prefWidth="180" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Flag Suspicious Activity" />
 
         </VBox>
 
-        <!-- Logout & Back Buttons -->
-        <Button layoutX="40.0" layoutY="530.0" onAction="#handleLogout" prefWidth="140.0"
-                style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;"
-                text="Logout" />
-
-        <Button layoutX="40.0" layoutY="497.0" onAction="#handleBack" prefWidth="140.0"
-                style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;"
-                text="Back" />
+        <Button layoutX="40.0" layoutY="497.0" onAction="#handleBack" prefWidth="140.0" style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Back" />
+      <Button layoutX="39.0" layoutY="534.0" onAction="#handleLogout" prefWidth="140.0" style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Logout" />
 
     </AnchorPane>
 
     <!-- Header -->
-    <Label layoutX="260.0" layoutY="40.0"
-           style="-fx-font-size: 22px; -fx-text-fill: #0078D7; -fx-font-weight: bold;"
-           text="Welcome to Cashier Dashboard" />
+    <Label layoutX="260.0" layoutY="40.0" style="-fx-font-size: 22px; -fx-text-fill: #0078D7; -fx-font-weight: bold;" text="Welcome to Cashier Dashboard" />
 
     <Line endX="600.0" layoutX="260.0" layoutY="80.0" stroke="#0078D7" strokeWidth="2" />
 
     <!-- Content Area -->
-    <Label layoutX="260.0" layoutY="120.0"
-           style="-fx-text-fill: #666666; -fx-font-size: 14px;"
-           text="Select an option from the sidebar to continue." />
+    <Label layoutX="260.0" layoutY="120.0" style="-fx-text-fill: #666666; -fx-font-size: 14px;" text="Select an option from the sidebar to continue." />
 
 </AnchorPane>

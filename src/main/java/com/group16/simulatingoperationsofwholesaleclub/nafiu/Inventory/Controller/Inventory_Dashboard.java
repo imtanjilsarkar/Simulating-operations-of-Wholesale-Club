@@ -37,7 +37,7 @@ public class Inventory_Dashboard {
 
     @javafx.fxml.FXML
     public void handleLogout(ActionEvent actionEvent) throws IOException{
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/initial/dashboard.fxml",actionEvent);
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/initial/login.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
