@@ -92,4 +92,6 @@ public class LeaveApprovalController  extends BaseController {
             outputMessage.setText("No leave requests found.");
         }
     }
+
+
 }

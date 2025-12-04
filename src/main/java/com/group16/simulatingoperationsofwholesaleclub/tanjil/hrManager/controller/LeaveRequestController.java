@@ -107,5 +107,4 @@ public class LeaveRequestController extends BaseController {
         leaveTable.getItems().clear();
         outputMessage.setText("Table cleared.");
     }
-
 }
