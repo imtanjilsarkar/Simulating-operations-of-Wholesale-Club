@@ -21,7 +21,8 @@ public class Inventory_Dashboard {
     }
 
     @javafx.fxml.FXML
-    public void handleForecastDemand(ActionEvent actionEvent) {
+    public void handleForecastDemand(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/forecast_Demand.fxml",actionEvent);
     }
 
     @javafx.fxml.FXML
