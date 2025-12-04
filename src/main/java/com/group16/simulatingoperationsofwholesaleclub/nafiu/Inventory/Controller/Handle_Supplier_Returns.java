@@ -22,9 +22,13 @@ public class Handle_Supplier_Returns {
 
     @javafx.fxml.FXML
     public void verifyReturn(ActionEvent actionEvent) {
+        confirmationArea.setText("Return Eligible");
     }
 
     @javafx.fxml.FXML
     public void processReturn(ActionEvent actionEvent) {
+        String productId = productIdField.getText();
+        String quantity = quantityField.getText();
+        confirmationArea.setText("Product " + productId + " with quantity " + quantity + " returned successfully");
     }
 }

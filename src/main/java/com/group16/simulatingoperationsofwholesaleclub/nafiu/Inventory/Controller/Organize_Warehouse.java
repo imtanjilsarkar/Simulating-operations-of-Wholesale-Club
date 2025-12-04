@@ -17,6 +17,7 @@ public class Organize_Warehouse {
 
     @javafx.fxml.FXML
     public void validateLocation(ActionEvent actionEvent) {
+        statusArea.setText("Location Available");
     }
 
     @javafx.fxml.FXML
@@ -26,5 +27,8 @@ public class Organize_Warehouse {
 
     @javafx.fxml.FXML
     public void updatePlacement(ActionEvent actionEvent) {
+        String productId = productIdField.getText();
+        String shelf = shelfField.getText();
+        statusArea.setText("Product " + productId + " placed in " + shelf);
     }
 }
