@@ -28,7 +28,7 @@ public class Apply_Membership_Discount {
             int discountedPrice = productPrice / 2;
             updatedBillLabel.setText("Updated Bill: " + discountedPrice + " taka");
         } else {
-            updatedBillLabel.setText("Membership not valid!");
+            updatedBillLabel.setText("Membership not valid! updated bill "  + productPrice );
         }
     }
 

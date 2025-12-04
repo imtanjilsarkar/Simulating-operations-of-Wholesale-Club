@@ -31,5 +31,19 @@ public class Process_Payment {
 
     @javafx.fxml.FXML
     public void handleSubmitPaymentInfo(ActionEvent actionEvent) {
+        String method = (String) paymentMethodBox.getValue();
+        String amountEntered = paymentDetailsField.getText();
+        if (method == null || amountEntered.isEmpty()) {
+            validationLabel.setText("Please fill all fields!");
+            return;
+        }
+        if (amountEntered.equals("100")) {
+            validationLabel.setText("OK");
+        } else {
+            validationLabel.setText("Invalid Amount");
+            return;
+        }
+        paymentStatusLabel.setText("Payment Complete");
+        balanceLabel.setText("Balance: 0");
     }
 }

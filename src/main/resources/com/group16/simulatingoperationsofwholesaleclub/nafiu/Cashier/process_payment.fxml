@@ -46,9 +46,6 @@
         <!-- Step 3: Validation -->
         <Label fx:id="validationLabel" style="-fx-text-fill: #333; -fx-font-size: 16px;" text="Validation: Pending" />
 
-        <!-- Step 4: Balance or Confirmation -->
-        <Label fx:id="balanceLabel" style="-fx-text-fill: #333; -fx-font-size: 16px;" text="Balance / Confirmation: Not Calculated" />
-
         <!-- Step 5: Payment Success or Failure -->
         <Label fx:id="paymentStatusLabel" style="-fx-text-fill: #333; -fx-font-size: 16px;" text="Payment Status: Not Completed" />
 
