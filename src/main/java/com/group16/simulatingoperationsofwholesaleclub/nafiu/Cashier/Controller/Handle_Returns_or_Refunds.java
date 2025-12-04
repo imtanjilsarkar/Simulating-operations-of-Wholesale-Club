@@ -27,7 +27,7 @@ public class Handle_Returns_or_Refunds {
             eligibilityLabel.setText("Please fill all fields!");
             return;
         }
-        if (productId.equals("111") && billNo.equals("f111")) {
+        if (productId.equals("fish1") && billNo.equals("f111")) {
             eligibilityLabel.setText("Positive");
             refundAmountLabel.setText("100 taka");
             refundConfirmationLabel.setText("Confirm Refund");
