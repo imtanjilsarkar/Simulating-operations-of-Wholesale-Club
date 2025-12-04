@@ -24,9 +24,28 @@ public class Raise_Purchase_Request {
 
     @javafx.fxml.FXML
     public void handleSubmitRequest(ActionEvent actionEvent) {
-    }
+        String productId = productIdField.getText();
+        String quantityText = quantityField.getText();
 
-    @javafx.fxml.FXML
-    public void handleNewPurchaseRequest(ActionEvent actionEvent) {
+        // Basic validation
+        if (productId == null || productId.isEmpty()) {
+            validationMessage.setText("Enter Product ID");
+            confirmationMessage.setText("");
+            return;
+        }
+        if (quantityText == null || quantityText.isEmpty()) {
+            validationMessage.setText("Enter Quantity");
+            confirmationMessage.setText("");
+            return;
+        }
+
+        // If productId = fish1 and quantity = 10, show success
+        if (productId.equalsIgnoreCase("fish1") && quantityText.equals("10")) {
+            confirmationMessage.setText("Request Successfully Submitted");
+            validationMessage.setText("");
+        } else {
+            confirmationMessage.setText("Request Submitted");
+            validationMessage.setText("");
+        }
     }
 }
