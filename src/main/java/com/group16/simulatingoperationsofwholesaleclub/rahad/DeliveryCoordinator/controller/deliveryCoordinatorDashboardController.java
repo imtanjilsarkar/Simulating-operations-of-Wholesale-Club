@@ -3,7 +3,6 @@ package com.group16.simulatingoperationsofwholesaleclub.rahad.DeliveryCoordinato
 import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import javafx.event.ActionEvent;
 
-import javax.imageio.event.IIOWriteProgressListener;
 import java.io.IOException;
 
 public class deliveryCoordinatorDashboardController {
@@ -33,7 +32,7 @@ public class deliveryCoordinatorDashboardController {
 
     @javafx.fxml.FXML
     public void reportProblems(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/DeliveryCoordinator/report_problems.fxml",actionEvent);
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/DeliveryCoordinator/return_problems.fxml",actionEvent);
     }
 
 
