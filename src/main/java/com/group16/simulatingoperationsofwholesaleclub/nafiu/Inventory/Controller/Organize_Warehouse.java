@@ -24,7 +24,6 @@ public class Organize_Warehouse {
     public void goBack(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/inventory_dashboard.fxml",actionEvent);
     }
-
     @javafx.fxml.FXML
     public void updatePlacement(ActionEvent actionEvent) {
         String productId = productIdField.getText();

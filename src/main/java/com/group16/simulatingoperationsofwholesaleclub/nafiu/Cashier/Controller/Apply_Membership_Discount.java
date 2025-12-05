@@ -21,7 +21,6 @@ public class Apply_Membership_Discount {
     public void handleBack(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Cashier/cashier_dashboard.fxml",actionEvent);
     }
-
     @javafx.fxml.FXML
     public void handleRecalculateTotal(ActionEvent actionEvent) {
         if (isMember) {
@@ -31,7 +30,6 @@ public class Apply_Membership_Discount {
             updatedBillLabel.setText("Membership not valid! updated bill "  + productPrice );
         }
     }
-
     @javafx.fxml.FXML
     public void handleVerifyMembership(ActionEvent actionEvent) {
         String enteredId = membershipIdField.getText();

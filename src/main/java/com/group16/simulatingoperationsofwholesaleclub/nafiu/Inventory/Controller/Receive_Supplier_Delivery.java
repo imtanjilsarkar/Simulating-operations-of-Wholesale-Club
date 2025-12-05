@@ -31,7 +31,6 @@ public class Receive_Supplier_Delivery {
         }
         inventoryDisplayArea.setText("Product Verified for Invoice: " + invoice);
     }
-
     @javafx.fxml.FXML
     public void updateStock(ActionEvent actionEvent) {
         String productList = productListArea.getText();
@@ -40,28 +39,20 @@ public class Receive_Supplier_Delivery {
             inventoryDisplayArea.setText("Enter product list to update stock!");
             return;
         }
-
         StringBuilder inventoryText = new StringBuilder();
         String[] products = productList.split("\n");
-
-        // ---------- WRITE TO FILE ----------
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("Receive_Supplier_Delivery.txt", true))) {
-
             for (String p : products) {
                 String line = p + " → Stock Updated";
                 inventoryText.append(line).append("\n");
-
                 writer.write(line);
                 writer.newLine();
             }
-
         } catch (IOException e) {
             inventoryDisplayArea.setText("Error saving updated stock!");
             e.printStackTrace();
             return;
         }
-        // -----------------------------------
-
         inventoryDisplayArea.setText(inventoryText.toString());
     }
 }

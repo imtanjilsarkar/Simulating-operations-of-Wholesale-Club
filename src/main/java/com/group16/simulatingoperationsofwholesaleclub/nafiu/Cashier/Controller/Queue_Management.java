@@ -17,15 +17,10 @@ public class Queue_Management {
     public void handleBack(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Cashier/cashier_dashboard.fxml",actionEvent);
     }
-
     @javafx.fxml.FXML
     public void handleNextCustomer(ActionEvent actionEvent) {
         customerCount++;
-
-        // Log the transaction order
         transactionLogLabel.setText("Customer " + customerCount + " served");
-
-        // Show ready status
         readyStatusLabel.setText("Ready for Next Customer");
     }
 }

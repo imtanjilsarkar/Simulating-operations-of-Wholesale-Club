@@ -17,7 +17,6 @@ public class Update_Damaged_or_Expired_Goods {
     @javafx.fxml.FXML
     private TextField quantityField;
 
-    // Newly added fields
     @javafx.fxml.FXML
     private TextField productNameField;
     @javafx.fxml.FXML
@@ -38,7 +37,6 @@ public class Update_Damaged_or_Expired_Goods {
             statusArea.setText("Enter Quantity!");
             return;
         }
-
         int qty;
         try {
             qty = Integer.parseInt(qtyText);
@@ -46,16 +44,13 @@ public class Update_Damaged_or_Expired_Goods {
             statusArea.setText("Enter a valid number!");
             return;
         }
-
         if (qty > fishStock) {
             statusArea.setText("Cannot deduct more than available stock! Current: " + fishStock);
             return;
         }
-
         fishStock -= qty;
         statusArea.setText("Stock Deducted: " + qty + "\nUpdated Stock: " + fishStock);
 
-        // NEW DATA
         String productId = productIdField.getText().trim();
         if (productId.isEmpty()) productId = "Unknown Product";
 
@@ -65,14 +60,12 @@ public class Update_Damaged_or_Expired_Goods {
         String reason = reasonField.getText().trim();
         if (reason.isEmpty()) reason = "No Reason Provided";
 
-        // Line to save
         String line = "Product ID: " + productId +
                 ", Name: " + productName +
                 ", Deducted: " + qty +
                 ", Updated Stock: " + fishStock +
                 ", Reason: " + reason;
 
-        // File Write
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("damaged_goods.txt", true))) {
             writer.write(line);
             writer.newLine();
@@ -81,7 +74,6 @@ public class Update_Damaged_or_Expired_Goods {
             e.printStackTrace();
         }
     }
-
     @javafx.fxml.FXML
     public void verifyStock(ActionEvent actionEvent) {
         statusArea.setText("Stock Verified");

@@ -42,7 +42,6 @@ public class Handle_Returns_or_Refunds {
     public void handleBack(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Cashier/cashier_dashboard.fxml",actionEvent);
     }
-
     @Deprecated
     public void handleSelectReturnItem(ActionEvent actionEvent) {
     }

@@ -27,7 +27,6 @@ public class Raise_Purchase_Request {
         String productId = productIdField.getText();
         String quantityText = quantityField.getText();
 
-        // Basic validation
         if (productId == null || productId.isEmpty()) {
             validationMessage.setText("Enter Product ID");
             confirmationMessage.setText("");
@@ -38,8 +37,6 @@ public class Raise_Purchase_Request {
             confirmationMessage.setText("");
             return;
         }
-
-        // If productId = fish1 and quantity = 10, show success
         if (productId.equalsIgnoreCase("fish1") && quantityText.equals("10")) {
             confirmationMessage.setText("Request Successfully Submitted");
             validationMessage.setText("");

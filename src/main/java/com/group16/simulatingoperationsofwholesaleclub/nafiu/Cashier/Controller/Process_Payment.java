@@ -22,11 +22,9 @@ public class Process_Payment {
     public void handleBack(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Cashier/cashier_dashboard.fxml",actionEvent);
     }
-
     @Deprecated
     public void handleGenerateReceipt(ActionEvent actionEvent) {
     }
-
     @javafx.fxml.FXML
     public void handleSubmitPaymentInfo(ActionEvent actionEvent) {
         String method = (String) paymentMethodBox.getValue();

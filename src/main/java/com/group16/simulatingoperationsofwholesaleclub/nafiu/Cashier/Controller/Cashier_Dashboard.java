@@ -36,8 +36,6 @@ public class Cashier_Dashboard {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Cashier/apply_membership_discount.fxml",actionEvent);
     }
 
-
-
     @javafx.fxml.FXML
     public void handleCashDrawer(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Cashier/balance_cash_drawer.fxml",actionEvent);

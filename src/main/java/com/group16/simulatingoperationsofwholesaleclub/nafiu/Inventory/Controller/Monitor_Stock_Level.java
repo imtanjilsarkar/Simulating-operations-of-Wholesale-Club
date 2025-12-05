@@ -21,16 +21,14 @@ public class Monitor_Stock_Level {
     public void handleBack(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/inventory_dashboard.fxml",actionEvent);
     }
-
     @javafx.fxml.FXML
     public void handleInventory(ActionEvent actionEvent) {
         String productName = productNameField.getText();
 
-        // Simple logic: if product name is "fish", quantity = 5
         if (productName != null && productName.equalsIgnoreCase("fish")) {
             quantityField.setText("5");
         } else {
-            quantityField.setText("0"); // default if not found
+            quantityField.setText("0");
         }
     }
 }

@@ -17,12 +17,10 @@ public class Generate_Stock_Report {
     public void goBack(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/inventory_dashboard.fxml",actionEvent);
     }
-
     @javafx.fxml.FXML
     public void generateReport(ActionEvent actionEvent) {
         String inventoryData = currentinventory.getText();
         String[] items = inventoryData.split(",");
-
         StringBuilder report = new StringBuilder("Stock Report:\n");
 
         for (String item : items) {
@@ -31,8 +29,6 @@ public class Generate_Stock_Report {
                 String name = parts[0].trim();
                 int qty = Integer.parseInt(parts[1].trim());
                 report.append(name).append(": ").append(qty);
-
-                // check stock status
                 if (qty < 10) {
                     report.append(" (Low Stock)");
                 } else if (qty > 100) {
@@ -41,7 +37,6 @@ public class Generate_Stock_Report {
                 report.append("\n");
             }
         }
-
         summaryArea.setText(report.toString());
     }
 }

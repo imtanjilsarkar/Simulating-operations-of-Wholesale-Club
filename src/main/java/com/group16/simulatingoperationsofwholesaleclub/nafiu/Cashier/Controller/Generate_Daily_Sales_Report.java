@@ -20,7 +20,6 @@ public class Generate_Daily_Sales_Report {
     public void handleBack(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Cashier/cashier_dashboard.fxml",actionEvent);
     }
-
     @javafx.fxml.FXML
     public void handleGenerateReport(ActionEvent actionEvent) {
 
@@ -31,7 +30,6 @@ public class Generate_Daily_Sales_Report {
         netSalesLabel.setText("today's Sales: " + totalSales + " taka");
         reportStatusLabel.setText("Report Generated Successfully");
 
-        // ----------- File Write Code -----------
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("totalcash.txt", true))) {
             writer.write(String.valueOf(totalSales));
             writer.newLine();
@@ -39,6 +37,5 @@ public class Generate_Daily_Sales_Report {
             reportStatusLabel.setText("Error saving report.");
             e.printStackTrace();
         }
-        // ----------------------------------------
     }
 }

@@ -17,12 +17,10 @@ public class Forecast_Demand {
     public void goBack(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/inventory_dashboard.fxml",actionEvent);
     }
-
     @javafx.fxml.FXML
     public void handleForecast(ActionEvent actionEvent) {
         String pastData = pastdata.getText();
         String[] numbers = pastData.split(",");
-
         StringBuilder forecast = new StringBuilder();
 
         for (String numStr : numbers) {
@@ -31,16 +29,11 @@ public class Forecast_Demand {
                 int predicted = num + 40; // simple logic to generate forecast
                 forecast.append(predicted).append(",");
             } catch (NumberFormatException e) {
-                // ignore invalid numbers
             }
         }
-
-        // remove last comma
         if (forecast.length() > 0) {
             forecast.deleteCharAt(forecast.length() - 1);
         }
-
-        // Show in forecastArea
         forecastArea.setText(forecast.toString());
     }
 }

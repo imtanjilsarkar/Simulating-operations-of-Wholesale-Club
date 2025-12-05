@@ -27,23 +27,18 @@ public class Flag_Suspicious_Activity {
             confirmationLabel.setText("Please enter a reason");
             return;
         }
-
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("suspiciousactivity.txt", true))) {
             writer.write(reason);
             writer.newLine();
 
             recordStatusLabel.setText("Record Saved");
             confirmationLabel.setText("Manager Notified");
-
         } catch (IOException e) {
             confirmationLabel.setText("Error saving report");
             e.printStackTrace();
         }
-
-
         reasonField.clear();
     }
-
     @javafx.fxml.FXML
     public void handleBack(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Cashier/cashier_dashboard.fxml", actionEvent);
