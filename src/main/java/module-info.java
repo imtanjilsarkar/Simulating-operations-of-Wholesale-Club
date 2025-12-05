@@ -5,6 +5,7 @@ module project.simulatingoperationsofwholesaleclub {
     requires javafx.base;
     requires java.desktop;
     requires java.base;
+    requires com.github.librepdf.openpdf;
     // requires project.simulatingoperationsofwholesaleclub;
     //requires project.simulatingoperationsofwholesaleclub;
     //requires project.simulatingoperationsofwholesaleclub;

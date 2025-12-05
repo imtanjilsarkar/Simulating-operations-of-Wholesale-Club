@@ -6,8 +6,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.stage.FileChooser;
+
+import org.openpdf.text.Document;
+import org.openpdf.text.DocumentException;
+import org.openpdf.text.Paragraph;
+import org.openpdf.text.Table;
+import org.openpdf.text.pdf.PdfWriter;
 
 import java.io.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class GenerateProcurementReportController {
@@ -90,24 +98,63 @@ public class GenerateProcurementReportController {
     // =============================================================
     // BACK BUTTON
     // =============================================================
-    @Deprecated
-    public void BackBTN(ActionEvent event) throws IOException {
-        SceneSwitcher.switchTo(
-                "/com/group16/simulatingoperationsofwholesaleclub/rahad/ProcurementOfficer/procurementOff_dashboard.fxml",
-                event
-        );
-    }
-
     @FXML
     public void handleBack(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/ProcurementOfficer/procurementOff_dashboard.fxml",actionEvent);
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/ProcurementOfficer/procurementOff_dashboard.fxml", actionEvent);
+    }
+
+    // =============================================================
+    // GENERATE PDF
+    // =============================================================
+    @FXML
+    public void downloadReport(ActionEvent actionEvent) {
+        if (orderList.isEmpty()) {
+            successLabel.setText("⚠ No orders to export!");
+            return;
+        }
+
+        FileChooser chooser = new FileChooser();
+        chooser.setTitle("Save Procurement Report PDF");
+        chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("PDF Document (.pdf)", "*.pdf"));
+
+        File file = chooser.showSaveDialog(reportArea.getScene().getWindow());
+        if (file == null) return;
+
+        try {
+            Document pdf = new Document();
+            PdfWriter.getInstance(pdf, new FileOutputStream(file));
+            pdf.open();
+
+            pdf.add(new Paragraph("Procurement Report"));
+            pdf.add(new Paragraph("Generated on: " + LocalDate.now()));
+            pdf.add(new Paragraph("Total Orders: " + orderList.size()));
+            pdf.add(new Paragraph(" "));
+
+            Table pdfTable = new Table(4); // 4 columns: Supplier ID, Product, Quantity, Due Date
+            pdfTable.addCell("Supplier ID");
+            pdfTable.addCell("Product");
+            pdfTable.addCell("Quantity");
+            pdfTable.addCell("Due Date");
+
+            for (SupplierOrder order : orderList) {
+                pdfTable.addCell(order.getSupplierId());
+                pdfTable.addCell(order.getProductName());
+                pdfTable.addCell(String.valueOf(order.getQuantity()));
+                pdfTable.addCell(order.getDueDate());
+            }
+
+            pdf.add(pdfTable);
+            pdf.close();
+
+            successLabel.setText("✅ PDF generated successfully!");
+
+        } catch (IOException | DocumentException e) {
+            e.printStackTrace();
+            successLabel.setText("❌ Error generating PDF!");
+        }
     }
 
     @FXML
     public void generateReport(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    public void downloadReport(ActionEvent actionEvent) {
     }
 }

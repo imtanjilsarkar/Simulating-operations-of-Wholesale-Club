@@ -8,23 +8,22 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TrackDeliveryController {
 
-    private static final String ASSIGNED_FILE = "C:\\Users\\rubay\\IdeaProjects\\Simulating-operations-of-Wholesale-Club\\assigned_deliveries.dat";
-    private static final String CONFIRMED_FILE = "C:\\Users\\rubay\\IdeaProjects\\Simulating-operations-of-Wholesale-Club\\confirmed_orders.dat";
+    private static final String ASSIGNED_FILE = "C:/Users/rubay/IdeaProjects/Simulating-operations-of-Wholesale-Club/assigned_deliveries.dat";
+    private static final String CONFIRMED_FILE = "C:/Users/rubay/IdeaProjects/Simulating-operations-of-Wholesale-Club/confirmed_orders.dat";
 
     @FXML
     private TextField orderIdField;
 
     @FXML
     private Label statusLabel;
-
-    @FXML
-    private Label staffLabel;
 
     @FXML
     public void handleBack(ActionEvent actionEvent) throws IOException {
@@ -38,51 +37,34 @@ public class TrackDeliveryController {
     public void handleTrackDelivery(ActionEvent actionEvent) {
         String orderId = orderIdField.getText().trim();
         statusLabel.setText("");
-        staffLabel.setText("");
 
         if (orderId.isEmpty()) {
             statusLabel.setText("⚠ Please enter an Order ID.");
             return;
         }
 
-        // Load confirmed orders
-        List<ConfirmOrders> confirmedList = readConfirmedOrders();
-        for (ConfirmOrders co : confirmedList) {
+        List<ConfirmOrders> confirmedOrders = readConfirmedOrders();
+        List<AssignedDelivery> assignedDeliveries = readAssignedDeliveries();
+
+        // Check if delivered
+        for (ConfirmOrders co : confirmedOrders) {
             if (co.getOrderId().equals(orderId)) {
                 statusLabel.setText("Order ID " + orderId + " has already been delivered.");
-                // Check which staff it was assigned to before delivery
-                AssignedDelivery ad = findAssignedDelivery(orderId);
-                if (ad != null) {
-                    staffLabel.setText("Delivered by Staff ID: " + ad.getStaffId());
-                }
                 return;
             }
         }
 
-        // Check assigned deliveries
-        AssignedDelivery ad = findAssignedDelivery(orderId);
-        if (ad != null) {
-            statusLabel.setText("Order ID " + orderId + " is currently in process .");
-            staffLabel.setText("Assigned Staff ID: " + ad.getStaffId());
-            return;
-        }
-
-        // If not found in both
-        statusLabel.setText("Order ID " + orderId + " was never assigned for delivery.");
-    }
-
-    // Helper to find assigned delivery by order ID
-    private AssignedDelivery findAssignedDelivery(String orderId) {
-        List<AssignedDelivery> assignedList = readAssignedDeliveries();
-        for (AssignedDelivery ad : assignedList) {
+        // Check if assigned but not delivered
+        for (AssignedDelivery ad : assignedDeliveries) {
             if (ad.getOrderId().equals(orderId)) {
-                return ad;
+                statusLabel.setText("Order ID " + orderId + " is currently in process.");
+                return;
             }
         }
-        return null;
-    }
 
-    // ---------------- FILE METHODS ----------------
+        // Not found
+        statusLabel.setText("Order ID " + orderId + " was never assigned for delivery.");
+    }
 
     private List<AssignedDelivery> readAssignedDeliveries() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ASSIGNED_FILE))) {
