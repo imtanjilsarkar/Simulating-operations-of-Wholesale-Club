@@ -23,7 +23,7 @@ public class PromotionController {
     private Label successLabel;
 
     private final String FILE_PATH =
-            "C:\\Users\\MUBASSIR_MOHI\\IdeaProjects\\Simulating-operations-of-Wholesale-Club\\promotions.txt";
+            "promotions.txt";
 
     @FXML
     public void approveBTN() {
