@@ -5,6 +5,8 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Receive_Supplier_Delivery {
@@ -17,7 +19,7 @@ public class Receive_Supplier_Delivery {
 
     @javafx.fxml.FXML
     public void goBack(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/inventory_dashboard.fxml",actionEvent);
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Inventory/inventory_dashboard.fxml", actionEvent);
     }
 
     @javafx.fxml.FXML
@@ -29,19 +31,37 @@ public class Receive_Supplier_Delivery {
         }
         inventoryDisplayArea.setText("Product Verified for Invoice: " + invoice);
     }
+
     @javafx.fxml.FXML
     public void updateStock(ActionEvent actionEvent) {
         String productList = productListArea.getText();
+
         if (productList == null || productList.isEmpty()) {
             inventoryDisplayArea.setText("Enter product list to update stock!");
             return;
         }
+
         StringBuilder inventoryText = new StringBuilder();
         String[] products = productList.split("\n");
-        for (String p : products) {
 
-            inventoryText.append(p).append(" → Stock Updated\n");
+        // ---------- WRITE TO FILE ----------
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("Receive_Supplier_Delivery.txt", true))) {
+
+            for (String p : products) {
+                String line = p + " → Stock Updated";
+                inventoryText.append(line).append("\n");
+
+                writer.write(line);
+                writer.newLine();
+            }
+
+        } catch (IOException e) {
+            inventoryDisplayArea.setText("Error saving updated stock!");
+            e.printStackTrace();
+            return;
         }
+        // -----------------------------------
+
         inventoryDisplayArea.setText(inventoryText.toString());
     }
 }
