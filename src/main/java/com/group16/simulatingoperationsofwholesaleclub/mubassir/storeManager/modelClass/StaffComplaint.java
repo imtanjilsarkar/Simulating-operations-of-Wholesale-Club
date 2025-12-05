@@ -6,10 +6,12 @@ public class StaffComplaint {
 
     @Override
     public String toString() {
-        return "StaffComplaint{" +
-                "staffId='" + staffId + '\'' +
-                ", details='" + details + '\'' +
-                '}';
+//        return "StaffComplaint{" +
+//                "staffId='" + staffId + '\'' +
+//                ", details='" + details + '\'' +
+//                '}';
+        return staffId + " | " + details;
+//        return customerName + " | " + complaintTitle + " | " + description + " | " + status;
     }
 
     public String getDetails() {

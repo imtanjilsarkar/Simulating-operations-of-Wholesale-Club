@@ -1,6 +1,7 @@
 package com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller;
 
 import com.group16.simulatingoperationsofwholesaleclub.BaseController;
+import com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.modelClass.StaffComplaint;
 import com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.modelClass.Employee;
 import com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.modelClass.LeaveRequest;
 import javafx.collections.FXCollections;
@@ -8,10 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,23 +21,29 @@ public class LeaveRequestController extends BaseController {
     @javafx.fxml.FXML
     private Label outputMessage;
     @javafx.fxml.FXML
-    private TableView <LeaveRequest> leaveTable;
+    private TableView<LeaveRequest> leaveTable;
     @javafx.fxml.FXML
-    private TableColumn <LeaveRequest, LocalDate> colStartDate;
+    private TableColumn<LeaveRequest, LocalDate> colStartDate;
     @javafx.fxml.FXML
     private DatePicker dpEnd;
     @javafx.fxml.FXML
-    private TableColumn <LeaveRequest, String> colEmpName;
+    private TableColumn<LeaveRequest, String> colEmpName;
     @javafx.fxml.FXML
-    private ComboBox <String> cmbLeaveType;
+    private ComboBox<String> cmbLeaveType;
     @javafx.fxml.FXML
-    private TableColumn <LeaveRequest, String> colLeaveType;
+    private TableColumn<LeaveRequest, String> colLeaveType;
     @javafx.fxml.FXML
-    private TableColumn <LeaveRequest, LocalDate> colEndDate;
+    private TableColumn<LeaveRequest, LocalDate> colEndDate;
     @javafx.fxml.FXML
-    private TableColumn <LeaveRequest, String> colStatus;
+    private TableColumn<LeaveRequest, String> colStatus;
     @javafx.fxml.FXML
     private TextField txtEmployeeName;
+    @javafx.fxml.FXML
+    private TableColumn<StaffComplaint, String> colDetails;
+    @javafx.fxml.FXML
+    private TableView<StaffComplaint> staffConditionTable;
+    @javafx.fxml.FXML
+    private TableColumn<StaffComplaint, String> colStaffName;
 
 
     List<Employee> employeeList = new ArrayList<>();
@@ -54,6 +58,9 @@ public class LeaveRequestController extends BaseController {
         colStartDate.setCellValueFactory(new PropertyValueFactory<>("startDate"));
         colEndDate.setCellValueFactory(new PropertyValueFactory<>("endDate"));
         colStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+
+        colStaffName.setCellValueFactory(new PropertyValueFactory<>("StaffId"));
+        colDetails.setCellValueFactory(new PropertyValueFactory<>("details"));
     }
 
 
@@ -107,4 +114,31 @@ public class LeaveRequestController extends BaseController {
         leaveTable.getItems().clear();
         outputMessage.setText("Table cleared.");
     }
+
+
+    @javafx.fxml.FXML
+    public void handleLoadStaffCondition(ActionEvent actionEvent) {
+        List<StaffComplaint> list = new ArrayList<>();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader("staff_complaints.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+
+                // split by comma instead of |
+                String[] parts = line.split(",");
+
+                if (parts.length == 2) {
+                    list.add(new StaffComplaint(parts[0].trim(), parts[1].trim()));
+                }
+            }
+
+            staffConditionTable.setItems(FXCollections.observableArrayList(list));
+            outputMessage.setText("Staff condition info loaded.");
+
+        } catch (IOException e) {
+            outputMessage.setText("No staff condition info found.");
+        }
+
+    }
 }
+

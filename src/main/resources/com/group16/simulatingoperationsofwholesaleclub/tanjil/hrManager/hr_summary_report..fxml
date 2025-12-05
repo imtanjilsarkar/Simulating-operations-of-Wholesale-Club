@@ -22,8 +22,8 @@
     </TableView>
 
     <HBox spacing="10">
-        <Button fx:id="btnLoadReport" onAction="#handleLoadReport" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Load Report" />
-        <Button fx:id="btnExportPDF" onAction="#exportToPDF" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Export to PDF" />
+        <Button onAction="#handleLoadReport" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Load Report" />
+        <Button onAction="#exportToPDF" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Export to PDF" />
       <Button mnemonicParsing="false" onAction="#handleBackHRMD" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Back" />
     </HBox>
 
