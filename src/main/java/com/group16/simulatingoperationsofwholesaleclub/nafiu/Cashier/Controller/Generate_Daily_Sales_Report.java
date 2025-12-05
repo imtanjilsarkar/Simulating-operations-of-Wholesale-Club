@@ -4,6 +4,8 @@ import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Generate_Daily_Sales_Report {
@@ -21,10 +23,22 @@ public class Generate_Daily_Sales_Report {
 
     @javafx.fxml.FXML
     public void handleGenerateReport(ActionEvent actionEvent) {
+
         int totalTransactions = 5;
         int totalSales = 500;
+
         transactionDataLabel.setText("Total Transactions: " + totalTransactions);
-        netSalesLabel.setText("Net Sales: " + totalSales + " taka");
+        netSalesLabel.setText("today's Sales: " + totalSales + " taka");
         reportStatusLabel.setText("Report Generated Successfully");
+
+        // ----------- File Write Code -----------
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("totalcash.txt", true))) {
+            writer.write(String.valueOf(totalSales));
+            writer.newLine();
+        } catch (IOException e) {
+            reportStatusLabel.setText("Error saving report.");
+            e.printStackTrace();
+        }
+        // ----------------------------------------
     }
 }
