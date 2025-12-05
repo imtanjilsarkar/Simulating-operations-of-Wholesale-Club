@@ -1,0 +1,1 @@
+Product ID: fish1, Deducted: 10, Updated Stock: 40
