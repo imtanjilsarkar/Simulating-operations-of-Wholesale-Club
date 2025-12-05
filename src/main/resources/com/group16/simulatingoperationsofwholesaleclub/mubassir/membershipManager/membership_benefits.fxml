@@ -13,14 +13,16 @@
     <Label layoutX="20" layoutY="80" style="-fx-text-fill:#004aad;" text="Membership ID:" />
     <TextField fx:id="membershipIdTF" layoutX="160" layoutY="75" prefWidth="200" style="-fx-border-color:#007bff;" />
 
-    <Label layoutX="20" layoutY="130" style="-fx-text-fill:#004aad;" text="Benefits:" />
-    <ComboBox fx:id="benefitsCB" layoutX="160" layoutY="125" prefHeight="27.0" prefWidth="201.0" style="-fx-border-color:#007bff;" />
+    <Label layoutX="20" layoutY="130" style="-fx-text-fill:#004aad;" text="Cureent Status:" />
 
-    <Label layoutX="20.0" layoutY="176.0" style="-fx-text-fill:#004aad;" text="Membership Type:" />
-    <ComboBox fx:id="membershipTypeCB" layoutX="161.0" layoutY="171.0" prefWidth="200" style="-fx-border-color:#007bff;" />
+    <Label layoutX="20.0" layoutY="176.0" style="-fx-text-fill:#004aad;" text="Updated Status" />
+    <ComboBox fx:id="statusUpdateCB" layoutX="161.0" layoutY="171.0" prefWidth="200" style="-fx-border-color:#007bff;" />
 
     <Button layoutX="160" layoutY="290" onAction="#UpdateBenefitsBTN" prefWidth="140" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;" text="Update Benefits" />
 
     <Button layoutX="320" layoutY="290" onAction="#BackBTN" prefWidth="80" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;" text="Back" />
+   <TextField fx:id="currentStatusTF" layoutX="160.0" layoutY="125.0" prefWidth="200" style="-fx-border-color:#007bff;" />
+   <Button layoutX="384.0" layoutY="76.0" onAction="#searchIDBTN" prefWidth="80" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;" text="Search ID" />
+   <Label fx:id="successLabel" layoutX="161.0" layoutY="241.0" prefHeight="18.0" prefWidth="216.0" />
 
 </AnchorPane>

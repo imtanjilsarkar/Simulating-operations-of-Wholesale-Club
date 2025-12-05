@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManager.controller.MembershipInfoCheckController"
+            prefHeight="450.0" prefWidth="700.0"
+            style="-fx-background-color: white;">
+
+    <Label text="Membership Checkout"
+           layoutX="250" layoutY="20"
+           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill:#004aad;"/>
+
+    <Label text="Member ID:"
+           layoutX="140" layoutY="80"
+           style="-fx-text-fill:#004aad;"/>
+
+    <TextField fx:id="memberIdTF"
+               layoutX="220" layoutY="75"
+               prefWidth="200"
+               style="-fx-border-color:#007bff;"/>
+
+    <Button text="Show Info"
+            layoutX="440" layoutY="75"
+            prefWidth="100"
+            onAction="#ShowInfoBTN"
+            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;"/>
+
+    <Label fx:id="successLabel"
+           layoutX="220" layoutY="110"
+           style="-fx-text-fill:green; -fx-font-weight:bold;"/>
+
+    <TableView fx:id="infoTable"
+               layoutX="60" layoutY="140"
+               prefWidth="580" prefHeight="250"
+               style="-fx-border-color:#007bff;">
+
+        <columns>
+            <TableColumn fx:id="idCol" text="ID" prefWidth="120"/>
+            <TableColumn fx:id="nameCol" text="Name" prefWidth="160"/>
+            <TableColumn fx:id="statusCol" text="Status" prefWidth="140"/>
+            <TableColumn fx:id="validTillCol" text="Valid Till" prefWidth="160"/>
+        </columns>
+
+    </TableView>
+
+    <Button text="Back"
+            layoutX="315" layoutY="400"
+            prefWidth="80"
+            onAction="#BackBTN"
+            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;"/>
+
+</AnchorPane>

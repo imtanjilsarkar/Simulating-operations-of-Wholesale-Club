@@ -48,7 +48,7 @@ public class StaffTaskController implements Initializable {
     }
 
     @FXML
-    public void assignTaskBTN(ActionEvent actionEvent) {
+    public void assignTaskBTN() {
         successLabel.setText("");
 
         String staffId = staffIdTF.getText().trim();

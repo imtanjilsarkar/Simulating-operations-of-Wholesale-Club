@@ -26,7 +26,7 @@ public class StaffComplaintGoalController {
             "C:\\Users\\MUBASSIR_MOHI\\IdeaProjects\\Simulating-operations-of-Wholesale-Club\\staff_complaints.txt";
 
     @FXML
-    public void submitBTN(ActionEvent actionEvent) {
+    public void submitBTN() {
         String staffId = staffIdTF.getText().trim();
         String details = complaintDetailsTF.getText().trim();
 

@@ -24,16 +24,9 @@ public class ApprovePurchaseController {
             "C:/Users/MUBASSIR_MOHI/IdeaProjects/Simulating-operations-of-Wholesale-Club/purchase_requests.txt";
 
     @FXML
-    public void backBTN(ActionEvent actionEvent) {
-        try {
-            SceneSwitcher.switchTo(
-                    "/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/storemanager_dashboard.fxml",
-                    actionEvent
-            );
-        } catch (IOException e) {
-            messageLabel.setStyle("-fx-text-fill: red;");
-            messageLabel.setText("Error returning to dashboard.");
-        }
+    public void backBTN(ActionEvent actionEvent) throws IOException{
+            SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/storemanager_dashboard.fxml", actionEvent);
+
     }
 
     @FXML

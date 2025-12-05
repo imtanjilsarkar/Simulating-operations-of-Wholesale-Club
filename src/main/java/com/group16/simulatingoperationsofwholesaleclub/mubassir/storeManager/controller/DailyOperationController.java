@@ -39,8 +39,6 @@ public class DailyOperationController {
             writer.write(activityLine + "\n");
             successLabel.setText("Activity added successfully!");
             successLabel.setStyle("-fx-text-fill: green;");
-
-            // Clear input fields
             salesTF.clear();
             lowStockTF.clear();
             staffTF.clear();

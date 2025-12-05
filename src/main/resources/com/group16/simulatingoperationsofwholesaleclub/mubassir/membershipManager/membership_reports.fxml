@@ -1,50 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManager.controller.MembershipReportsController"
-            prefHeight="400.0" prefWidth="600.0"
-            style="-fx-background-color: white;">
+<AnchorPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManager.controller.MembershipReportsController">
 
-    <Label text="Membership Reports"
-           layoutX="200" layoutY="20"
-           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill:#004aad;"/>
+    <Label layoutX="220" layoutY="20" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill:#004aad;" text="Membership Reports" />
 
-    <Label text="From:"
-           layoutX="80" layoutY="90"
-           style="-fx-text-fill:#004aad;"/>
-    <DatePicker fx:id="fromDP"
-                layoutX="130" layoutY="85"
-                prefWidth="150"
-                style="-fx-border-color:#007bff;"/>
+    <Button layoutX="50.0" layoutY="374.0" onAction="#GeneratePDFBTN" prefWidth="130" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;" text="Generate PDF" />
 
-    <Label text="To:"
-           layoutX="310" layoutY="90"
-           style="-fx-text-fill:#004aad;"/>
-    <DatePicker fx:id="toDP"
-                layoutX="350" layoutY="85"
-                prefWidth="150"
-                style="-fx-border-color:#007bff;"/>
 
-    <Button text="Show Report"
-            layoutX="240" layoutY="140"
-            prefWidth="120"
-            onAction="#ShowReportBTN"
-            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;"/>
+    <TableView fx:id="reportTable" layoutX="50.0" layoutY="75.0" prefHeight="260" prefWidth="600" style="-fx-border-color:#007bff; -fx-background-color:white;">
 
-    <TextArea fx:id="reportTA"
-              layoutX="80" layoutY="190"
-              prefWidth="440" prefHeight="150"
-              promptText="Report will appear here..."
-              style="-fx-border-color:#007bff;"/>
+        <columns>
+            <TableColumn fx:id="idCol" prefWidth="90" text="ID" />
+            <TableColumn fx:id="nameCol" prefWidth="170" text="Name" />
+            <TableColumn fx:id="statusCol" prefWidth="170" text="Status" />
+            <TableColumn fx:id="validTillCol" prefWidth="170" text="Valid Till" />
+        </columns>
 
-    <Button text="Back"
-            layoutX="260" layoutY="350"
-            prefWidth="80"
-            onAction="#BackBTN"
-            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;"/>
+    </TableView>
+
+
+    <Label fx:id="successLabel" layoutX="50.0" layoutY="342.0" prefWidth="600" style="-fx-font-size: 14px;" textFill="#004aad" />
+
+    <Button layoutX="310" layoutY="400" onAction="#BackBTN" prefWidth="80" style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;" text="Back" />
 
 </AnchorPane>

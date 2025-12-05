@@ -36,15 +36,10 @@ public class TopManagementReportsController {
 
 
     @FXML
-    public void backBTN(ActionEvent actionEvent) {
-        try {
-            SceneSwitcher.switchTo(
-                    "/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/storemanager_dashboard.fxml",
-                    actionEvent
-            );
-        } catch (IOException e) {
-            reportOutputTA.setText("Error going back!");
-            e.printStackTrace();
-        }
+    public void backBTN(ActionEvent actionEvent) throws IOException{
+
+            SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/storemanager_dashboard.fxml", actionEvent);
+
+
     }
 }

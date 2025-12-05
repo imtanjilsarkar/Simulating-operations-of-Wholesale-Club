@@ -11,11 +11,7 @@ import java.io.IOException;
 public class SalesPerformaneController {
 
     @javafx.fxml.FXML
-    private DatePicker toDP;
-    @javafx.fxml.FXML
     private TextArea salesOutputTA;
-    @javafx.fxml.FXML
-    private DatePicker fromDP;
 
     @javafx.fxml.FXML
     public void viewReportBTN(ActionEvent actionEvent) {

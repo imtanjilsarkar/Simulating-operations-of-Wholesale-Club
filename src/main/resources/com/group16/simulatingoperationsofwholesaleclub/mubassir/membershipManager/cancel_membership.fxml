@@ -1,44 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManager.controller.CancelMembershipController"
-            prefHeight="400.0" prefWidth="600.0"
-            style="-fx-background-color: white;">
+<AnchorPane prefHeight="400" prefWidth="600" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManager.controller.CancelMembershipController">
 
-    <Label text="Cancel Membership"
-           layoutX="20" layoutY="20"
-           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill:#004aad;"/>
+    <!-- Simple Blue Title -->
+    <Label alignment="CENTER" layoutX="0" layoutY="20" prefWidth="600" style="-fx-text-fill: #0d47a1;                   -fx-font-size: 22px;                   -fx-font-weight: bold;" text="Cancel Membership" />
 
-    <Label text="Membership ID:"
-           layoutX="20" layoutY="80"
-           style="-fx-text-fill:#004aad;"/>
-    <TextField fx:id="membershipIdTF"
-               layoutX="150" layoutY="75"
-               prefWidth="200"
-               style="-fx-border-color:#007bff;"/>
+    <!-- Membership ID Field -->
+    <TextField fx:id="membershipIdTF" layoutX="150" layoutY="80" prefHeight="26.0" prefWidth="178.0" promptText="Enter Membership ID" />
 
-    <Label text="Reason:"
-           layoutX="20" layoutY="130"
-           style="-fx-text-fill:#004aad;"/>
-    <TextArea fx:id="reasonTA"
-              layoutX="150" layoutY="125"
-              prefWidth="300" prefHeight="120"
-              style="-fx-border-color:#007bff;"/>
+    <!-- Search Button -->
+    <Button layoutX="350.0" layoutY="78.0" onAction="#searchIDBTN" prefWidth="100" style="-fx-background-color: #1976d2;                    -fx-text-fill: white;                    -fx-font-size: 14px;" text="Search ID" />
 
-    <Button text="Cancel Membership"
-            layoutX="150" layoutY="270"
-            prefWidth="160"
-            onAction="#CancelMembershipBTN"
-            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;"/>
+    <!-- Info TextArea -->
+    <TextArea fx:id="infoTA" editable="false" layoutX="150.0" layoutY="138.0" prefHeight="140" prefWidth="300" wrapText="true" />
 
-    <Button text="Back"
-            layoutX="330" layoutY="270"
-            prefWidth="80"
-            onAction="#BackBTN"
-            style="-fx-background-color:#007bff; -fx-text-fill:white; -fx-background-radius:5;"/>
+    <!-- Success Message -->
+    <Label fx:id="successLabel" layoutX="150" layoutY="320" prefWidth="300" style="-fx-font-size: 14px;" />
 
+    <!-- Cancel Membership Button (Blue Now) -->
+    <Button layoutX="150.0" layoutY="305.0" onAction="#CancelMembershipBTN" prefWidth="160" style="-fx-background-color: #1976d2;                    -fx-text-fill: white;                    -fx-font-size: 14px;" text="Cancel Membership" />
+
+    <!-- Back Button (Blue) -->
+    <Button layoutX="491.0" layoutY="352.0" onAction="#BackBTN" prefWidth="80" style="-fx-background-color: #1976d2;                    -fx-text-fill: white;" text="Back" />
+   <Label layoutX="48.0" layoutY="84.0" text="Enter Member ID:" textFill="#4242f7" />
+   <Label layoutX="118.0" layoutY="152.0" text="Info:" textFill="#4242f7" />
 </AnchorPane>

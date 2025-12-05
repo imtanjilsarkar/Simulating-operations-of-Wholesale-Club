@@ -56,8 +56,8 @@
 
     <Button layoutX="430" layoutY="220"
             prefWidth="180"
-            onAction="#VerifyMembershipBTN"
-            text="Verify Membership"
+            onAction="#MembershipInfoBTN"
+            text="Membership Info"
             style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" />
 
     <Button layoutX="430" layoutY="280"
