@@ -19,7 +19,7 @@ public class DailyOperationController {
     @FXML
     private Label successLabel;
 
-    private final String FILE_PATH = "C:\\Users\\MUBASSIR_MOHI\\IdeaProjects\\Simulating-operations-of-Wholesale-Club\\daily_operations.txt";
+    private final String FILE_PATH = "daily_operations.txt";
 
     @FXML
     public void addActivityBTN() {

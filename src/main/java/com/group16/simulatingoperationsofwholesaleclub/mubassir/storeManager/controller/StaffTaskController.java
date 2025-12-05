@@ -31,7 +31,7 @@ public class StaffTaskController implements Initializable {
     private Label successLabel;
 
     private static final String FILE_PATH =
-            "C:\\Users\\MUBASSIR_MOHI\\IdeaProjects\\Simulating-operations-of-Wholesale-Club\\staff_tasks.txt";
+            "staff_tasks.txt";
 
 
     @Override

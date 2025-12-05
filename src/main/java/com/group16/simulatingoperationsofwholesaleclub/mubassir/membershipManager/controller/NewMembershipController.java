@@ -31,7 +31,7 @@ public class NewMembershipController {
     private Label successLabel;
 
     private final String FILE_PATH =
-            "C:\\Users\\MUBASSIR_MOHI\\IdeaProjects\\Simulating-operations-of-Wholesale-Club\\new_memberships.dat";
+            "new_memberships.dat";
 
     @FXML
     public void initialize() {

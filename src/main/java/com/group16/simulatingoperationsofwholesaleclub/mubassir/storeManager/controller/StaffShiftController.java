@@ -20,7 +20,7 @@ public class StaffShiftController {
     private Label successLabel;
 
 
-    private final String FILE_PATH = "C:\\Users\\MUBASSIR_MOHI\\IdeaProjects\\Simulating-operations-of-Wholesale-Club\\staff_shifts.txt";
+    private final String FILE_PATH = "staff_shifts.txt";
 
 
     @FXML
