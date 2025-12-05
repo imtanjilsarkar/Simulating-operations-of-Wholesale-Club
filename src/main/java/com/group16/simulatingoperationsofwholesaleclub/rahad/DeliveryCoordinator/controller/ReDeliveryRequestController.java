@@ -25,13 +25,13 @@ public class ReDeliveryRequestController {
     private Label statusLabel;
 
     private static final String RE_DELIVERY_FILE =
-            "C:/Users/rubay/IdeaProjects/Simulating-operations-of-Wholesale-Club/redelivery_requests.dat";
+            "redelivery_requests.dat";
 
     private static final String ASSIGNED_DELIVERY_FILE =
-            "C:/Users/rubay/IdeaProjects/Simulating-operations-of-Wholesale-Club/assigned_deliveries.dat";
+            "assigned_deliveries.dat";
 
     private static final String CONFIRMED_FILE =
-            "C:/Users/rubay/IdeaProjects/Simulating-operations-of-Wholesale-Club/confirmed_orders.dat";
+            "confirmed_orders.dat";
 
     // ------------------------------
     // BACK BUTTON

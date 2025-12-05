@@ -15,7 +15,7 @@ import java.util.List;
 
 public class ManageDeliveryScheduleController {
 
-    private static final String FILE_PATH = "C:\\Users\\rubay\\IdeaProjects\\Simulating-operations-of-Wholesale-Club\\assigned_deliveries.dat";
+    private static final String FILE_PATH = "assigned_deliveries.dat";
 
     @FXML
     private Label statusLabel;

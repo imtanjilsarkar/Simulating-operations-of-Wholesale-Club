@@ -8,3 +8,10 @@ qwidhqwodh,idhwhedqhdo,Approved
 456789,rahad.,Approved
 2312456,wedwedw,Approved
 23456,rahad,Approved
+p101,Product Name: rice
+Quantity: 100kg,Approved
+p101,product name: Rice
+Quantity: 101kg,Approved
+121,rice 
+100,Approved
+2311,product name : rice quantity: 100,Approved

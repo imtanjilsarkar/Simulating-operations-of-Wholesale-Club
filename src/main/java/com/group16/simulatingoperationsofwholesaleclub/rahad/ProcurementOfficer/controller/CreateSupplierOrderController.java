@@ -8,79 +8,91 @@ import javafx.scene.control.*;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class CreateSupplierOrderController {
 
     @FXML private TextField supplierIdField;
+    @FXML private TextField orderIdField;
     @FXML private TextField productField;
     @FXML private TextField quantityField;
     @FXML private DatePicker dueDatePicker;
     @FXML private Label messageLabel;
 
-    // Changed extension to .bin for binary file
-    private static final String FILE_PATH =
-            "C:\\Users\\rubay\\IdeaProjects\\Simulating-operations-of-Wholesale-Club\\supplier_orders.bin";
+    private static final String FILE_PATH = "supplier_orders.bin";
 
     @FXML
     public void handleSaveOrderButton(ActionEvent event) {
-        try {
-            String supplierId = supplierIdField.getText().strip();
-            String product = productField.getText().strip();
-            String qtyText = quantityField.getText().strip();
-            String dueDate = (dueDatePicker.getValue() != null) ? dueDatePicker.getValue().toString() : "";
 
-            // Validation
-            if (supplierId.isBlank() || product.isBlank() || qtyText.isBlank() || dueDate.isBlank()) {
-                messageLabel.setText("Please fill all fields!");
-                messageLabel.setStyle("-fx-text-fill: red;");
+        try {
+            String supplierId = supplierIdField.getText().trim();
+            String orderId = orderIdField.getText().trim(); // use generated or manually entered
+            String product = productField.getText().trim();
+            String qtyText = quantityField.getText().trim();
+            String dueDate = (dueDatePicker.getValue() != null)
+                    ? dueDatePicker.getValue().toString()
+                    : "";
+
+            // VALIDATION
+            if (supplierId.isEmpty() || product.isEmpty() || qtyText.isEmpty() || dueDate.isEmpty()) {
+                showMessage("Please fill all fields!", "red");
                 return;
             }
 
-            int quantity = Integer.parseInt(qtyText);
+            int quantity;
+            try {
+                quantity = Integer.parseInt(qtyText);
+            } catch (NumberFormatException ex) {
+                showMessage("Quantity must be a number!", "red");
+                return;
+            }
 
-            // 1. Create the new Object
-            SupplierOrder newOrder = new SupplierOrder(supplierId, product, quantity, dueDate);
+            // If orderId is empty, generate one automatically
+            if (orderId.isEmpty()) {
+                orderId = generateUniqueOrderId();
+                orderIdField.setText(orderId);
+            }
 
-            // 2. Load existing orders (to simulate append)
+            // Create new order object
+            SupplierOrder newOrder = new SupplierOrder(orderId, supplierId, product, quantity, dueDate);
+
+            // Load existing binary file
             ArrayList<SupplierOrder> orderList = new ArrayList<>();
             File file = new File(FILE_PATH);
 
             if (file.exists()) {
                 try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
-                    // Suppress warning is safe here as we know what we wrote
                     orderList = (ArrayList<SupplierOrder>) ois.readObject();
-                } catch (EOFException | ClassNotFoundException e) {
-                    // File might be empty or corrupt, start with new list
+                } catch (EOFException | ClassNotFoundException ignored) {
                     orderList = new ArrayList<>();
                 }
             }
 
-            // 3. Add the new order to the list
+            // Add new order
             orderList.add(newOrder);
 
-            // 4. Write the entire list back to the binary file
+            // Save back
             try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
                 oos.writeObject(orderList);
             }
 
-            // UI Feedback
-            messageLabel.setText("Order saved successfully (Binary)!");
-            messageLabel.setStyle("-fx-text-fill: green;");
+            showMessage("Order saved successfully!", "green");
 
-            // Clear fields
+            // Clear only input fields (keep order ID displayed if generated manually)
             supplierIdField.clear();
             productField.clear();
             quantityField.clear();
             dueDatePicker.setValue(null);
 
-        } catch (NumberFormatException e) {
-            messageLabel.setText("Quantity must be a number!");
-            messageLabel.setStyle("-fx-text-fill: red;");
         } catch (IOException e) {
-            messageLabel.setText("Error saving order!");
-            messageLabel.setStyle("-fx-text-fill: red;");
+            showMessage("Error saving order!", "red");
             e.printStackTrace();
         }
+    }
+
+    private void showMessage(String msg, String color) {
+        messageLabel.setText(msg);
+        messageLabel.setStyle("-fx-text-fill:" + color + ";");
     }
 
     @FXML
@@ -89,5 +101,19 @@ public class CreateSupplierOrderController {
                 "/com/group16/simulatingoperationsofwholesaleclub/rahad/ProcurementOfficer/procurementOff_dashboard.fxml",
                 event
         );
+    }
+
+    @FXML
+    public void handleGenerateOrderId(ActionEvent actionEvent) {
+        String orderId = generateUniqueOrderId();
+        orderIdField.setText(orderId);
+        orderIdField.setEditable(false);
+    }
+
+    // Helper method to generate a unique order ID
+    private String generateUniqueOrderId() {
+        long timestamp = System.currentTimeMillis(); // current time in milliseconds
+        int randomNumber = new Random().nextInt(900) + 100; // random 3-digit number (100-999)
+        return "ORD" + timestamp + randomNumber;
     }
 }

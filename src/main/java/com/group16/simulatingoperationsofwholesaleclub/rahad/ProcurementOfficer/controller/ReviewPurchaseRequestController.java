@@ -20,7 +20,7 @@ public class ReviewPurchaseRequestController {
     private TextArea requestsTextArea;
 
     private static final String FILE_PATH =
-            "C:\\Users\\MUBASSIR_MOHI\\IdeaProjects\\Simulating-operations-of-Wholesale-Club\\purchase_requests.txt";
+            "purchase_requests.txt";
 
     @FXML
     public void showApprovedRequests(ActionEvent event) {
@@ -33,21 +33,29 @@ public class ReviewPurchaseRequestController {
         }
 
         StringBuilder sb = new StringBuilder();
-        sb.append("Store Manager-Approved Purchase Requests:\n\n");
+        sb.append("Store Manager - Purchase Requests:\n\n");
 
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
+
             while ((line = br.readLine()) != null) {
-                // Assuming format: RequestID,Product,Quantity
                 String[] parts = line.split(",");
+
+                // Expecting: ID,Details,Status
                 if (parts.length >= 3) {
-                    sb.append("Request ID: ").append(parts[0].trim())
-                            .append(", Product: ").append(parts[1].trim())
-                            .append(", Quantity: ").append(parts[2].trim())
-                            .append("\n");
+                    String requestId = parts[0].trim();
+                    String details = parts[1].trim();
+                    String status = parts[2].trim();
+
+                    sb.append("Request ID: ").append(requestId).append("\n");
+                    sb.append("Details: ").append(details).append("\n");
+                    sb.append("Status: ").append(status).append("\n");
+                    sb.append("-------------------------------------------\n");
                 }
             }
+
             requestsTextArea.setText(sb.toString());
+
         } catch (IOException e) {
             e.printStackTrace();
             requestsTextArea.setText("Error reading purchase requests.");

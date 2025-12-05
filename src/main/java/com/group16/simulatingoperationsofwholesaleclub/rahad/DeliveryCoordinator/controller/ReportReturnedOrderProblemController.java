@@ -17,9 +17,9 @@ public class ReportReturnedOrderProblemController {
 
     // File paths
     private static final String FILE_PATH_COMPLETED =
-            "C:\\Users\\rubay\\IdeaProjects\\Simulating-operations-of-Wholesale-Club\\confirmed_orders.dat";
+            "confirmed_orders.dat";
     private static final String FILE_PATH_PROBLEMS =
-            "C:\\Users\\rubay\\IdeaProjects\\Simulating-operations-of-Wholesale-Club\\return_problems.dat";
+            "return_problems.dat";
 
     @FXML
     private TextField orderIdField;

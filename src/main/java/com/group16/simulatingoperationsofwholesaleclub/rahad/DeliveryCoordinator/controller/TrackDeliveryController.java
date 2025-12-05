@@ -16,8 +16,8 @@ import java.util.List;
 
 public class TrackDeliveryController {
 
-    private static final String ASSIGNED_FILE = "C:/Users/rubay/IdeaProjects/Simulating-operations-of-Wholesale-Club/assigned_deliveries.dat";
-    private static final String CONFIRMED_FILE = "C:/Users/rubay/IdeaProjects/Simulating-operations-of-Wholesale-Club/confirmed_orders.dat";
+    private static final String ASSIGNED_FILE = "assigned_deliveries.dat";
+    private static final String CONFIRMED_FILE = "confirmed_orders.dat";
 
     @FXML
     private TextField orderIdField;

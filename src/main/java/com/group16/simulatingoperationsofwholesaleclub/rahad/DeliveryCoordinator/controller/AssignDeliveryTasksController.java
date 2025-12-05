@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class AssignDeliveryTasksController {
 
     private static final String FILE_PATH =
-            "C:/Users/rubay/IdeaProjects/Simulating-operations-of-Wholesale-Club/assigned_deliveries.dat";
+            "assigned_deliveries.dat";
 
     @FXML
     private DatePicker deliveryDatePicker;

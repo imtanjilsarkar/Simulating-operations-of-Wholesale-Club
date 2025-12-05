@@ -27,7 +27,7 @@ public class GenerateProcurementReportController {
     private Label successLabel;
 
     private static final String FILE_PATH =
-            "C:\\Users\\rubay\\IdeaProjects\\Simulating-operations-of-Wholesale-Club\\supplier_orders.bin";
+            "supplier_orders.bin";
 
     private ArrayList<SupplierOrder> orderList;
 

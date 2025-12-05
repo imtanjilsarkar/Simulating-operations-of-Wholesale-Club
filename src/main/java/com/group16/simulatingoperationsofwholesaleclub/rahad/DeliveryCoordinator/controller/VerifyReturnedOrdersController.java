@@ -16,7 +16,7 @@ import java.util.List;
 public class VerifyReturnedOrdersController {
 
     private static final String FILE_PATH_PROBLEMS =
-            "C:\\Users\\rubay\\IdeaProjects\\Simulating-operations-of-Wholesale-Club\\return_problems.dat";
+            "return_problems.dat";
 
     @FXML
     private TextField orderIdField;
