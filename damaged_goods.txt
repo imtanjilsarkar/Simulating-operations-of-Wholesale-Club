@@ -1,1 +1,1 @@
-Product ID: fish1, Deducted: 10, Updated Stock: 40
+Product ID: Fish1, Name: Fish, Deducted: 10, Updated Stock: 40, Reason: Rotten
