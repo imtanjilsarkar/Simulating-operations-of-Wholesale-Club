@@ -5,23 +5,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" style="" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Cashier.Controller.Cashier_Dashboard">
+<AnchorPane prefHeight="600.0" prefWidth="900.0"  xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Cashier.Controller.Cashier_Dashboard">
 
-    <!-- Header -->
     <Label layoutX="260.0" layoutY="40.0" style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Welcome to Cashier Dashboard" />
 
     <Line endX="600.0" layoutX="260.0" layoutY="80.0" startX="-248.0" strokeWidth="2" />
 
-      <Button layoutX="115.0" layoutY="150.0" onAction="#handleProcessCheckout" prefWidth="180.0" style="" text="Start Checkout" />
-      <Button layoutX="115.0" layoutY="204.0" onAction="#handleMembershipDiscount" prefWidth="180.0" style="" text="Apply Membership" />
-      <Button layoutX="115.0" layoutY="258.0" onAction="#handlePayment" prefWidth="180" style="" text="Process Payment" />
-      <Button layoutX="115.0" layoutY="318.0" onAction="#handleReturns" prefWidth="180" style="" text="Return Item" />
-      <Button layoutX="551.0" layoutY="150.0" onAction="#handleDailyReport" prefWidth="180" style="" text="Generate Report" />
-      <Button layoutX="551.0" layoutY="204.0" onAction="#handleCashDrawer" prefWidth="180" style="" text="End Shift" />
-      <Button layoutX="551.0" layoutY="258.0" onAction="#handleQueueManagement" prefWidth="180" style="" text="Queue Management" />
-      <Button layoutX="551.0" layoutY="318.0" onAction="#handleSuspiciousActivity" prefWidth="180" style="" text="Suspicious Report" />
+      <Button layoutX="115.0" layoutY="150.0" onAction="#handleProcessCheckout" prefWidth="180.0"  text="Start Checkout" />
+      <Button layoutX="115.0" layoutY="204.0" onAction="#handleMembershipDiscount" prefWidth="180.0"  text="Apply Membership" />
+      <Button layoutX="115.0" layoutY="258.0" onAction="#handlePayment" prefWidth="180"  text="Process Payment" />
+      <Button layoutX="115.0" layoutY="318.0" onAction="#handleReturns" prefWidth="180"  text="Return Item" />
+      <Button layoutX="551.0" layoutY="150.0" onAction="#handleDailyReport" prefWidth="180"  text="Generate Report" />
+      <Button layoutX="551.0" layoutY="204.0" onAction="#handleCashDrawer" prefWidth="180"  text="End Shift" />
+      <Button layoutX="551.0" layoutY="258.0" onAction="#handleQueueManagement" prefWidth="180"  text="Queue Management" />
+      <Button layoutX="551.0" layoutY="318.0" onAction="#handleSuspiciousActivity" prefWidth="180"  text="Suspicious Report" />
 
-     <Button layoutX="353.0" layoutY="439.0" onAction="#handleBack" prefWidth="140.0" style="" text="Back" />
-     <Button layoutX="353.0" layoutY="487.0" onAction="#handleLogout" prefWidth="140.0" style="" text="Logout" />
+     <Button layoutX="353.0" layoutY="439.0" onAction="#handleBack" prefWidth="140.0"  text="Back" />
+     <Button layoutX="353.0" layoutY="487.0" onAction="#handleLogout" prefWidth="140.0"  text="Logout" />
 
 </AnchorPane>

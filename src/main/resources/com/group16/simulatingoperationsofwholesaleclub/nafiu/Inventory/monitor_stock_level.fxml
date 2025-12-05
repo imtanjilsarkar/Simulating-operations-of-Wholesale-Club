@@ -11,15 +11,12 @@
     <VBox layoutX="50" layoutY="40" spacing="15">
         <Label style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Monitor Stock Levels" />
 
-        <!-- Product Name -->
         <Label text="Product Name:" />
         <TextField fx:id="productNameField" promptText="Enter product name" />
 
-        <!-- Current Stock -->
         <Label text="Available Quantity:" />
         <TextField fx:id="quantityField" editable="false" promptText="Quantity will appear here" />
 
-        <!-- Buttons -->
         <Button fx:id="checkButton" onAction="#handleInventory" prefWidth="150" text="Check Inventory" />
         <Button fx:id="backButton" onAction="#handleBack" prefWidth="150" text="Back" />
 

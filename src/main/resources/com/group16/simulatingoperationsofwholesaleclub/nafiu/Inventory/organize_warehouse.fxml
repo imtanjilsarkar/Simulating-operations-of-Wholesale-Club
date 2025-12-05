@@ -10,12 +10,10 @@
 
     <children>
 
-        <!-- Title -->
         <Label text="Organize Warehouse"
                layoutX="300" layoutY="20"
                style="-fx-font-size: 22px; -fx-font-weight: bold;" />
 
-        <!-- Step 1: Assign Storage Location -->
         <Label text="Product ID:" layoutX="60" layoutY="100" />
         <TextField fx:id="productIdField"
                    layoutX="160" layoutY="95"
@@ -26,34 +24,27 @@
                    layoutX="160" layoutY="145"
                    prefWidth="150" />
 
-        <!-- Validate Location Button -->
+
         <Button text="Validate Location"
                 layoutX="60" layoutY="200"
                 prefWidth="180"
-                onAction="#validateLocation"
-                style="" />
+                onAction="#validateLocation"/>
 
-        <!-- Update Placement Button -->
         <Button text="Update Placement"
                 layoutX="260" layoutY="200"
                 prefWidth="180"
-                onAction="#updatePlacement"
-                style="" />
+                onAction="#updatePlacement"/>
 
-        <!-- Confirmation -->
         <Label text="Updated Storage Status:" layoutX="60" layoutY="260" />
         <TextArea fx:id="statusArea"
                   layoutX="60" layoutY="290"
                   prefWidth="720" prefHeight="140"
-                  editable="false"
-                  style="" />
+                  editable="false"/>
 
-        <!-- Back Button -->
         <Button text="Back"
                 layoutX="60" layoutY="450"
                 prefWidth="100"
-                onAction="#goBack"
-                style="" />
+                onAction="#goBack"/>
 
     </children>
 

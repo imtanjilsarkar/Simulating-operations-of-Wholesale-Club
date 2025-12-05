@@ -1,72 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500" prefWidth="850"
-            xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Inventory.Controller.Update_Damaged_or_Expired_Goods">
+<AnchorPane prefHeight="500" prefWidth="850" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Inventory.Controller.Update_Damaged_or_Expired_Goods">
 
     <children>
 
-        <!-- Title -->
-        <Label text="Update Damaged / Expired Goods"
-               layoutX="250" layoutY="20"
-               style="-fx-font-size: 22px; -fx-font-weight: bold;" />
 
-        <!-- Product ID -->
-        <Label text="Product ID:" layoutX="60" layoutY="100" />
-        <TextField fx:id="productIdField"
-                   layoutX="160" layoutY="95"
-                   prefWidth="250" />
+        <Label layoutX="250" layoutY="20" style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Update Damaged / Expired Goods" />
 
-        <!-- Product Name -->
-        <Label text="Product Name:" layoutX="60" layoutY="140" />
-        <TextField fx:id="productNameField"
-                   layoutX="160" layoutY="135"
-                   prefWidth="250" />
+        <Label layoutX="60" layoutY="100" text="Product ID:" />
+        <TextField fx:id="productIdField" layoutX="160" layoutY="95" prefWidth="250" />
 
-        <!-- Quantity -->
-        <Label text="Damaged Quantity:" layoutX="60" layoutY="180" />
-        <TextField fx:id="quantityField"
-                   layoutX="200" layoutY="175"
-                   prefWidth="150" />
+        <Label layoutX="60" layoutY="140" text="Product Name:" />
+        <TextField fx:id="productNameField" layoutX="160" layoutY="135" prefWidth="250" />
 
-        <!-- Reason -->
-        <Label text="Reason:" layoutX="60" layoutY="220" />
-        <TextField fx:id="reasonField"
-                   layoutX="160" layoutY="215"
-                   prefWidth="400" />
+        <Label layoutX="60" layoutY="180" text="Damaged Quantity:" />
+        <TextField fx:id="quantityField" layoutX="200" layoutY="175" prefWidth="150" />
 
-        <!-- Verify Stock -->
-        <Button text="Verify Stock"
-                layoutX="60" layoutY="260"
-                prefWidth="150"
-                onAction="#verifyStock"
-                style="" />
+        <Label layoutX="60" layoutY="220" text="Reason:" />
+        <TextField fx:id="reasonField" layoutX="160" layoutY="215" prefWidth="400" />
 
-        <!-- Deduct Stock -->
-        <Button text="Deduct from Stock"
-                layoutX="230" layoutY="260"
-                prefWidth="180"
-                onAction="#deductStock"
-                style="" />
+        <Button layoutX="60" layoutY="260" onAction="#verifyStock" prefWidth="150" text="Verify Stock" />
 
-        <!-- Updated Stock Status -->
-        <Label text="Updated Stock Status:" layoutX="60" layoutY="310" />
-        <TextArea fx:id="statusArea"
-                  layoutX="60" layoutY="340"
-                  prefWidth="720" prefHeight="140"
-                  editable="false"
-                  style="" />
+        <Button layoutX="230" layoutY="260" onAction="#deductStock" prefWidth="180" text="Deduct from Stock" />
 
-        <!-- Back Button -->
-        <Button text="Back"
-                layoutX="60" layoutY="490"
-                prefWidth="100"
-                onAction="#goBack"
-                style="" />
+        <Label layoutX="60" layoutY="310" text="Updated Stock Status:" />
+        <TextArea fx:id="statusArea" editable="false" layoutX="60" layoutY="340" prefHeight="114.0" prefWidth="720" />
+
+        <Button layoutX="62.0" layoutY="466.0" onAction="#goBack" prefWidth="100" text="Back" />
 
     </children>
 

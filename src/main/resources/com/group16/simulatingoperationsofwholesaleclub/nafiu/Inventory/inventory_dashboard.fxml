@@ -7,30 +7,28 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Inventory.Controller.Inventory_Dashboard">
 
-    <!-- Header -->
     <Label layoutX="260.0" layoutY="40.0" style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Welcome to Inventory Manager Dashboard" />
 
     <Line endX="600.0" layoutX="260.0" layoutY="80.0" startX="-266.0" strokeWidth="2" />
 
-      <Button layoutX="236.0" layoutY="174.0" onAction="#handleMonitorStock" prefWidth="180.0" style="" text="Check Inventory" />
+      <Button layoutX="236.0" layoutY="174.0" onAction="#handleMonitorStock" prefWidth="180.0"  text="Check Inventory" />
 
-      <Button layoutX="236.0" layoutY="221.0" onAction="#handlePurchaseRequest" prefWidth="180.0" style="" text="New Purchase Request" />
+      <Button layoutX="236.0" layoutY="221.0" onAction="#handlePurchaseRequest" prefWidth="180.0"  text="New Purchase Request" />
 
-      <Button layoutX="236.0" layoutY="269.0" onAction="#handleReceiveDelivery" prefWidth="180.0" style="" text="Receive Supplier Delivery" />
+      <Button layoutX="236.0" layoutY="269.0" onAction="#handleReceiveDelivery" prefWidth="180.0"  text="Receive Supplier Delivery" />
 
-      <Button layoutX="236.0" layoutY="317.0" onAction="#handleUpdateDamaged" prefWidth="180.0" style="" text="Update Damaged/Expired Goods" />
+      <Button layoutX="236.0" layoutY="317.0" onAction="#handleUpdateDamaged" prefWidth="180.0"  text="Update Damaged/Expired Goods" />
 
-      <Button layoutX="484.0" layoutY="174.0" onAction="#handleForecastDemand" prefWidth="180.0" style="" text="Forecast Demand" />
+      <Button layoutX="484.0" layoutY="174.0" onAction="#handleForecastDemand" prefWidth="180.0"  text="Forecast Demand" />
 
-      <Button layoutX="484.0" layoutY="221.0" onAction="#handleStockReport" prefWidth="180.0" style="" text="Generate Stock Report" />
+      <Button layoutX="484.0" layoutY="221.0" onAction="#handleStockReport" prefWidth="180.0"  text="Generate Stock Report" />
 
-      <Button layoutX="484.0" layoutY="269.0" onAction="#handleOrganizeWarehouse" prefWidth="180.0" style="" text="Organize Warehouse" />
+      <Button layoutX="484.0" layoutY="269.0" onAction="#handleOrganizeWarehouse" prefWidth="180.0"  text="Organize Warehouse" />
 
-      <Button layoutX="484.0" layoutY="317.0" onAction="#handleSupplierReturns" prefWidth="180.0" style="" text="Handle Supplier Returns" />
+      <Button layoutX="484.0" layoutY="317.0" onAction="#handleSupplierReturns" prefWidth="180.0"  text="Handle Supplier Returns" />
 
-     <Button layoutX="389.0" layoutY="431.0" onAction="#handleBack" prefWidth="140.0" style="" text="Back" />
+     <Button layoutX="389.0" layoutY="431.0" onAction="#handleBack" prefWidth="140.0"  text="Back" />
 
-     <!-- Logout & Back Buttons -->
-     <Button layoutX="389.0" layoutY="475.0" onAction="#handleLogout" prefWidth="140.0" style="" text="Logout" />
+     <Button layoutX="389.0" layoutY="475.0" onAction="#handleLogout" prefWidth="140.0"  text="Logout" />
 
 </AnchorPane>

@@ -12,18 +12,14 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Cashier.Controller.Process_Payment">
 
-    <!-- Back Button -->
     <Button layoutX="14.0" layoutY="561.0" onAction="#handleBack" prefWidth="100.0" text="Back" />
 
-    <!-- Header -->
     <Label layoutX="160.0" layoutY="40.0" text="Process Payment" />
 
     <Line endX="600.0" layoutX="160.0" layoutY="80.0" strokeWidth="2" />
 
-    <!-- Content Section -->
     <VBox layoutX="160.0" layoutY="120.0" spacing="20.0">
 
-        <!-- Step 1: Select Payment Method -->
         <VBox spacing="5.0">
             <Label text="Select Payment Method:" />
             <ComboBox fx:id="paymentMethodBox" prefWidth="250.0">
@@ -36,17 +32,14 @@
             </ComboBox>
         </VBox>
 
-        <!-- Step 2: Enter Payment Details -->
         <VBox spacing="5.0">
             <Label text="Payment Details / Cash Received:" />
             <TextField fx:id="paymentDetailsField" prefWidth="300.0" />
             <Button onAction="#handleSubmitPaymentInfo" prefWidth="150.0" text="Submit Payment Info" />
         </VBox>
 
-        <!-- Step 3: Validation -->
         <Label fx:id="validationLabel" text="Validation: Pending" />
 
-        <!-- Step 5: Payment Success or Failure -->
         <Label fx:id="paymentStatusLabel" text="Payment Status: Not Completed" />
 
     </VBox>

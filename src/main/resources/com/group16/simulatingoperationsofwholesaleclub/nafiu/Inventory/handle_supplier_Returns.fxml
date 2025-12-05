@@ -10,12 +10,12 @@
 
     <children>
 
-        <!-- Title -->
+
         <Label text="Handle Supplier Returns"
                layoutX="280" layoutY="20"
                style="-fx-font-size: 22px; -fx-font-weight: bold;" />
 
-        <!-- Step 1: Enter Product ID and Quantity -->
+
         <Label text="Product ID:" layoutX="60" layoutY="100" />
         <TextField fx:id="productIdField"
                    layoutX="160" layoutY="95"
@@ -26,34 +26,29 @@
                    layoutX="160" layoutY="145"
                    prefWidth="150" />
 
-        <!-- Step 2: Verify Return Eligibility -->
+
         <Button text="Verify Return"
                 layoutX="60" layoutY="200"
                 prefWidth="180"
-                onAction="#verifyReturn"
-                style="" />
+                onAction="#verifyReturn"/>
 
-        <!-- Step 3: Update Stock & Mark as Returned -->
         <Button text="Process Return"
                 layoutX="260" layoutY="200"
                 prefWidth="180"
-                onAction="#processReturn"
-                style="" />
+                onAction="#processReturn"/>
 
-        <!-- Step 4: Display Return Confirmation -->
+
         <Label text="Return Confirmation:" layoutX="60" layoutY="260" />
         <TextArea fx:id="confirmationArea"
                   layoutX="60" layoutY="290"
                   prefWidth="720" prefHeight="140"
-                  editable="false"
-                  style="" />
+                  editable="false"/>
 
-        <!-- Back Button -->
+
         <Button text="Back"
                 layoutX="60" layoutY="450"
                 prefWidth="100"
-                onAction="#goBack"
-                style="" />
+                onAction="#goBack"/>
 
     </children>
 
