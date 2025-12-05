@@ -33,7 +33,7 @@ public class VerifyReturnedOrdersController {
         List<ReturnProblem> allProblems = readProblems();
         List<ReturnProblem> filtered = new ArrayList<>();
 
-        // Filter by orderId if entered, otherwise show all
+
         for (ReturnProblem rp : allProblems) {
             if (orderId.isEmpty() || rp.getOrderId().equals(orderId)) {
                 filtered.add(rp);
@@ -41,10 +41,10 @@ public class VerifyReturnedOrdersController {
         }
 
         if (filtered.isEmpty()) {
-            statusLabel.setText("❌ No return problem found" + (orderId.isEmpty() ? "." : " for Order ID: " + orderId));
+            statusLabel.setText(" No return problem found" + (orderId.isEmpty() ? "." : " for Order ID: " + orderId));
             returnTextArea.clear();
         } else {
-            statusLabel.setText("✅ Return problem(s) found.");
+            statusLabel.setText(" Return problem(s) found.");
             StringBuilder sb = new StringBuilder();
             for (ReturnProblem rp : filtered) {
                 sb.append("Order ID: ").append(rp.getOrderId())
@@ -63,7 +63,7 @@ public class VerifyReturnedOrdersController {
         );
     }
 
-    // Helper to read return problems from file
+
     private List<ReturnProblem> readProblems() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_PATH_PROBLEMS))) {
             return (List<ReturnProblem>) ois.readObject();

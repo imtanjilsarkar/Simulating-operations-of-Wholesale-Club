@@ -15,7 +15,7 @@ import java.util.List;
 
 public class ViewSupplierContactController {
 
-    // Must match the file used for saving records
+
     private static final String SUPPLIER_FILE = "supplier_records.dat";
 
     @FXML
@@ -40,11 +40,11 @@ public class ViewSupplierContactController {
             return;
         }
 
-        // 1. Load all records from the binary file
+
         List<SupplierRecord> records = loadSupplierRecords();
         SupplierRecord foundRecord = null;
 
-        // 2. Search for the supplier ID
+
         for (SupplierRecord record : records) {
             if (record.getSupplierId().equals(searchId)) {
                 foundRecord = record;
@@ -52,7 +52,7 @@ public class ViewSupplierContactController {
             }
         }
 
-        // 3. Display results
+
         if (foundRecord != null) {
             String info = String.format(
                     "Supplier ID: %s\nName: %s\nContact: %s\nAddress: %s",
@@ -71,24 +71,19 @@ public class ViewSupplierContactController {
         }
     }
 
-    /**
-     * Helper method to load all SupplierRecord objects from the binary file using ObjectInputStream.
-     * This is the same reading logic used in ManageSupplierRecordsController.
-     * @return A List of SupplierRecord objects, or an empty List if the file is new or corrupt.
-     */
+
     private List<SupplierRecord> loadSupplierRecords() {
         File file = new File(SUPPLIER_FILE);
-        // Check 1: If file doesn't exist or is empty, return empty list
+
         if (!file.exists() || file.length() == 0) {
             return new ArrayList<>();
         }
 
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
-            // Read the single object (the List) from the binary stream
-            // Suppress warning is safe because we check the file length and format on write
+
             return (List<SupplierRecord>) ois.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            // Display an alert if file loading fails (e.g., file corrupted)
+
             new Alert(Alert.AlertType.ERROR, "Failed to load supplier records. File may be corrupted or missing model class.").show();
             e.printStackTrace();
             return new ArrayList<>();

@@ -6,7 +6,7 @@ public class DamagedProduct {
     private int deductedQty;
     private String reason;
 
-    // Constructor
+
     public DamagedProduct(String productId, String productName, int deductedQty, String reason) {
         this.productId = productId;
         this.productName = productName;
@@ -14,13 +14,13 @@ public class DamagedProduct {
         this.reason = reason;
     }
 
-    // Getters
+
     public String getProductId() { return productId; }
     public String getProductName() { return productName; }
     public int getDeductedQty() { return deductedQty; }
     public String getReason() { return reason; }
 
-    // Setters (if needed)
+
     public void setProductId(String productId) { this.productId = productId; }
     public void setProductName(String productName) { this.productName = productName; }
     public void setDeductedQty(int deductedQty) { this.deductedQty = deductedQty; }

@@ -4,6 +4,7 @@ import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import com.group16.simulatingoperationsofwholesaleclub.rahad.ProcurementOfficer.modelClass.SupplierOrder;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 
 import java.io.*;
@@ -17,12 +18,14 @@ public class TrackPendingSupplierDeliveriesController {
 
     private static final String BIN_FILE_PATH = "supplier_orders.bin";
     private static final String TXT_FILE_PATH = "Receive_Supplier_delivery.txt";
+    @FXML
+    private Button loadPendingButton;
 
     @FXML
     public void loadPendingDeliveries(ActionEvent event) {
         pendingOrdersArea.clear();
 
-        // 1️⃣ Load delivered order IDs from text file
+
         Set<String> deliveredOrderIds = new HashSet<>();
         File txtFile = new File(TXT_FILE_PATH);
         if (txtFile.exists()) {
@@ -31,7 +34,7 @@ public class TrackPendingSupplierDeliveriesController {
                 while ((line = br.readLine()) != null) {
                     line = line.trim();
                     if (!line.isEmpty()) {
-                        // Assume TXT format: OrderID,Delivered/Status (comma-separated)
+
                         String[] parts = line.split(",");
                         if (parts.length >= 2 && parts[1].equalsIgnoreCase("Delivered")) {
                             deliveredOrderIds.add(parts[0].trim());
@@ -45,7 +48,7 @@ public class TrackPendingSupplierDeliveriesController {
             }
         }
 
-        // 2️⃣ Load all orders from binary file
+
         ArrayList<SupplierOrder> allOrders = new ArrayList<>();
         File binFile = new File(BIN_FILE_PATH);
         if (binFile.exists()) {
@@ -66,7 +69,7 @@ public class TrackPendingSupplierDeliveriesController {
             }
         }
 
-        // 3️⃣ Filter and display only pending orders
+
         StringBuilder sb = new StringBuilder();
         sb.append("Pending Orders:\n\n");
 

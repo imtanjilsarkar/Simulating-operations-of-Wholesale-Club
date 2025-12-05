@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ManageSupplierRecordsController {
 
-    // IMPORTANT CHANGE: Using a relative binary file path
+
     private static final String SUPPLIER_FILE = "supplier_records.dat";
 
     @FXML
@@ -30,7 +30,7 @@ public class ManageSupplierRecordsController {
         String contact = contactField.getText().trim();
         String address = addressField.getText().trim();
 
-        // Simple validation (retained from your original code)
+
         if (supplierId.isEmpty() || name.isEmpty() || contact.isEmpty() || address.isEmpty()) {
             messageLabel.setText("All fields are required!");
             messageLabel.setStyle("-fx-text-fill: red;");
@@ -49,13 +49,11 @@ public class ManageSupplierRecordsController {
             return;
         }
 
-        // --- NEW BINARY FILE LOGIC STARTS HERE ---
 
-        // 1. Load existing records from the binary file
         List<SupplierRecord> records = loadSupplierRecords();
         SupplierRecord newOrUpdatedRecord = new SupplierRecord(supplierId, name, contact, address);
 
-        // 2. Check for existence (Update or Add)
+
         boolean updated = false;
         for (int i = 0; i < records.size(); i++) {
             if (records.get(i).getSupplierId().equals(supplierId)) {
@@ -67,16 +65,16 @@ public class ManageSupplierRecordsController {
         }
 
         if (!updated) {
-            // Add new record
+
             records.add(newOrUpdatedRecord);
         }
 
-        // 3. Save the entire updated list back to the binary file
+
         if (saveSupplierRecords(records)) {
             messageLabel.setText(updated ? "Supplier record updated successfully!" : "New supplier record saved successfully!");
             messageLabel.setStyle("-fx-text-fill: green;");
 
-            // Clear fields upon successful save
+
             supplierIdField.clear();
             nameField.clear();
             contactField.clear();
@@ -85,25 +83,22 @@ public class ManageSupplierRecordsController {
             messageLabel.setText("Error saving record to binary file!");
             messageLabel.setStyle("-fx-text-fill: red;");
         }
-        // --- NEW BINARY FILE LOGIC ENDS HERE ---
+
     }
 
-    /**
-     * Helper method to load all SupplierRecord objects from the binary file using ObjectInputStream.
-     * Modeled after your demo binary handling code.
-     */
+
     private List<SupplierRecord> loadSupplierRecords() {
         File file = new File(SUPPLIER_FILE);
-        // Check 1: If file doesn't exist or is empty, return empty list
+
         if (!file.exists() || file.length() == 0) {
             return new ArrayList<>();
         }
 
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
-            // Read the single object (the List) from the binary stream
+
             return (List<SupplierRecord>) ois.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            // Display an alert if file loading fails (e.g., file corrupted)
+
             new Alert(Alert.AlertType.ERROR, "Failed to load supplier records. File may be corrupted.").show();
             e.printStackTrace();
             return new ArrayList<>();

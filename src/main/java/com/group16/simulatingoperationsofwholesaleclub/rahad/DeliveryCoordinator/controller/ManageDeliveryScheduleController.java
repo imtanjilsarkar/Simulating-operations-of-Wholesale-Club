@@ -37,7 +37,7 @@ public class ManageDeliveryScheduleController {
         );
     }
 
-    // ---------------- SEARCH ORDER ----------------
+
     @FXML
     public void searchID(ActionEvent actionEvent) {
         String orderId = orderIdField.getText().trim();
@@ -45,7 +45,7 @@ public class ManageDeliveryScheduleController {
         prevDateField.setText("");
 
         if (orderId.isEmpty()) {
-            statusLabel.setText("⚠ Please enter an Order ID.");
+            statusLabel.setText(" Please enter an Order ID.");
             return;
         }
 
@@ -54,18 +54,18 @@ public class ManageDeliveryScheduleController {
             prevDateField.setText(ad.getDeliveryDate());
             statusLabel.setText("Order found. You can update the delivery date.");
         } else {
-            statusLabel.setText("❌ No order found with Order ID: " + orderId);
+            statusLabel.setText(" No order found with Order ID: " + orderId);
         }
     }
 
-    // ---------------- UPDATE DELIVERY DATE ----------------
+
     @FXML
     public void handleUpdateDate(ActionEvent actionEvent) {
         String orderId = orderIdField.getText().trim();
         LocalDate newDate = newDatePicker.getValue();
 
         if (orderId.isEmpty() || newDate == null) {
-            statusLabel.setText("⚠ Please enter Order ID and select a new delivery date.");
+            statusLabel.setText(" Please enter Order ID and select a new delivery date.");
             return;
         }
 
@@ -82,14 +82,14 @@ public class ManageDeliveryScheduleController {
 
         if (found) {
             saveAssignedDeliveries(assignedList);
-            statusLabel.setText("✅ Delivery date updated successfully!");
+            statusLabel.setText(" Delivery date updated successfully!");
             prevDateField.setText(newDate.toString());
         } else {
-            statusLabel.setText("❌ No order found with Order ID: " + orderId);
+            statusLabel.setText(" No order found with Order ID: " + orderId);
         }
     }
 
-    // ---------------- HELPER METHODS ----------------
+
     private AssignedDelivery findAssignedDelivery(String orderId) {
         List<AssignedDelivery> assignedList = readAssignedDeliveries();
         for (AssignedDelivery ad : assignedList) {

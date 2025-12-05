@@ -13,7 +13,7 @@ public class SupplierOrder implements Serializable {
     private int quantity;
     private String dueDate;
 
-    // Constructor with auto-generated order ID
+
     public SupplierOrder(String supplierId, String productName, int quantity, String dueDate) {
         this.orderId = generateUniqueOrderId();
         this.supplierId = supplierId;
@@ -22,7 +22,7 @@ public class SupplierOrder implements Serializable {
         this.dueDate = dueDate;
     }
 
-    // Constructor with explicit order ID (optional)
+
     public SupplierOrder(String orderId, String supplierId, String productName, int quantity, String dueDate) {
         this.orderId = orderId;
         this.supplierId = supplierId;
@@ -31,7 +31,7 @@ public class SupplierOrder implements Serializable {
         this.dueDate = dueDate;
     }
 
-    // Getters and setters
+
     public String getOrderId() {
         return orderId;
     }
@@ -79,7 +79,7 @@ public class SupplierOrder implements Serializable {
                 '}';
     }
 
-    // Helper method to generate a unique order ID
+
     private String generateUniqueOrderId() {
         long timestamp = System.currentTimeMillis(); // current time in milliseconds
         int randomNumber = new Random().nextInt(900) + 100; // random 3-digit number (100-999)

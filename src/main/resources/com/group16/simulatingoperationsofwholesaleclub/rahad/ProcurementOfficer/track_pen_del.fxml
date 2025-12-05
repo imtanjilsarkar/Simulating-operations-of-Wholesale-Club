@@ -10,22 +10,20 @@
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.group16.simulatingoperationsofwholesaleclub.rahad.ProcurementOfficer.controller.TrackPendingSupplierDeliveriesController">
 
-    <!-- Title -->
+
     <Label layoutX="220.0" layoutY="20.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #004aad;"
            text="Track Pending Supplier Deliveries" />
 
-    <!-- Load Pending Deliveries Button -->
     <Button fx:id="loadPendingButton" layoutX="20.0" layoutY="70.0" prefWidth="180.0" prefHeight="35.0"
             style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 8;"
             text="Load Pending Deliveries"
             onAction="#loadPendingDeliveries" />
 
-    <!-- TextArea to show pending orders -->
     <TextArea fx:id="pendingOrdersArea" layoutX="20.0" layoutY="120.0" prefWidth="660.0" prefHeight="280.0"
               style="-fx-border-color:#007bff; -fx-border-radius:5;"
               promptText="Pending orders will appear here..." editable="false" wrapText="true" />
 
-    <!-- Back Button -->
+
     <Button layoutX="20.0" layoutY="415.0" prefWidth="100.0" prefHeight="30.0"
             style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 8;"
             text="Back" onAction="#handleBack" />

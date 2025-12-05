@@ -19,13 +19,12 @@ public class SupplierRecord implements Serializable {
         this.address = address;
     }
 
-    // --- Getters ---
+
     public String getSupplierId() { return supplierId; }
     public String getName() { return name; }
     public String getContact() { return contact; }
     public String getAddress() { return address; }
 
-    // --- Setters (Used when updating an existing record) ---
     public void setName(String name) { this.name = name; }
     public void setContact(String contact) { this.contact = contact; }
     public void setAddress(String address) { this.address = address; }

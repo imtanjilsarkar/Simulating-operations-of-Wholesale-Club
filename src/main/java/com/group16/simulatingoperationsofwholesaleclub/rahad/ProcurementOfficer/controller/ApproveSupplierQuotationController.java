@@ -17,16 +17,16 @@ public class ApproveSupplierQuotationController {
 
     private static final String QUOTATION_FILE = "quotation_decisions.dat";
 
-    // ========== FXML Fields (Matching FXML Exactly) ==========
+
     @FXML private TextField supplierfield;
     @FXML private TextField productnamefield;
     @FXML private TextField pricefield;
     @FXML private TextArea qualitynotesTA;
 
-    // Label for messages
+
     @FXML private Label messageLabel;
 
-    // =========================================================
+
 
     @FXML
     public void handleApproveButton(ActionEvent actionEvent) {
@@ -38,9 +38,7 @@ public class ApproveSupplierQuotationController {
         saveQuotationDecision("Rejected");
     }
 
-    /**
-     * Core saving logic for approved/rejected decisions.
-     */
+
     private void saveQuotationDecision(String status) {
 
         String supplier = supplierfield.getText().trim();
@@ -48,7 +46,7 @@ public class ApproveSupplierQuotationController {
         String priceText = pricefield.getText().trim();
         String qualityNotes = qualitynotesTA.getText().trim();
 
-        // --------- VALIDATION ---------
+
         if (supplier.isEmpty() || product.isEmpty() || priceText.isEmpty() || qualityNotes.isEmpty()) {
             setMessage("All fields must be filled out.", "red");
             return;
@@ -66,20 +64,14 @@ public class ApproveSupplierQuotationController {
             return;
         }
 
-        // --------- CREATE RECORD ---------
-        ApproveQuotation record = new ApproveQuotation(
-                supplier,
-                product,
-                price,
-                qualityNotes,
-                status
-        );
 
-        // --------- LOAD EXISTING DATA ---------
+        ApproveQuotation record = new ApproveQuotation(supplier, product, price, qualityNotes, status);
+
+
         List<ApproveQuotation> records = loadQuotationRecords();
         records.add(record);
 
-        // --------- SAVE UPDATED DATA ---------
+
         if (saveQuotationRecords(records)) {
             setMessage("Quotation successfully " + status + "!", "green");
             clearFields();
@@ -88,13 +80,13 @@ public class ApproveSupplierQuotationController {
         }
     }
 
-    // Show message on the screen
+
     private void setMessage(String msg, String color) {
         messageLabel.setText(msg);
         messageLabel.setStyle("-fx-text-fill: " + color + "; -fx-font-size: 14px;");
     }
 
-    // Clear input boxes
+
     private void clearFields() {
         supplierfield.clear();
         productnamefield.clear();
@@ -102,7 +94,7 @@ public class ApproveSupplierQuotationController {
         qualitynotesTA.clear();
     }
 
-    // Load binary file data
+
     private List<ApproveQuotation> loadQuotationRecords() {
         File file = new File(QUOTATION_FILE);
         if (!file.exists() || file.length() == 0) {
@@ -117,7 +109,7 @@ public class ApproveSupplierQuotationController {
         }
     }
 
-    // Save binary file data
+
     private boolean saveQuotationRecords(List<ApproveQuotation> list) {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(QUOTATION_FILE))) {
             oos.writeObject(list);

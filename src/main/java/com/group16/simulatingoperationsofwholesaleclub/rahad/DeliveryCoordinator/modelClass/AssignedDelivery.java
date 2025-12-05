@@ -10,14 +10,14 @@ public class AssignedDelivery implements Serializable {
     private String orderId;       // Changed from deliveryNo to orderId
     private String deliveryDate;
 
-    // Constructor
+
     public AssignedDelivery(String staffId, String orderId, String deliveryDate) {
         this.staffId = staffId;
         this.orderId = orderId;
         this.deliveryDate = deliveryDate;
     }
 
-    // Getters and Setters
+
     public String getStaffId() {
         return staffId;
     }
@@ -42,7 +42,7 @@ public class AssignedDelivery implements Serializable {
         this.deliveryDate = deliveryDate;
     }
 
-    // toString method
+
     @Override
     public String toString() {
         return "AssignedDelivery{" +

@@ -33,7 +33,7 @@ public class CreateSupplierOrderController {
                     ? dueDatePicker.getValue().toString()
                     : "";
 
-            // VALIDATION
+
             if (supplierId.isEmpty() || product.isEmpty() || qtyText.isEmpty() || dueDate.isEmpty()) {
                 showMessage("Please fill all fields!", "red");
                 return;
@@ -47,16 +47,16 @@ public class CreateSupplierOrderController {
                 return;
             }
 
-            // If orderId is empty, generate one automatically
+
             if (orderId.isEmpty()) {
                 orderId = generateUniqueOrderId();
                 orderIdField.setText(orderId);
             }
 
-            // Create new order object
+
             SupplierOrder newOrder = new SupplierOrder(orderId, supplierId, product, quantity, dueDate);
 
-            // Load existing binary file
+
             ArrayList<SupplierOrder> orderList = new ArrayList<>();
             File file = new File(FILE_PATH);
 
@@ -68,17 +68,17 @@ public class CreateSupplierOrderController {
                 }
             }
 
-            // Add new order
+
             orderList.add(newOrder);
 
-            // Save back
+
             try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
                 oos.writeObject(orderList);
             }
 
             showMessage("Order saved successfully!", "green");
 
-            // Clear only input fields (keep order ID displayed if generated manually)
+
             supplierIdField.clear();
             productField.clear();
             quantityField.clear();
@@ -110,7 +110,7 @@ public class CreateSupplierOrderController {
         orderIdField.setEditable(false);
     }
 
-    // Helper method to generate a unique order ID
+
     private String generateUniqueOrderId() {
         long timestamp = System.currentTimeMillis(); // current time in milliseconds
         int randomNumber = new Random().nextInt(900) + 100; // random 3-digit number (100-999)

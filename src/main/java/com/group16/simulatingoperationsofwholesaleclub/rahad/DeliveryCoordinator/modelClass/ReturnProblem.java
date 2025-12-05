@@ -14,7 +14,7 @@ public class ReturnProblem implements Serializable {
         this.problemDetails = problemDetails;
     }
 
-    // Getters and setters
+
     public String getOrderId() {
         return orderId;
     }

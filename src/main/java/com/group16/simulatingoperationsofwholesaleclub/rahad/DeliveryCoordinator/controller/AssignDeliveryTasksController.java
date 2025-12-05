@@ -28,13 +28,13 @@ public class AssignDeliveryTasksController {
     @FXML
     private Label successLabel;
 
-    // Back button
+
     @FXML
     public void handleBack(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/DeliveryCoordinator/delivery_Dashboard.fxml", actionEvent);
     }
 
-    // Assign Delivery Button
+
     @FXML
     public void AssignDeliveryBTN(ActionEvent actionEvent) {
 
@@ -44,17 +44,16 @@ public class AssignDeliveryTasksController {
                 ? deliveryDatePicker.getValue().toString()
                 : "";
 
-        // Validation
+
         if (staffId.isEmpty() || deliveryNo.isEmpty() || deliveryDate.isEmpty()) {
-            successLabel.setText("⚠ Please fill all fields.");
+            successLabel.setText(" Please fill all fields.");
             return;
         }
 
         try {
-            // Load existing deliveries
             ArrayList<AssignedDelivery> list = loadAssignedDeliveries();
 
-            // Check if order ID already exists
+
             for (AssignedDelivery ad : list) {
                 if (ad.getOrderId().equals(deliveryNo)) {
                     successLabel.setText("This Order ID is already assigned!");
@@ -62,11 +61,11 @@ public class AssignDeliveryTasksController {
                 }
             }
 
-            // Add new delivery
+
             AssignedDelivery assignedDelivery = new AssignedDelivery(staffId, deliveryNo, deliveryDate);
             list.add(assignedDelivery);
 
-            // Save back to file
+
             try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(FILE_PATH))) {
                 out.writeObject(list);
             }
@@ -80,7 +79,7 @@ public class AssignDeliveryTasksController {
         }
     }
 
-    // Load assigned deliveries
+
     private ArrayList<AssignedDelivery> loadAssignedDeliveries() {
         ArrayList<AssignedDelivery> list = new ArrayList<>();
         if (Files.exists(Paths.get(FILE_PATH))) {
@@ -93,7 +92,7 @@ public class AssignDeliveryTasksController {
         return list;
     }
 
-    // Clear UI fields
+
     private void clearFields() {
         staffIdField.clear();
         deliveryNoField.clear();

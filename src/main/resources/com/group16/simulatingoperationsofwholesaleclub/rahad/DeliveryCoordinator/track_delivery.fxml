@@ -10,23 +10,23 @@
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.group16.simulatingoperationsofwholesaleclub.rahad.DeliveryCoordinator.controller.TrackDeliveryController">
 
-    <!-- Page Title -->
+
     <Label layoutX="150" layoutY="40"
            style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #004aad;"
            text="Track Delivery" />
 
-    <!-- Order ID Label -->
+
     <Label layoutX="70" layoutY="140"
            style="-fx-font-size: 14px; -fx-text-fill: #004aad;"
            text="Order ID:" />
 
-    <!-- Order ID Input -->
+
     <TextField fx:id="orderIdField"
                layoutX="150" layoutY="135"
                prefWidth="250"
                style="-fx-border-color: #007bff; -fx-background-radius: 5;" />
 
-    <!-- Status Label -->
+
     <Label fx:id="statusLabel"
            layoutX="70" layoutY="200"
            prefWidth="470"
@@ -34,7 +34,7 @@
            wrapText="true"
            text="" />
 
-    <!-- Staff ID Label -->
+
     <Label fx:id="staffLabel"
            layoutX="70" layoutY="240"
            prefWidth="470"
@@ -42,14 +42,14 @@
            wrapText="true"
            text="" />
 
-    <!-- Track Button -->
+
     <Button layoutX="150" layoutY="300"
             onAction="#handleTrackDelivery"
             prefWidth="150"
             style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 8;"
             text="Track Delivery" />
 
-    <!-- Back Button -->
+
     <Button layoutX="330" layoutY="300"
             onAction="#handleBack"
             prefWidth="100"

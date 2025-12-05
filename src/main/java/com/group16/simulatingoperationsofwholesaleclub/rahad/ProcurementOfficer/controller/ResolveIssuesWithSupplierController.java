@@ -37,7 +37,7 @@ public class ResolveIssuesWithSupplierController {
 
     @FXML
     public void initialize() {
-        // Map TableView columns to model properties
+
         colProductID.setCellValueFactory(new PropertyValueFactory<>("productId"));
         colProductName.setCellValueFactory(new PropertyValueFactory<>("productName"));
         deductedQTYcol.setCellValueFactory(new PropertyValueFactory<>("deductedQty"));
@@ -59,8 +59,6 @@ public class ResolveIssuesWithSupplierController {
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = br.readLine()) != null) {
-                // Expected format:
-                // Product ID: P001, Name: Fish, Deducted: 5, Updated Stock: 45, Reason: Rotten
                 String[] parts = line.split(",");
                 if (parts.length < 5) continue; // skip invalid lines
 
@@ -72,7 +70,7 @@ public class ResolveIssuesWithSupplierController {
                 damagedList.add(new DamagedProduct(productId, productName, deductedQty, reason));
             }
 
-            // Use ObservableList to display in TableView
+
             ObservableList<DamagedProduct> tableItems = FXCollections.observableArrayList(damagedList);
             damagedTable.setItems(tableItems);
 

@@ -39,14 +39,14 @@ public class TrackDeliveryController {
         statusLabel.setText("");
 
         if (orderId.isEmpty()) {
-            statusLabel.setText("⚠ Please enter an Order ID.");
+            statusLabel.setText(" Please enter an Order ID.");
             return;
         }
 
         List<ConfirmOrders> confirmedOrders = readConfirmedOrders();
         List<AssignedDelivery> assignedDeliveries = readAssignedDeliveries();
 
-        // Check if delivered
+
         for (ConfirmOrders co : confirmedOrders) {
             if (co.getOrderId().equals(orderId)) {
                 statusLabel.setText("Order ID " + orderId + " has already been delivered.");
@@ -54,7 +54,7 @@ public class TrackDeliveryController {
             }
         }
 
-        // Check if assigned but not delivered
+
         for (AssignedDelivery ad : assignedDeliveries) {
             if (ad.getOrderId().equals(orderId)) {
                 statusLabel.setText("Order ID " + orderId + " is currently in process.");
@@ -62,7 +62,7 @@ public class TrackDeliveryController {
             }
         }
 
-        // Not found
+
         statusLabel.setText("Order ID " + orderId + " was never assigned for delivery.");
     }
 

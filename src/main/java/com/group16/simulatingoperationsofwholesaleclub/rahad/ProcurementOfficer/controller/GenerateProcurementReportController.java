@@ -31,18 +31,14 @@ public class GenerateProcurementReportController {
 
     private ArrayList<SupplierOrder> orderList;
 
-    // =============================================================
-    // INITIALIZE
-    // =============================================================
+
     @FXML
     public void initialize() {
         loadOrders();
         displayOrders();
     }
 
-    // =============================================================
-    // LOAD ORDERS FROM BINARY FILE
-    // =============================================================
+
     private void loadOrders() {
         orderList = new ArrayList<>();
         File file = new File(FILE_PATH);
@@ -70,9 +66,7 @@ public class GenerateProcurementReportController {
         }
     }
 
-    // =============================================================
-    // DISPLAY ORDERS IN TEXTAREA
-    // =============================================================
+
     private void displayOrders() {
         if (orderList.isEmpty()) {
             reportArea.setText("No orders to display.");
@@ -95,17 +89,13 @@ public class GenerateProcurementReportController {
         reportArea.setText(sb.toString());
     }
 
-    // =============================================================
-    // BACK BUTTON
-    // =============================================================
+
     @FXML
     public void handleBack(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/rahad/ProcurementOfficer/procurementOff_dashboard.fxml", actionEvent);
     }
 
-    // =============================================================
-    // GENERATE PDF
-    // =============================================================
+
     @FXML
     public void downloadReport(ActionEvent actionEvent) {
         if (orderList.isEmpty()) {

@@ -38,25 +38,25 @@ public class ConfirmCompletedDeliveriesController {
     public void handleConfirmDelivery(ActionEvent actionEvent) {
         String orderId = orderIdField.getText().trim();
 
-        // Clear previous messages
+
         deliveredLabel.setText("");
         notAssignedLabel.setText("");
 
         if (orderId.isEmpty()) {
-            notAssignedLabel.setText("⚠ Please enter an Order ID.");
+            notAssignedLabel.setText("Please enter an Order ID.");
             return;
         }
 
-        // Check if already confirmed
+
         List<ConfirmOrders> confirmedList = readConfirmedOrders();
         for (ConfirmOrders co : confirmedList) {
             if (co.getOrderId().equals(orderId)) {
-                deliveredLabel.setText("⚠ Order ID " + orderId + " is already DELIVERED.");
+                deliveredLabel.setText(" Order ID " + orderId + " is already DELIVERED.");
                 return;
             }
         }
 
-        // Load assigned deliveries
+
         List<AssignedDelivery> assignedList = readAssignedDeliveries();
         AssignedDelivery target = null;
 
@@ -68,24 +68,23 @@ public class ConfirmCompletedDeliveriesController {
         }
 
         if (target == null) {
-            // Order not assigned
             notAssignedLabel.setText(" Order ID is not assigned to any delivery staff yet.");
             return;
         }
 
-        // Confirm delivery
+
         saveConfirmedOrder(orderId);
 
-        // Remove from assigned deliveries
+
         assignedList.remove(target);
         saveAssignedDeliveries(assignedList);
 
-        // Show success in delivered label
-        deliveredLabel.setText("✅ Order ID " + orderId + " marked as DELIVERED successfully!");
+
+        deliveredLabel.setText(" Order ID " + orderId + " marked as DELIVERED successfully!");
         orderIdField.clear();
     }
 
-    // ---------- FILE METHODS ----------
+
 
     private List<AssignedDelivery> readAssignedDeliveries() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ASSIGNED_FILE))) {

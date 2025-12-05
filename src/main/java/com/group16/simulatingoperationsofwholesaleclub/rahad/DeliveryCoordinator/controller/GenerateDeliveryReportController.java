@@ -71,7 +71,7 @@ public class GenerateDeliveryReportController {
     @FXML
     public void handleDownloadReport(ActionEvent event) {
         if (reportTable.getItems().isEmpty()) {
-            statusLabel.setText("⚠ Generate the report first!");
+            statusLabel.setText("Generate the report first!");
             return;
         }
 
@@ -106,10 +106,10 @@ public class GenerateDeliveryReportController {
             pdf.add(pdfTable);
             pdf.close();
 
-            statusLabel.setText("✅ PDF generated successfully!");
+            statusLabel.setText(" PDF generated successfully!");
 
         } catch (IOException | DocumentException e) {
-            statusLabel.setText("❌ Error generating PDF!");
+            statusLabel.setText(" Error generating PDF!");
             e.printStackTrace();
         }
     }
@@ -139,7 +139,6 @@ public class GenerateDeliveryReportController {
         }
     }
 
-    // ------------------- Report Row -------------------
     public static class ReportRow {
         private final String orderId;
         private final String status;

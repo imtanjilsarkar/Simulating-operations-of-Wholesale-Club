@@ -10,21 +10,21 @@
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.group16.simulatingoperationsofwholesaleclub.rahad.ProcurementOfficer.controller.ReviewPurchaseRequestController">
 
-    <!-- Title -->
+
     <Label layoutX="150.0" layoutY="20.0" text="Store Manager-Approved Purchase Requests"
            style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #004aad;" />
 
-    <!-- TextArea to show requests -->
+
     <TextArea fx:id="requestsTextArea" layoutX="30.0" layoutY="60.0" prefWidth="540.0" prefHeight="250.0"
               editable="false" wrapText="true" style="-fx-border-color: #007bff; -fx-border-radius: 5;" />
 
-    <!-- Show Requests Button -->
+
     <Button fx:id="showRequestsButton" layoutX="30.0" layoutY="330.0" prefWidth="150.0" prefHeight="35.0"
             text="Show Purchase Requests"
             style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-weight: bold;"
             onAction="#showApprovedRequests" />
 
-    <!-- Back Button -->
+
     <Button layoutX="220.0" layoutY="330.0" prefWidth="100.0" prefHeight="35.0"
             text="Back"
             style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-weight: bold;"
