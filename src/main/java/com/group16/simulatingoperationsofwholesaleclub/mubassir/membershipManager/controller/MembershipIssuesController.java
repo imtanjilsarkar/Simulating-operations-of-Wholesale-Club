@@ -2,22 +2,34 @@ package com.group16.simulatingoperationsofwholesaleclub.mubassir.membershipManag
 
 import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 
 import java.io.IOException;
-
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class MembershipIssuesController {
-    @javafx.fxml.FXML
+
+    @FXML
     private TextArea issueTA;
 
-    @javafx.fxml.FXML
+    @FXML
     public void BackBTN(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/membershipManager/membership_dashboard.fxml",actionEvent);
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/membershipManager/membership_dashboard.fxml", actionEvent);
     }
 
-
-    @javafx.fxml.FXML
+    @FXML
     public void loadIssueBTN(ActionEvent actionEvent) {
+        try {
+            Path path = Path.of("membership_requests.txt");
+
+            String content = Files.readString(path);
+
+            issueTA.setText(content);
+
+        } catch (IOException e) {
+            issueTA.setText("Could not load issues. File missing or unreadable.");
+        }
     }
 }

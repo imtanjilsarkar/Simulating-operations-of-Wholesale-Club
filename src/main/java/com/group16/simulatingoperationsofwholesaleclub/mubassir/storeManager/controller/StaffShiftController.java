@@ -37,7 +37,11 @@ public class StaffShiftController {
             successLabel.setStyle("-fx-text-fill: red;");
             return;
         }
-
+        if (shiftDateDP.getValue().isBefore(java.time.LocalDate.now())) {
+            successLabel.setText(" Date cannot be in the past!");
+            successLabel.setStyle("-fx-text-fill: red;");
+            return;
+        }
 
         try (FileWriter writer = new FileWriter(FILE_PATH, true)) {
             writer.write(staffId + "," + shiftDate + "," + shiftTime + "\n");

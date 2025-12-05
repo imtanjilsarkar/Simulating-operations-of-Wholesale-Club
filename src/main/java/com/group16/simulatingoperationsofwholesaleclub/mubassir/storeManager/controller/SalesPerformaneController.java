@@ -17,7 +17,7 @@ public class SalesPerformaneController {
     @FXML
     public void viewReportBTN(ActionEvent actionEvent) {
         try {
-            Path filePath = Path.of("purchase_requests.txt");
+            Path filePath = Path.of("totalcash.txt");
             String content = Files.readString(filePath);
             salesOutputTA.setText(content);
 

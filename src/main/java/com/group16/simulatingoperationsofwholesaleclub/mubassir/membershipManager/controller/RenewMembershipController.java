@@ -53,6 +53,11 @@ public class RenewMembershipController {
             return;
         }
 
+        if (expiryDP.getValue().isBefore(java.time.LocalDate.now())) {
+            successLabels.setText(" Date cannot be in the past!");
+            successLabels.setStyle("-fx-text-fill: red;");
+            return;
+        }
         int id = Integer.parseInt(membershipIdTF.getText());
         NewMembership found = null;
 
