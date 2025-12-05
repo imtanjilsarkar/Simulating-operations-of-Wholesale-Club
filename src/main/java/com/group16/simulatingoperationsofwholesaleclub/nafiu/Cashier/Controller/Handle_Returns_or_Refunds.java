@@ -43,7 +43,7 @@ public class Handle_Returns_or_Refunds {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/nafiu/Cashier/cashier_dashboard.fxml",actionEvent);
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleSelectReturnItem(ActionEvent actionEvent) {
     }
 }

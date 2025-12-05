@@ -6,30 +6,30 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F9FAFB;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Cashier.Controller.Generate_Daily_Sales_Report">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Cashier.Controller.Generate_Daily_Sales_Report">
 
     <!-- Back Button -->
-    <Button layoutX="14.0" layoutY="553.0" onAction="#handleBack" prefWidth="100.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Back" />
+    <Button layoutX="14.0" layoutY="553.0" onAction="#handleBack" prefWidth="100.0" style="" text="Back" />
 
     <!-- Header -->
-    <Label layoutX="160.0" layoutY="40.0" style="-fx-font-size: 22px; -fx-text-fill: #0078D7; -fx-font-weight: bold;" text="Generate Daily Sales Report" />
+    <Label layoutX="160.0" layoutY="40.0" style="-fx-font-size: 22px;" text="Generate Daily Sales Report" />
 
-    <Line endX="600.0" layoutX="160.0" layoutY="80.0" stroke="#0078D7" strokeWidth="2" />
+    <Line endX="600.0" layoutX="160.0" layoutY="80.0" style="" />
 
     <!-- Content Section -->
     <VBox layoutX="160.0" layoutY="120.0" spacing="20.0">
 
         <!-- Step 1: Generate Report -->
-        <Button onAction="#handleGenerateReport" prefWidth="250.0" style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Generate Report" />
+        <Button onAction="#handleGenerateReport" prefWidth="250.0" style="" text="Generate Report" />
 
         <!-- Step 2: Show All Transactions -->
-        <Label fx:id="transactionDataLabel" style="-fx-text-fill: #333; -fx-font-size: 16px;" text="Transactions: Not Loaded" />
+        <Label fx:id="transactionDataLabel" style="-fx-font-size: 16px;" text="Transactions: Not Loaded" />
 
         <!-- Step 3: Summarize Totals -->
-        <Label fx:id="netSalesLabel" style="-fx-text-fill: #333; -fx-font-size: 16px;" text="Net Sales: Not Calculated" />
+        <Label fx:id="netSalesLabel" style="-fx-font-size: 16px;" text="Net Sales: Not Calculated" />
 
         <!-- Step 4: Display Sales Report -->
-        <Label fx:id="reportStatusLabel" style="-fx-text-fill: #333; -fx-font-size: 16px;" text="Report Status: Not Generated" />
+        <Label fx:id="reportStatusLabel" style="-fx-font-size: 16px;" text="Report Status: Not Generated" />
 
     </VBox>
 

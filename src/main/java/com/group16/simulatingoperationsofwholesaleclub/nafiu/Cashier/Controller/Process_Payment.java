@@ -16,8 +16,6 @@ public class Process_Payment {
     @javafx.fxml.FXML
     private Label validationLabel;
     @javafx.fxml.FXML
-    private Label balanceLabel;
-    @javafx.fxml.FXML
     private Label paymentStatusLabel;
 
     @javafx.fxml.FXML
