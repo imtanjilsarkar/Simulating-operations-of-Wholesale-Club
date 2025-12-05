@@ -37,13 +37,13 @@ public class Process_Payment {
             validationLabel.setText("Please fill all fields!");
             return;
         }
-        if (amountEntered.equals("100")) {
-            validationLabel.setText("OK");
+        if (amountEntered.equals("50")) {
+            validationLabel.setText("valid");
         } else {
             validationLabel.setText("Invalid Amount");
+            paymentStatusLabel.setText("Payment Incomplete");
             return;
         }
         paymentStatusLabel.setText("Payment Complete");
-        balanceLabel.setText("Balance: 0");
     }
 }

@@ -12,8 +12,6 @@ public class Process_Customer_Checkout {
     private TextField productIdField;
     @javafx.fxml.FXML
     private Label totalPriceLabel;
-    @javafx.fxml.FXML
-    private Label finalBillLabel;
 
     @javafx.fxml.FXML
     public void handleBack(ActionEvent actionEvent) throws IOException {
