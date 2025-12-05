@@ -31,14 +31,14 @@
                 layoutX="60" layoutY="200"
                 prefWidth="180"
                 onAction="#validateLocation"
-                style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+                style="" />
 
         <!-- Update Placement Button -->
         <Button text="Update Placement"
                 layoutX="260" layoutY="200"
                 prefWidth="180"
                 onAction="#updatePlacement"
-                style="-fx-background-color: #FF9800; -fx-text-fill: white;" />
+                style="" />
 
         <!-- Confirmation -->
         <Label text="Updated Storage Status:" layoutX="60" layoutY="260" />
@@ -46,14 +46,14 @@
                   layoutX="60" layoutY="290"
                   prefWidth="720" prefHeight="140"
                   editable="false"
-                  style="-fx-control-inner-background: #f0f0f0;" />
+                  style="" />
 
         <!-- Back Button -->
         <Button text="Back"
                 layoutX="60" layoutY="450"
                 prefWidth="100"
                 onAction="#goBack"
-                style="-fx-background-color: #777; -fx-text-fill: white;" />
+                style="" />
 
     </children>
 

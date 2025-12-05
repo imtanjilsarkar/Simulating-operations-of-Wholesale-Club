@@ -3,49 +3,34 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F9FAFB;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Inventory.Controller.Inventory_Dashboard">
-
-    <!-- Sidebar -->
-    <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="600.0" prefWidth="220.0" style="-fx-background-color: #0078D7;">
-
-        <Label layoutX="40.0" layoutY="40.0" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="Inventory Manager" />
-
-        <VBox layoutX="20.0" layoutY="100.0" spacing="15.0">
-
-            <Button onAction="#handleMonitorStock" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Check Inventory" />
-
-            <Button onAction="#handlePurchaseRequest" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="New Purchase Request" />
-
-            <Button onAction="#handleReceiveDelivery" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Receive Supplier Delivery" />
-
-            <Button onAction="#handleUpdateDamaged" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Update Damaged/Expired Goods" />
-
-            <Button onAction="#handleForecastDemand" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Forecast Demand" />
-
-            <Button onAction="#handleStockReport" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Generate Stock Report" />
-
-            <Button onAction="#handleOrganizeWarehouse" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Organize Warehouse" />
-
-            <Button onAction="#handleSupplierReturns" prefWidth="180.0" style="-fx-background-color: white; -fx-text-fill: #0078D7; -fx-font-weight: bold; -fx-background-radius: 6;" text="Handle Supplier Returns" />
-
-        </VBox>
-
-        <!-- Logout & Back Buttons -->
-        <Button layoutX="40.0" layoutY="530.0" onAction="#handleLogout" prefWidth="140.0" style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Logout" />
-
-        <Button layoutX="40.0" layoutY="497.0" onAction="#handleBack" prefWidth="140.0" style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Back" />
-
-    </AnchorPane>
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.nafiu.Inventory.Controller.Inventory_Dashboard">
 
     <!-- Header -->
-    <Label layoutX="260.0" layoutY="40.0" style="-fx-font-size: 22px; -fx-text-fill: #0078D7; -fx-font-weight: bold;" text="Welcome to Inventory Manager Dashboard" />
+    <Label layoutX="260.0" layoutY="40.0" style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Welcome to Inventory Manager Dashboard" />
 
-    <Line endX="600.0" layoutX="260.0" layoutY="80.0" stroke="#0078D7" strokeWidth="2" />
+    <Line endX="600.0" layoutX="260.0" layoutY="80.0" startX="-266.0" strokeWidth="2" />
 
-    <!-- Content Area -->
-    <Label layoutX="260.0" layoutY="120.0" style="-fx-text-fill: #666666; -fx-font-size: 14px;" text="Select an option from the sidebar to continue." />
+      <Button layoutX="236.0" layoutY="174.0" onAction="#handleMonitorStock" prefWidth="180.0" style="" text="Check Inventory" />
+
+      <Button layoutX="236.0" layoutY="221.0" onAction="#handlePurchaseRequest" prefWidth="180.0" style="" text="New Purchase Request" />
+
+      <Button layoutX="236.0" layoutY="269.0" onAction="#handleReceiveDelivery" prefWidth="180.0" style="" text="Receive Supplier Delivery" />
+
+      <Button layoutX="236.0" layoutY="317.0" onAction="#handleUpdateDamaged" prefWidth="180.0" style="" text="Update Damaged/Expired Goods" />
+
+      <Button layoutX="484.0" layoutY="174.0" onAction="#handleForecastDemand" prefWidth="180.0" style="" text="Forecast Demand" />
+
+      <Button layoutX="484.0" layoutY="221.0" onAction="#handleStockReport" prefWidth="180.0" style="" text="Generate Stock Report" />
+
+      <Button layoutX="484.0" layoutY="269.0" onAction="#handleOrganizeWarehouse" prefWidth="180.0" style="" text="Organize Warehouse" />
+
+      <Button layoutX="484.0" layoutY="317.0" onAction="#handleSupplierReturns" prefWidth="180.0" style="" text="Handle Supplier Returns" />
+
+     <Button layoutX="389.0" layoutY="431.0" onAction="#handleBack" prefWidth="140.0" style="" text="Back" />
+
+     <!-- Logout & Back Buttons -->
+     <Button layoutX="389.0" layoutY="475.0" onAction="#handleLogout" prefWidth="140.0" style="" text="Logout" />
 
 </AnchorPane>

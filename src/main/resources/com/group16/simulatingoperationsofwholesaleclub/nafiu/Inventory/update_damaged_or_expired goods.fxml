@@ -32,14 +32,14 @@
                 layoutX="60" layoutY="200"
                 prefWidth="150"
                 onAction="#verifyStock"
-                style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+                style="" />
 
         <!-- Deduct Stock -->
         <Button text="Deduct from Stock"
                 layoutX="230" layoutY="200"
                 prefWidth="180"
                 onAction="#deductStock"
-                style="-fx-background-color: #FF9800; -fx-text-fill: white;" />
+                style="" />
 
         <!-- Updated Stock Status -->
         <Label text="Updated Stock Status:" layoutX="60" layoutY="260" />
@@ -47,14 +47,14 @@
                   layoutX="60" layoutY="290"
                   prefWidth="720" prefHeight="140"
                   editable="false"
-                  style="-fx-control-inner-background: #f0f0f0;" />
+                  style="" />
 
         <!-- Back Button -->
         <Button text="Back"
                 layoutX="60" layoutY="450"
                 prefWidth="100"
                 onAction="#goBack"
-                style="-fx-background-color: #777; -fx-text-fill: white;" />
+                style="" />
 
     </children>
 
