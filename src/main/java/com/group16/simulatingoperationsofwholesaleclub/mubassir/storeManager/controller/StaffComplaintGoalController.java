@@ -23,7 +23,7 @@ public class StaffComplaintGoalController {
     private Label successLabel;
 
     private final String FILE_PATH =
-            "C:\\Users\\MUBASSIR_MOHI\\IdeaProjects\\Simulating-operations-of-Wholesale-Club\\staff_complaints.txt";
+            "staff_complaints.txt";
 
     @FXML
     public void submitBTN() {

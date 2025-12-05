@@ -21,7 +21,7 @@ public class ApprovePurchaseController {
     private Label messageLabel;
 
     private final String FILE_PATH =
-            "C:/Users/MUBASSIR_MOHI/IdeaProjects/Simulating-operations-of-Wholesale-Club/purchase_requests.txt";
+            "purchase_requests.txt";
 
     @FXML
     public void backBTN(ActionEvent actionEvent) throws IOException{

@@ -2,23 +2,32 @@ package com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.co
 
 import com.group16.simulatingoperationsofwholesaleclub.SceneSwitcher;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
+import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class SalesPerformaneController {
 
-    @javafx.fxml.FXML
+    @FXML
     private TextArea salesOutputTA;
 
-    @javafx.fxml.FXML
+    @FXML
     public void viewReportBTN(ActionEvent actionEvent) {
+        try {
+            Path filePath = Path.of("purchase_requests.txt");
+            String content = Files.readString(filePath);
+            salesOutputTA.setText(content);
+
+        } catch (IOException e) {
+            salesOutputTA.setText("Error loading report. File not found or unreadable.");
+        }
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void backBTN(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/storemanager_dashboard.fxml",actionEvent);
+        SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/mubassir/storeManager/storemanager_dashboard.fxml", actionEvent);
     }
 }
