@@ -63,9 +63,14 @@ public class NewMembershipController {
 
         if (customerIdTF.getText().isEmpty() || customerNameTF.getText().isEmpty() || membershipTypeCB.getValue() == null || validTillDP.getValue() == null) {
             successLabel.setText(" Please fill all fields!");
+            successLabel.setStyle("-fx-text-fill: red;");
             return;
         }
-
+        if (validTillDP.getValue().isBefore(java.time.LocalDate.now())) {
+            successLabel.setText(" Date cannot be in the past!");
+            successLabel.setStyle("-fx-text-fill: red;");
+            return;
+        }
         int id = Integer.parseInt(customerIdTF.getText());
         String name = customerNameTF.getText();
         String type = membershipTypeCB.getValue();

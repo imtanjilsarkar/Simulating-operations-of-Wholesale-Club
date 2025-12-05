@@ -1,6 +1,0 @@
-Sales: 234, Low Stock: 34, Active Staff: 454
-Sales: 2334, Low Stock: 23e231231, Active Staff: 43535
-Sales: 123, Low Stock: 1231313, Active Staff: 13123
-Sales: 57, Low Stock: 8, Active Staff: 5
-Sales: 255, Low Stock: 12, Active Staff: 7
-Sales: 5000, Low Stock: 20, Active Staff: 123

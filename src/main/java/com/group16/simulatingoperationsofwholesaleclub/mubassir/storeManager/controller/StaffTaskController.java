@@ -59,7 +59,11 @@ public class StaffTaskController implements Initializable {
             successLabel.setText("ERROR: Please fill all fields.");
             return;
         }
-
+        if (dateDP.getValue().isBefore(java.time.LocalDate.now())) {
+            successLabel.setText(" Date cannot be in the past!");
+            successLabel.setStyle("-fx-text-fill: red;");
+            return;
+        }
         if (!staffId.matches("\\d+")) {
             successLabel.setText("ERROR: Staff ID must be a number.");
             return;
@@ -89,8 +93,5 @@ public class StaffTaskController implements Initializable {
             writer.println(task.toString());
         }
     }
-
-
-
 
 }
