@@ -32,7 +32,7 @@ public class Flag_Suspicious_Activity {
             writer.newLine();
 
             recordStatusLabel.setText("Record Saved");
-            confirmationLabel.setText("Manager Notified");
+            confirmationLabel.setText("Notified");
         } catch (IOException e) {
             confirmationLabel.setText("Error saving report");
             e.printStackTrace();

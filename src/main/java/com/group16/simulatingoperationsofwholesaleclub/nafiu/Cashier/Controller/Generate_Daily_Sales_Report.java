@@ -27,7 +27,7 @@ public class Generate_Daily_Sales_Report {
         int totalSales = 500;
 
         transactionDataLabel.setText("Total Transactions: " + totalTransactions);
-        netSalesLabel.setText("today's Sales: " + totalSales + " taka");
+        netSalesLabel.setText("net Sales: " + totalSales + " taka");
         reportStatusLabel.setText("Report Generated Successfully");
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("totalcash.txt", true))) {
