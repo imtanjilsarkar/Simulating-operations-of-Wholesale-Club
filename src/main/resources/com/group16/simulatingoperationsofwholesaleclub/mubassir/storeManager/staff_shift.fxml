@@ -10,7 +10,7 @@
 
     <Label layoutX="210" layoutY="20" style="-fx-font-size: 20px; -fx-text-fill: #004aad;" text="Assign Staff Shift" />
 
-    <Label layoutX="80" layoutY="80" style="-fx-text-fill: #004aad;" text="Staff ID:" />
+    <Label layoutX="69.0" layoutY="79.0" style="-fx-text-fill: #004aad;" text="Staff ID/Name:" />
     <TextField fx:id="staffIdTF" layoutX="150" layoutY="75" prefWidth="150" promptText="Enter Staff ID" />
 
     <Label layoutX="320" layoutY="80" style="-fx-text-fill: #004aad;" text="Date:" />
