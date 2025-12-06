@@ -20,12 +20,13 @@
     </TableView>
 
     <!-- Load Button -->
-    <Button layoutX="300.0" layoutY="420.0" onAction="#handleLoadComplaints" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Load" />
+    <Button layoutX="180.0" layoutY="440.0" onAction="#handleLoadComplaints" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Load" />
 
     <!-- Back Button -->
-    <Button layoutX="480.0" layoutY="420.0" onAction="#handleBackCSD" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #0078D7; -fx-text-fill: White; -fx-background-radius: 8;" text="Back" />
+    <Button layoutX="504.0" layoutY="440.0" onAction="#handleBackCSD" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #0078D7; -fx-text-fill: White; -fx-background-radius: 8;" text="Back" />
 
     <!-- Message Label -->
-    <Label fx:id="messageLabel" layoutX="150.0" layoutY="420.0" prefWidth="120.0" />
+    <Label fx:id="messageLabel" layoutX="147.0" layoutY="406.0" prefHeight="18.0" prefWidth="500.0" />
+   <Button layoutX="340.0" layoutY="440.0" onAction="#exportToPDF" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Export" />
 
 </AnchorPane>

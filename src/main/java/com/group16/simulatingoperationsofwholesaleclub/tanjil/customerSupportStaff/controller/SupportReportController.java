@@ -10,10 +10,15 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
+
+import javafx.stage.FileChooser;
+import org.openpdf.text.Document;
+import org.openpdf.text.DocumentException;
+import org.openpdf.text.Paragraph;
+import org.openpdf.text.Table;
+import org.openpdf.text.pdf.PdfWriter;
 
 public class SupportReportController extends BaseController {
 
@@ -61,6 +66,51 @@ public class SupportReportController extends BaseController {
 
         } catch (IOException e) {
             messageLabel.setText("Failed to load complaints.");
+            e.printStackTrace();
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void exportToPDF(ActionEvent actionEvent) {
+        if (data.isEmpty()) {
+            messageLabel.setText("No complaint data to export!");
+            return;
+        }
+
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Save Support Report PDF");
+        fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("PDF Document (.pdf)", "*.pdf")
+        );
+        File file = fileChooser.showSaveDialog(tblReports.getScene().getWindow());
+        if (file == null) return;
+
+        try {
+            Document pdf = new Document();
+            PdfWriter.getInstance(pdf, new FileOutputStream(file));
+            pdf.open();
+
+            pdf.add(new Paragraph("Customer Support Report"));
+            pdf.add(new Paragraph(" "));
+            pdf.add(new Paragraph("Total Complaints: " + data.size()));
+            pdf.add(new Paragraph(" "));
+
+            Table pdfTable = new Table(2);
+            pdfTable.addCell("Customer Name");
+            pdfTable.addCell("Status");
+
+            for (SupportReport s : data) {
+                pdfTable.addCell(s.getCustomerName());
+                pdfTable.addCell(s.getStatus());
+            }
+
+            pdf.add(pdfTable);
+            pdf.close();
+
+            messageLabel.setText("PDF generated successfully!");
+
+        } catch (DocumentException | IOException e) {
+            messageLabel.setText("Error generating PDF!");
             e.printStackTrace();
         }
     }
