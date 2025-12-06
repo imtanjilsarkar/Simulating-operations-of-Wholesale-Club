@@ -8,11 +8,11 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.mubassir.storeManager.controller.PromotionController">
 
-    <Label layoutX="20" layoutY="20" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #004aad;" text=" Promotion Approval" />
+    <Label layoutX="20" layoutY="20" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #004aad;" text=" Discount &amp; Promotion Approval" />
 
-    <Label layoutX="20" layoutY="80" style="-fx-text-fill:#004aad;" text="Promotion Title:" />
+    <Label layoutX="20" layoutY="80" style="-fx-text-fill:#004aad;" text="Discount/Promotion Title:" />
     <TextField fx:id="promoTitleTF" layoutX="160" layoutY="75" prefWidth="250" style="-fx-border-color:#007bff;" />
-    <Label layoutX="20" layoutY="130" style="-fx-text-fill:#004aad;" text="Promotion Details:" />
+    <Label layoutX="113.0" layoutY="136.0" style="-fx-text-fill:#004aad;" text=" Details:" />
     <TextArea fx:id="promoDetailsTF" layoutX="160" layoutY="125" prefHeight="100" prefWidth="300" style="-fx-border-color:#007bff;" />
 
 

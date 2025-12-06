@@ -1,2 +1,3 @@
 Product ID: Fish1, Name: Fish, Deducted: 10, Updated Stock: 40, Reason: Rotten
 Product ID: 1201, Name: rice, Deducted: 15, Updated Stock: 35, Reason: the bag was torned
+

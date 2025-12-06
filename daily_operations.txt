@@ -1,0 +1,1 @@
+Sales: 50, Low Stock: 6, Active Staff: 25
