@@ -28,7 +28,7 @@
     <Button layoutX="330.0" layoutY="210.0" onAction="#deliveryReport" prefHeight="40" prefWidth="200.0" style="-fx-background-color:#0078D7; -fx-text-fill:white; -fx-background-radius: 8;" text="Generate Delivery Report" />
 
 
-    <Button layoutX="60.0" layoutY="270.0" onAction="#returnedOrders" prefHeight="40" prefWidth="200.0" style="-fx-background-color:#0078D7; -fx-text-fill:white; -fx-background-radius: 8;" text="Returned Orders" />
+    <Button layoutX="60.0" layoutY="270.0" onAction="#returnedOrders" prefHeight="40" prefWidth="200.0" style="-fx-background-color:#0078D7; -fx-text-fill:white; -fx-background-radius: 8;" text="VerifyReturned Orders" />
 
 
     <Button layoutX="330.0" layoutY="270.0" onAction="#requestReDelivery" prefHeight="40" prefWidth="200.0" style="-fx-background-color:#0078D7; -fx-text-fill:white; -fx-background-radius: 8;" text="Request Re-Delivery" />
