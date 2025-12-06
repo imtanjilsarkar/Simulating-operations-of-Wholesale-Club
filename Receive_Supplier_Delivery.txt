@@ -1,3 +1,4 @@
 Fish,20 → Stock Updated
 Chicken,15 → Stock Updated
 Sugar,10 → Stock Updated
+
