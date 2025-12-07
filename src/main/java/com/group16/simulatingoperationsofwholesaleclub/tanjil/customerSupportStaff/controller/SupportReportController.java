@@ -11,7 +11,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javafx.stage.FileChooser;
 import org.openpdf.text.Document;
@@ -54,8 +56,9 @@ public class SupportReportController extends BaseController {
 
                 String customerName = parts[0].trim();
                 String status = parts[3].trim();
+                String today = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 
-                data.add(new SupportReport(customerName, "", status));
+                data.add(new SupportReport(customerName, "", status, ""));
             }
 
             if (data.isEmpty()) {

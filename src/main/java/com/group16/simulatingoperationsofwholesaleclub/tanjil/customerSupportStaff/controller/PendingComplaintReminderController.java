@@ -13,6 +13,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class PendingComplaintReminderController extends BaseController
 {
@@ -26,6 +28,9 @@ public class PendingComplaintReminderController extends BaseController
     private Label messageLabel;
     @javafx.fxml.FXML
     private TableColumn <SupportReport, String> colStatus;
+    @javafx.fxml.FXML
+    private TableColumn <SupportReport, String> colDate;
+
 
     ObservableList<SupportReport> data = FXCollections.observableArrayList();
 
@@ -35,6 +40,7 @@ public class PendingComplaintReminderController extends BaseController
         colCustomerName.setCellValueFactory(new PropertyValueFactory<>("customerName"));
         colComplaintTitle.setCellValueFactory(new PropertyValueFactory<>("complaintTitle"));
         colStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+        colDate.setCellValueFactory(new PropertyValueFactory<>("date"));
     }
 
     @javafx.fxml.FXML
@@ -44,7 +50,6 @@ public class PendingComplaintReminderController extends BaseController
         try (BufferedReader reader = new BufferedReader(new FileReader("complaints.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                // Format: Customer | Title | Description | Status
                 String[] parts = line.split("\\|");
                 if (parts.length != 4) continue;
 
@@ -52,8 +57,10 @@ public class PendingComplaintReminderController extends BaseController
                 String title = parts[1].trim();
                 String status = parts[3].trim();
 
+                String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+
                 if (!status.equalsIgnoreCase("Closed")) {
-                    data.add(new SupportReport(customer, title, status));
+                    data.add(new SupportReport(customer, title, status, date));
                 }
             }
 

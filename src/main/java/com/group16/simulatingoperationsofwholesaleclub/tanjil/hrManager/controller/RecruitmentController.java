@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class RecruitmentController extends BaseController {
+public class    RecruitmentController extends BaseController {
     @javafx.fxml.FXML
     private TextField txtFullName;
     @javafx.fxml.FXML

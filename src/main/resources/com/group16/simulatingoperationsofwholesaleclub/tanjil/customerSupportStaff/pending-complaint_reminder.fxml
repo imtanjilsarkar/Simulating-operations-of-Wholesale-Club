@@ -14,9 +14,10 @@
     <!-- Table -->
     <TableView fx:id="tblPendingComplaints" layoutX="50.0" layoutY="70.0" prefHeight="300.0" prefWidth="700.0">
         <columns>
-            <TableColumn fx:id="colCustomerName" prefWidth="250" text="Customer Name" />
-            <TableColumn fx:id="colComplaintTitle" prefWidth="300" text="Complaint Title" />
-            <TableColumn fx:id="colStatus" prefWidth="150" text="Status" />
+            <TableColumn fx:id="colCustomerName" prefWidth="149.59998321533203" text="Customer Name" />
+            <TableColumn fx:id="colComplaintTitle" prefWidth="304.79998779296875" text="Complaint Title" />
+            <TableColumn fx:id="colStatus" prefWidth="115.19992065429688" text="Status" />
+         <TableColumn fx:id="colDate" prefWidth="128.800048828125" text="Date" />
         </columns>
     </TableView>
 

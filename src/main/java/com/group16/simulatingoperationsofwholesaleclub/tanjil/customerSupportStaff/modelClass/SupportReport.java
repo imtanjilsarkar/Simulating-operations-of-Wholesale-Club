@@ -3,42 +3,46 @@ package com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportSt
 public class SupportReport {
     private String customerName;
     private String complaintTitle;
-    private String status;  // Solved / Unsolved / Updated
+    private String status;// Solved / Unsolved / Updated
+    private String date;
+
+    public SupportReport(String customerName,String complaintTitle, String status, String date) {
+        this.customerName = customerName;
+        this.status = status;
+        this.date = date;
+        this.complaintTitle = complaintTitle;
+    }
 
     public String getCustomerName() {
-
         return customerName;
     }
 
     public void setCustomerName(String customerName) {
-
         this.customerName = customerName;
     }
 
     public String getComplaintTitle() {
-
         return complaintTitle;
     }
 
     public void setComplaintTitle(String complaintTitle) {
-
         this.complaintTitle = complaintTitle;
     }
 
     public String getStatus() {
-
         return status;
     }
 
     public void setStatus(String status) {
-
         this.status = status;
     }
 
-    public SupportReport(String customerName, String complaintTitle, String status) {
-        this.customerName = customerName;
-        this.complaintTitle = complaintTitle;
-        this.status = status;
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     @Override
@@ -47,6 +51,7 @@ public class SupportReport {
                 "customerName='" + customerName + '\'' +
                 ", complaintTitle='" + complaintTitle + '\'' +
                 ", status='" + status + '\'' +
+                ", date='" + date + '\'' +
                 '}';
     }
 }
