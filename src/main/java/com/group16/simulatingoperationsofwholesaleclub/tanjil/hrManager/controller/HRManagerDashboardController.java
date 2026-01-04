@@ -5,7 +5,7 @@ import javafx.event.ActionEvent;
 
 import java.io.IOException;
 
-public class HRManagerDashboardController {
+public class  HRManagerDashboardController {
     @javafx.fxml.FXML
     public void handlePayroll(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.switchTo("/com/group16/simulatingoperationsofwholesaleclub/tanjil/hrManager/payroll.fxml", actionEvent);

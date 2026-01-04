@@ -4,38 +4,77 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.initial.SignupController">
+<AnchorPane prefHeight="667.0" prefWidth="800.0" style="-fx-background-color: #ECEFF1;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.initial.SignupController">
 
-    <!-- Title -->
-    <Label layoutX="355.0" layoutY="48.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;" text="Sign Up" />
+    <!-- Center Card Panel -->
+    <VBox alignment="CENTER" layoutX="183.0" layoutY="25.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 30;">
 
-    <!-- Name -->
-    <Label layoutX="200.0" layoutY="120.0" text="Full Name:" />
-    <TextField layoutX="320.0" layoutY="115.0" prefWidth="250.0" />
+        <!-- Drop shadow -->
+        <effect>
+            <DropShadow color="#00000033" offsetX="0" offsetY="5" radius="15" />
+        </effect>
 
-    <!-- Username -->
-    <Label layoutX="200.0" layoutY="170.0" text="Username:" />
-    <TextField layoutX="320.0" layoutY="165.0" prefWidth="250.0" />
+        <!-- Page Title -->
+        <Label style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #1976D2;" text="Sign Up" />
 
-    <!-- Email -->
-    <Label layoutX="200.0" layoutY="220.0" text="Email:" />
-    <TextField layoutX="320.0" layoutY="215.0" prefWidth="250.0" />
+        <!-- Name Input -->
+        <VBox alignment="CENTER_LEFT" prefWidth="350" spacing="5">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #424242;" text="Full Name:" />
+            <TextField promptText="Enter your full name" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #B0BEC5; -fx-border-width: 1;" />
+        </VBox>
 
-    <!-- Password -->
-    <Label layoutX="200.0" layoutY="270.0" text="Password:" />
-    <PasswordField layoutX="320.0" layoutY="265.0" prefWidth="250.0" />
+        <!-- Username Input -->
+        <VBox alignment="CENTER_LEFT" prefWidth="350" spacing="5">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #424242;" text="Username:" />
+            <TextField promptText="Choose a username" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #B0BEC5; -fx-border-width: 1;" />
+        </VBox>
 
-    <!-- Confirm Password -->
-    <Label layoutX="200.0" layoutY="320.0" text="Confirm Password:" />
-    <PasswordField layoutX="320.0" layoutY="315.0" prefWidth="250.0" />
+        <!-- Email Input -->
+        <VBox alignment="CENTER_LEFT" prefWidth="350" spacing="5">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #424242;" text="Email:" />
+            <TextField promptText="Enter your email" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #B0BEC5; -fx-border-width: 1;" />
+        </VBox>
 
-    <!-- Sign Up Button -->
-    <Button layoutX="292.0" layoutY="381.0" onAction="#handleSignUp" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 8;" text="Sign Up" />
+        <!-- Password Input -->
+        <VBox alignment="CENTER_LEFT" prefWidth="350" spacing="5">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #424242;" text="Password:" />
+            <PasswordField promptText="Enter your password" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #B0BEC5; -fx-border-width: 1;" />
+        </VBox>
 
-    <!-- Back Button -->
-    <Button layoutX="293.0" layoutY="441.0" onAction="#handleBack" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-color: #0078D7; -fx-border-width: 2; -fx-text-fill: #0078D7; -fx-font-size: 15px; -fx-background-radius: 8;" text="Back" />
-   <Label layoutX="298.0" layoutY="550.0" style="-fx-font-size: 12px; -fx-text-fill: #999999;" text="© 2025 Wholesale Club Management System" />
+        <!-- Confirm Password Input -->
+        <VBox alignment="CENTER_LEFT" prefWidth="350" spacing="5">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #424242;" text="Confirm Password:" />
+            <PasswordField promptText="Confirm your password" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #B0BEC5; -fx-border-width: 1;" />
+        </VBox>
+
+        <!-- Buttons -->
+        <VBox alignment="CENTER" spacing="15">
+            <!-- Sign Up Button -->
+            <Button onAction="#handleSignUp" prefHeight="45" prefWidth="220" style="-fx-background-color: linear-gradient(to bottom, #42A5F5, #1E88E5);                            -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 12; -fx-cursor: hand;" text="Sign Up">
+                <style>
+                    .button:hover {
+                    -fx-background-color: linear-gradient(to bottom, #1E88E5, #1565C0);
+                    }
+                </style>
+            </Button>
+
+            <!-- Back Button -->
+            <Button onAction="#handleBack" prefHeight="45" prefWidth="220" style="-fx-background-color: white; -fx-border-color: #1976D2; -fx-border-width: 2;                            -fx-text-fill: #1976D2; -fx-font-size: 15px; -fx-background-radius: 12; -fx-cursor: hand;" text="Back">
+                <style>
+                    .button:hover {
+                    -fx-background-color: #E3F2FD;
+                    }
+                </style>
+            </Button>
+        </VBox>
+   
+       <!-- Footer -->
+       <Label style="-fx-font-size: 12px; -fx-text-fill: #999999;" text="© 2026 Wholesale Club Management System" />
+
+    </VBox>
 
 </AnchorPane>

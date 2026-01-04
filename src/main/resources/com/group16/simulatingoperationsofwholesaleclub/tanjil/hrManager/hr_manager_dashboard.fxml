@@ -2,40 +2,76 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Line?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F9FAFB;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.HRManagerDashboardController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ECEFF1;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.HRManagerDashboardController">
 
-    <!-- Header -->
-    <Label layoutX="286.0" layoutY="41.0" style="-fx-font-size: 22px; -fx-text-fill: #0078D7; -fx-font-weight: bold;" text="HR Manager Dashboard" />
+    <!-- Center Card Panel -->
+    <VBox alignment="TOP_CENTER" layoutX="204.0" layoutY="45.0" spacing="25.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 30;">
 
-    <Line endX="820.0" layoutX="40.0" layoutY="80.0" stroke="#0078D7" strokeWidth="2" />
+        <!-- Drop Shadow -->
+        <effect>
+            <DropShadow color="#00000033" offsetX="0" offsetY="5" radius="15" />
+        </effect>
 
-    <!-- Instruction -->
-    <Label layoutX="300.0" layoutY="120.0" style="-fx-text-fill: #666666; -fx-font-size: 14px;" text="Select an option below to continue." />
+        <!-- Title -->
+        <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1976D2;" text="HR Manager Dashboard" />
 
-    <!-- Buttons (Simple Layout, No Boxes) -->
-    <Button layoutX="190.0" layoutY="177.0" onAction="#handleRecruitment" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Recruitment" />
+        <!-- Subtitle -->
+        <Label style="-fx-font-size: 14px; -fx-text-fill: #616161;" text="Select an option below to continue" />
 
-    <Button layoutX="186.0" layoutY="363.0" onAction="#handleRemoveEmployee" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Remove Employee" />
+        <!-- Grid of Buttons -->
+        <GridPane hgap="30" vgap="20">
 
-    <Button layoutX="466.0" layoutY="177.0" onAction="#handleUpdateEmployee" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Update Employee" />
+            <!-- Row 1 -->
+            <Button onAction="#handleRecruitment" prefHeight="50" prefWidth="200" style="-fx-background-color: linear-gradient(to bottom, #42A5F5, #1E88E5); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12; -fx-cursor: hand;" text="Recruitment" />
+            <Button onAction="#handleUpdateEmployee" prefHeight="50" prefWidth="200" style="-fx-background-color: linear-gradient(to bottom, #42A5F5, #1E88E5); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12; -fx-cursor: hand;" text="Update Employee" GridPane.columnIndex="1" />
 
-    <Button layoutX="466.0" layoutY="299.0" onAction="#handleLeaveApproval" prefHeight="26.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Leave Approval" />
+            <!-- Row 2 -->
+            <Button onAction="#handleAttendance" prefHeight="50" prefWidth="200" style="-fx-background-color: linear-gradient(to bottom, #42A5F5, #1E88E5); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12; -fx-cursor: hand;" text="Attendance" GridPane.rowIndex="1" />
+            <Button onAction="#handlePayroll" prefHeight="50" prefWidth="200" style="-fx-background-color: linear-gradient(to bottom, #42A5F5, #1E88E5); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12; -fx-cursor: hand;" text="Payroll" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-    <Button layoutX="188.0" layoutY="237.0" onAction="#handleAttendance" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Attendance" />
+            <!-- Row 3 -->
+            <Button onAction="#handleLeaveRequest" prefHeight="50" prefWidth="200" style="-fx-background-color: linear-gradient(to bottom, #42A5F5, #1E88E5); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12; -fx-cursor: hand;" text="Leave Request" GridPane.rowIndex="2" />
+            <Button onAction="#handleLeaveApproval" prefHeight="50" prefWidth="200" style="-fx-background-color: linear-gradient(to bottom, #42A5F5, #1E88E5); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12; -fx-cursor: hand;" text="Leave Approval" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-    <Button layoutX="188.0" layoutY="300.0" onAction="#handlePayroll" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Payroll" />
+            <!-- Row 4 -->
+            <Button onAction="#handleRemoveEmployee" prefHeight="50" prefWidth="200" style="-fx-background-color: linear-gradient(to bottom, #42A5F5, #1E88E5); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12; -fx-cursor: hand;" text="Remove Employee" GridPane.rowIndex="3" />
+            <Button onAction="#handleSummaryReport" prefHeight="50" prefWidth="200" style="-fx-background-color: linear-gradient(to bottom, #42A5F5, #1E88E5); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12; -fx-cursor: hand;" text="Summary Report" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
 
-    <Button layoutX="466.0" layoutY="237.0" onAction="#handleLeaveRequest" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Leave Request" />
+        </GridPane>
 
-    <Button layoutX="466.0" layoutY="363.0" onAction="#handleSummaryReport" prefHeight="26.0" prefWidth="200.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Summary Report" />
+        <!-- Back & Logout -->
+        <GridPane hgap="20" layoutY="20">
+            <Button onAction="#handleBack" prefHeight="40" prefWidth="198.0" style="-fx-background-color: #1976D2; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12; -fx-cursor: hand;" text="Back" />
+            <Button onAction="#handleLogout" prefHeight="40" prefWidth="213.0" style="-fx-background-color: #1976D2; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 12; -fx-cursor: hand;" text="Logout" GridPane.columnIndex="1" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
 
-    <!-- Back & Logout -->
-    <Button layoutX="220.0" layoutY="442.0" onAction="#handleBack" prefWidth="160.0" style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Back" />
+    </VBox>
 
-    <Button layoutX="492.0" layoutY="442.0" onAction="#handleLogout" prefWidth="160.0" style="-fx-background-color: #005EA6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6;" text="Logout" />
-   <Line endX="8.199981689453125" endY="248.60003662109375" layoutX="419.0" layoutY="165.0" startX="8.199981689453125" startY="-2.5999908447265625" />
+    <!-- Footer -->
+    <Label layoutX="300.0" layoutY="570.0" style="-fx-font-size: 12px; -fx-text-fill: #999999;" text="© 2026 Wholesale Club Management System" />
 
 </AnchorPane>

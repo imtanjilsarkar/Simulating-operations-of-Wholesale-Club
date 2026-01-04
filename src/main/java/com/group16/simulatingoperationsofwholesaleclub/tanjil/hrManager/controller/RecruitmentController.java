@@ -67,7 +67,8 @@ public class    RecruitmentController extends BaseController {
 
     @javafx.fxml.FXML
     public void handleSaveToFile(ActionEvent actionEvent) {
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("employee.bin"))) {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("employee.bin")))
+        {
             out.writeObject(employeeList);
             outputMessage.setText("Employee data saved successfully!");
         } catch (IOException e) {
