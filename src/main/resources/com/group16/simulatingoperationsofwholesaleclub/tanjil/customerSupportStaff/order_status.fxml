@@ -4,26 +4,37 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller.OrderStatusController">
+<VBox alignment="TOP_CENTER" prefHeight="578.0" prefWidth="778.0" spacing="30" style="-fx-background-color: #F4F6F9; -fx-padding: 40;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller.OrderStatusController">
 
     <!-- Title -->
-    <Label layoutX="250.0" layoutY="20.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;" text="Order Status" />
+    <Label style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #2C3E50;" text="Order Status" />
 
-    <!-- TableView -->
-    <TableView fx:id="orderTable" layoutX="50.0" layoutY="70.0" prefHeight="300.0" prefWidth="600.0">
-        <columns>
-            <TableColumn fx:id="colOrderId" prefWidth="100.0" text="Order ID" />
-            <TableColumn fx:id="colCustomerName" prefWidth="150.0" text="Customer Name" />
-            <TableColumn fx:id="colProduct" prefWidth="150.0" text="Product" />
-            <TableColumn fx:id="colQuantity" prefWidth="80.0" text="Quantity" />
-            <TableColumn fx:id="colStatus" prefWidth="120.0" text="Status" />
-        </columns>
-    </TableView>
+    <!-- Card Container -->
+    <VBox alignment="CENTER" spacing="20" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 20;">
+        <effect>
+            <DropShadow offsetY="4" radius="15" />
+        </effect>
 
-    <!-- Refresh Button -->
-    <Button layoutX="300.0" layoutY="403.0" onAction="#handleRefresh" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Refresh" />
-   <Button layoutX="14.0" layoutY="408.0" onAction="#handleBackCSD" prefHeight="18.0" prefWidth="51.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Back" />
+        <!-- TableView -->
+        <TableView fx:id="orderTable" prefHeight="300" prefWidth="600">
+            <columns>
+                <TableColumn fx:id="colOrderId" prefWidth="100" text="Order ID" />
+                <TableColumn fx:id="colCustomerName" prefWidth="150" text="Customer Name" />
+                <TableColumn fx:id="colProduct" prefWidth="150" text="Product" />
+                <TableColumn fx:id="colQuantity" prefWidth="80" text="Quantity" />
+                <TableColumn fx:id="colStatus" prefWidth="120" text="Status" />
+            </columns>
+        </TableView>
 
-</AnchorPane>
+        <!-- Buttons -->
+        <HBox alignment="CENTER" spacing="30">
+            <Button onAction="#handleRefresh" prefHeight="35" prefWidth="120" style="-fx-background-color: #1976D2; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8;" text="Refresh" />
+            <Button onAction="#handleBackCSD" prefHeight="35" prefWidth="120" style="-fx-background-color: #1976D2; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8;" text="Back" />
+        </HBox>
+    </VBox>
+
+</VBox>

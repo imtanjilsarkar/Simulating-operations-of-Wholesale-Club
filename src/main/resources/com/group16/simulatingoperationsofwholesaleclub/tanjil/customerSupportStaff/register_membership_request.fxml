@@ -4,35 +4,45 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller.RegisterMembershipRequestController">
+<VBox alignment="TOP_CENTER" prefHeight="646.0" prefWidth="801.0" spacing="30" style="-fx-background-color: #F4F6F9; -fx-padding: 40;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.customerSupportStaff.controller.RegisterMembershipRequestController">
 
     <!-- Title -->
-    <Label layoutX="180.0" layoutY="30.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #0078D7;" text="Register Membership Request" />
+    <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2C3E50;" text="Register Membership Request" />
 
-    <!-- Customer Name -->
-    <Label layoutX="100.0" layoutY="100.0" text="Customer Name:" />
-    <TextField fx:id="txtCustomerName" layoutX="250.0" layoutY="96.0" prefWidth="300.0" />
+    <!-- Card Container -->
+    <VBox alignment="CENTER" spacing="20" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 30;">
+        <effect>
+            <DropShadow offsetY="4" radius="15" />
+        </effect>
 
-    <!-- Contact Info -->
-    <Label layoutX="100.0" layoutY="150.0" text="Contact Info:" />
-    <TextField fx:id="txtContactInfo" layoutX="250.0" layoutY="146.0" prefWidth="300.0" />
+        <!-- Form Fields -->
+        <VBox alignment="CENTER_LEFT" prefWidth="600" spacing="15">
+            <Label text="Customer Name:" />
+            <TextField fx:id="txtCustomerName" prefWidth="400" promptText="Enter Customer Name" />
 
-    <!-- Notes -->
-    <Label layoutX="100.0" layoutY="200.0" text="Notes:" />
-    <TextArea fx:id="txtNotes" layoutX="250.0" layoutY="196.0" prefHeight="100.0" prefWidth="300.0" />
+            <Label text="Contact Info:" />
+            <TextField fx:id="txtContactInfo" prefWidth="400" promptText="Enter Contact Info" />
 
-    <!-- Submit Button -->
-    <Button layoutX="250.0" layoutY="320.0" onAction="#handleSubmitRequest" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Submit" />
+            <Label text="Notes:" />
+            <TextArea fx:id="txtNotes" prefHeight="100" prefWidth="400" promptText="Additional notes..." />
+        </VBox>
 
-    <!-- Cancel Button -->
-    <Button layoutX="430.0" layoutY="320.0" onAction="#handleCancel" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #0078D7; -fx-text-fill: #0078D7; -fx-background-radius: 8;" text="Cancel" />
+        <!-- Message Label -->
+        <Label fx:id="messageLabel" style="-fx-font-size: 14px;" textFill="#1976D2" />
 
-    <!-- Message Label -->
-    <Label fx:id="messageLabel" layoutX="250.0" layoutY="280.0" prefHeight="18.0" prefWidth="300.0" />
+        <!-- Buttons -->
+        <HBox alignment="CENTER" spacing="30">
+            <Button onAction="#handleSubmitRequest" prefHeight="40" prefWidth="140" style="-fx-background-color: #1976D2; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8;" text="Submit" />
 
-    <!-- Back Button -->
-    <Button layoutX="10.0" layoutY="360.0" onAction="#handleBackCSD" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-background-radius: 8;" text="Back" />
+            <Button onAction="#handleCancel" prefHeight="40" prefWidth="140" style="-fx-background-color: white; -fx-border-color: #1976D2; -fx-text-fill: #1976D2; -fx-font-weight: bold; -fx-background-radius: 8;" text="Cancel" />
+        </HBox>
 
-</AnchorPane>
+        <!-- Back Button -->
+        <Button onAction="#handleBackCSD" prefHeight="35" prefWidth="100" style="-fx-background-color: #1976D2; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8;" text="Back" />
+    </VBox>
+
+</VBox>
