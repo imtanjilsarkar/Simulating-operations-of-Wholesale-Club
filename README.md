@@ -3,7 +3,7 @@
   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdW5tbjFnb2E4eGxkZ3Z5eHF6ZW9vNnhqa25kY3Bsb2N6Y2M1aCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/KAq5w47R9rmTuvWOWa/giphy.gif" width="320" alt="Java Animation"/>
 </p>
 
-<h1 align="center">🏬 Simulating Operations of a Wholesale Club</h1>
+<h1 align="center">🏬 Simulating operations of Wholesale Club (HyperMarket)</h1>
 
 <p align="center">
   <b>Object-Oriented Programming (OOP) Project</b><br>
