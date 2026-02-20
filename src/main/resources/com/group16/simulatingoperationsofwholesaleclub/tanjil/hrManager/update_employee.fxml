@@ -6,41 +6,96 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="500" prefWidth="600" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.UpdateEmployeeController">
+<AnchorPane prefHeight="680.0" prefWidth="736.0" style="-fx-background-color: #ECEFF1;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.UpdateEmployeeController">
 
-    <!-- Search Employee -->
-    <Label layoutX="50" layoutY="20" text="Employee Name:" />
-    <TextField fx:id="txtSearchName" layoutX="180" layoutY="15" prefWidth="200" />
-    <Button layoutX="400" layoutY="15" onAction="#handleSearch" prefHeight="30" prefWidth="120" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Search" />
+    <!-- Center Card -->
+    <VBox layoutX="60" layoutY="30" spacing="20" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 25;">
 
-    <!-- Department -->
-    <Label layoutX="50" layoutY="70" text="Department:" />
-    <ComboBox fx:id="cmbDepartment" layoutX="180" layoutY="65" prefWidth="200" />
+        <!-- Shadow -->
+        <effect>
+            <DropShadow color="#00000033" offsetX="0" offsetY="5" radius="15" />
+        </effect>
 
-    <!-- Position -->
-    <Label layoutX="50" layoutY="120" text="Position:" />
-    <ComboBox fx:id="cmbPosition" layoutX="180" layoutY="115" prefWidth="200" />
+        <!-- Title -->
+        <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1976D2;" text="Update Employee" />
 
-    <!-- Buttons -->
-    <Button layoutX="120.0" layoutY="170.0" onAction="#handleUpdate" prefHeight="30" prefWidth="120" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Update" />
-    <Button layoutX="253.0" layoutY="170.0" onAction="#handleClearForm" prefHeight="30" prefWidth="120" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Clear" />
-    <Button layoutX="389.0" layoutY="170.0" onAction="#handleLoadEmployees" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Load Employees" />
+        <!-- Search Section -->
+        <GridPane hgap="15" vgap="10">
+            <Label style="-fx-font-weight: bold;" text="Employee Name" />
+            <TextField fx:id="txtSearchName" prefWidth="220" promptText="Enter employee name" style="-fx-background-radius: 8; -fx-border-radius: 8;" GridPane.columnIndex="1" />
 
+            <Button onAction="#handleSearch" prefHeight="35" prefWidth="120" style="-fx-background-color: linear-gradient(to bottom, #42A5F5, #1E88E5);                            -fx-text-fill: white; -fx-font-weight: bold;                            -fx-background-radius: 8; -fx-cursor: hand;" text="Search" GridPane.columnIndex="2" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
 
-    <!-- Output Label -->
-    <Label fx:id="outputMessage" layoutX="50" layoutY="220" prefWidth="500" style="-fx-text-fill: black;" />
+        <!-- Update Form -->
+        <GridPane hgap="15" vgap="15">
 
-    <!-- TableView -->
-    <TableView fx:id="employeeTable" layoutX="44.0" layoutY="250.0" prefHeight="200" prefWidth="500">
-        <columns>
-            <TableColumn fx:id="colId" prefWidth="80" text="ID" />
-            <TableColumn fx:id="colName" prefWidth="150" text="Name" />
-            <TableColumn fx:id="colDepartment" prefWidth="140" text="Department" />
-            <TableColumn fx:id="colPosition" prefWidth="130" text="Position" />
-        </columns>
-    </TableView>
-   <Button layoutX="6.0" layoutY="464.0" onAction="#handleBackHRMD" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Back" />
+            <Label style="-fx-font-weight: bold;" text="Department" />
+            <ComboBox fx:id="cmbDepartment" prefWidth="220" style="-fx-background-radius: 8;" GridPane.columnIndex="1" />
+
+            <Label style="-fx-font-weight: bold;" text="Position" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cmbPosition" prefWidth="220" style="-fx-background-radius: 8;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+
+        <!-- Action Buttons -->
+        <GridPane hgap="15" vgap="15">
+
+            <Button onAction="#handleUpdate" prefHeight="38" prefWidth="130" style="-fx-background-color: #1976D2; -fx-text-fill: white;                            -fx-font-weight: bold; -fx-background-radius: 10; -fx-cursor: hand;" text="Update" />
+
+            <Button onAction="#handleClearForm" prefHeight="38" prefWidth="130" style="-fx-background-color: #ECEFF1; -fx-text-fill: #1976D2;                            -fx-border-color: #1976D2; -fx-border-radius: 10;                            -fx-background-radius: 10; -fx-cursor: hand;" text="Clear" GridPane.columnIndex="1" />
+
+            <Button onAction="#handleLoadEmployees" prefHeight="38" prefWidth="150" style="-fx-background-color: linear-gradient(to bottom, #42A5F5, #1E88E5);                            -fx-text-fill: white; -fx-font-weight: bold;                            -fx-background-radius: 10; -fx-cursor: hand;" text="Load Employees" GridPane.columnIndex="2" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+
+        <!-- Output Message -->
+        <Label fx:id="outputMessage" prefWidth="550" style="-fx-font-size: 14px;" />
+
+        <!-- Table -->
+        <TableView fx:id="employeeTable" prefHeight="220" prefWidth="580" style="-fx-background-radius: 10;">
+
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="90" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="160" text="Name" />
+                <TableColumn fx:id="colDepartment" prefWidth="160" text="Department" />
+                <TableColumn fx:id="colPosition" prefWidth="160" text="Position" />
+            </columns>
+
+        </TableView>
+
+        <!-- Back Button -->
+        <Button onAction="#handleBackHRMD" prefHeight="40" prefWidth="580" style="-fx-background-color: #455A64; -fx-text-fill: white;                        -fx-font-weight: bold; -fx-background-radius: 10; -fx-cursor: hand;" text="Back" />
+
+    </VBox>
 
 </AnchorPane>

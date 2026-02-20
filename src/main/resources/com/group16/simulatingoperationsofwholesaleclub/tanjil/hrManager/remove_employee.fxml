@@ -4,27 +4,59 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="400" prefWidth="600" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/24.0.1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.RemoveEmployeeController">
+<VBox alignment="TOP_CENTER" spacing="25" style="-fx-background-color: #F4F6F9; -fx-padding: 30;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.RemoveEmployeeController">
 
-    <!-- TableView -->
-    <TableView fx:id="employeeTable" layoutX="20" layoutY="20" prefHeight="280" prefWidth="560">
-        <columns>
-            <TableColumn fx:id="colId" prefWidth="80" text="ID" />
-            <TableColumn fx:id="colName" prefWidth="150" text="Name" />
-            <TableColumn fx:id="colDepartment" prefWidth="160" text="Department" />
-            <TableColumn fx:id="colPosition" prefWidth="160" text="Position" />
-        </columns>
-    </TableView>
+    <!-- Title -->
+    <Label style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #2C3E50;" text="Remove Employee" />
 
-    <!-- Buttons -->
-    <Button layoutX="52.0" layoutY="320.0" onAction="#handleLoadEmployees" prefHeight="30" prefWidth="100" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Load" />
-    <Button layoutX="188.0" layoutY="320.0" onAction="#handleRemoveEmployee" prefHeight="30" prefWidth="100" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Remove" />
-    <Button layoutX="314.0" layoutY="320.0" onAction="#handleClearTable" prefHeight="30" prefWidth="100" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Clear Table" />
+    <!-- ================= EMPLOYEE LIST CARD ================= -->
+    <VBox spacing="15" style="-fx-background-color: white;                  -fx-background-radius: 12;                  -fx-padding: 20;">
 
-    <!-- Output Label -->
-    <Label fx:id="outputMessage" layoutX="20" layoutY="360" prefWidth="560" style="-fx-text-fill: black;" />
-   <Button layoutX="451.0" layoutY="320.0" onAction="#handleBackHRMD" prefHeight="30" prefWidth="100" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Back" />
+        <effect>
+            <DropShadow offsetY="4" radius="20" />
+        </effect>
 
-</AnchorPane>
+        <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Employee List" />
+
+        <TableView fx:id="employeeTable" prefHeight="280" prefWidth="720">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="90" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="170" text="Name" />
+                <TableColumn fx:id="colDepartment" prefWidth="180" text="Department" />
+                <TableColumn fx:id="colPosition" prefWidth="180" text="Position" />
+            </columns>
+        </TableView>
+
+    </VBox>
+
+    <!-- ================= ACTION CARD ================= -->
+    <VBox alignment="CENTER" spacing="18" style="-fx-background-color: white;                  -fx-background-radius: 12;                  -fx-padding: 25;">
+
+        <effect>
+            <DropShadow offsetY="4" radius="20" />
+        </effect>
+
+        <HBox alignment="CENTER" spacing="15">
+
+            <!-- Primary Action -->
+            <Button onAction="#handleRemoveEmployee" style="-fx-background-color: #1976D2;                            -fx-text-fill: white;                            -fx-font-weight: bold;                            -fx-background-radius: 8;" text="Remove Employee" />
+
+            <!-- Secondary Actions -->
+            <Button onAction="#handleLoadEmployees" style="-fx-background-color: #E3F2FD;                            -fx-text-fill: #1976D2;                            -fx-background-radius: 8;" text="Load" />
+
+            <Button onAction="#handleClearTable" style="-fx-background-color: #ECEFF1;                            -fx-background-radius: 8;" text="Clear Table" />
+
+        </HBox>
+
+        <Label fx:id="outputMessage" />
+
+    </VBox>
+
+    <!-- Back Button -->
+    <Button onAction="#handleBackHRMD" style="-fx-background-color: #1976D2; -fx-background-radius: 8; -fx-text-fill: white;" text="Back" />
+
+</VBox>

@@ -1,44 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="500" prefWidth="700" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.AttendanceController">
+<VBox spacing="25"
+      alignment="TOP_CENTER"
+      xmlns="http://javafx.com/javafx/24.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.AttendanceController"
+      style="-fx-background-color: #F4F6F9; -fx-padding: 30;">
 
-    <!-- Employee Table -->
-    <TableView fx:id="employeeTable" layoutX="20" layoutY="20" prefHeight="200" prefWidth="525.0">
-        <columns>
-            <TableColumn fx:id="colName" prefWidth="151.20001792907715" text="Name" />
-            <TableColumn fx:id="colDepartment" prefWidth="182.39996337890625" text="Department" />
-            <TableColumn fx:id="colPosition" prefWidth="191.19998168945312" text="Position" />
-        </columns>
-    </TableView>
+    <!-- Title -->
+    <Label text="Attendance Management"
+           style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #2C3E50;" />
 
-    <!-- Load Employees Button -->
-    <Button layoutX="560.0" layoutY="20.0" onAction="#handleLoadEmployees" prefHeight="30" prefWidth="120" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Load Employees" />
+    <!-- ================= EMPLOYEE CARD ================= -->
+    <VBox spacing="15"
+          style="-fx-background-color: white;
+                 -fx-background-radius: 12;
+                 -fx-padding: 20;">
 
-    <!-- Attendance Controls -->
-    <ComboBox fx:id="cmbStatus" layoutX="560.0" layoutY="68.0" prefHeight="25" prefWidth="120" />
-    <Button layoutX="560.0" layoutY="280.0" onAction="#handleMarkAttendance" prefHeight="30" prefWidth="120" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Mark Attendance" />
+        <effect>
+            <DropShadow radius="20" offsetY="4"/>
+        </effect>
 
-    <!-- Attendance Table -->
-    <TableView fx:id="attendanceTable" layoutX="13.0" layoutY="250.0" prefHeight="200" prefWidth="533.0">
-        <columns>
-            <TableColumn fx:id="colAttendanceEmployee" prefWidth="162.4000301361084" text="Employee" />
-            <TableColumn fx:id="colAttendanceDate" prefWidth="174.39996337890625" text="Date" />
-            <TableColumn fx:id="colAttendanceStatus" prefWidth="195.99996948242188" text="Status" />
-        </columns>
-    </TableView>
+        <HBox alignment="CENTER_LEFT" spacing="20">
 
-    <!-- Save / Clear Buttons -->
-    <Button layoutX="560.0" layoutY="371.0" onAction="#handleSaveAttendance" prefHeight="30" prefWidth="120" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Save Attendance" />
-    <Button layoutX="560.0" layoutY="327.0" onAction="#handleClearAttendance" prefHeight="30" prefWidth="120" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Clear Attendance" />
+            <Label text="Employee List"
+                   style="-fx-font-size: 18px; -fx-font-weight: bold;" />
 
-    <!-- Output Label -->
-    <Label fx:id="outputMessage" layoutX="10.0" layoutY="468.0" prefWidth="650" style="-fx-text-fill: black;" />
-   <Button layoutX="560.0" layoutY="419.0" onAction="#handleBackHRMD" prefHeight="30" prefWidth="120" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Back" />
-</AnchorPane>
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button text="Load Employees"
+                    onAction="#handleLoadEmployees"
+                    style="-fx-background-color: #E3F2FD;
+                           -fx-text-fill: #1976D2;
+                           -fx-background-radius: 8;" />
+        </HBox>
+
+        <TableView fx:id="employeeTable" prefHeight="200" prefWidth="720">
+            <columns>
+                <TableColumn fx:id="colName" text="Name" prefWidth="200"/>
+                <TableColumn fx:id="colDepartment" text="Department" prefWidth="240"/>
+                <TableColumn fx:id="colPosition" text="Position" prefWidth="240"/>
+            </columns>
+        </TableView>
+
+    </VBox>
+
+    <!-- ================= ATTENDANCE ACTION CARD ================= -->
+    <VBox spacing="20"
+          alignment="CENTER"
+          style="-fx-background-color: white;
+                 -fx-background-radius: 12;
+                 -fx-padding: 25;">
+
+        <effect>
+            <DropShadow radius="20" offsetY="4"/>
+        </effect>
+
+        <Label text="Mark Attendance"
+               style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+        <HBox spacing="15" alignment="CENTER">
+            <Label text="Status:"/>
+            <ComboBox fx:id="cmbStatus" prefWidth="180"/>
+            <Button text="Mark Attendance"
+                    onAction="#handleMarkAttendance"
+                    style="-fx-background-color: #1976D2;
+                           -fx-text-fill: white;
+                           -fx-font-weight: bold;
+                           -fx-background-radius: 8;" />
+        </HBox>
+
+    </VBox>
+
+    <!-- ================= ATTENDANCE RECORD CARD ================= -->
+    <VBox spacing="15"
+          style="-fx-background-color: white;
+                 -fx-background-radius: 12;
+                 -fx-padding: 20;">
+
+        <effect>
+            <DropShadow radius="20" offsetY="4"/>
+        </effect>
+
+        <Label text="Attendance Records"
+               style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+        <TableView fx:id="attendanceTable" prefHeight="200" prefWidth="720">
+            <columns>
+                <TableColumn fx:id="colAttendanceEmployee" text="Employee" prefWidth="240"/>
+                <TableColumn fx:id="colAttendanceDate" text="Date" prefWidth="240"/>
+                <TableColumn fx:id="colAttendanceStatus" text="Status" prefWidth="240"/>
+            </columns>
+        </TableView>
+
+        <HBox spacing="15" alignment="CENTER">
+            <Button text="Save Attendance"
+                    onAction="#handleSaveAttendance"
+                    style="-fx-background-color: #1976D2;
+                           -fx-text-fill: white;
+                           -fx-font-weight: bold;
+                           -fx-background-radius: 8;" />
+
+            <Button text="Clear Attendance"
+                    onAction="#handleClearAttendance"
+                    style="-fx-background-color: #ECEFF1;
+                           -fx-background-radius: 8;" />
+        </HBox>
+
+    </VBox>
+
+    <!-- Output -->
+    <Label fx:id="outputMessage"/>
+
+    <!-- Back -->
+    <Button text="Back"
+            onAction="#handleBackHRMD"
+            style="-fx-background-color: #ECEFF1;
+                   -fx-background-radius: 8;" />
+
+</VBox>

@@ -4,28 +4,51 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" spacing="10" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.HRReportController">
+<AnchorPane prefHeight="610.0" prefWidth="810.0" style="-fx-background-color: #ECEFF1;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.HRReportController">
 
-    <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="HR Report" />
+    <!-- Center Card -->
+    <VBox layoutX="60" layoutY="30" prefHeight="531.0" prefWidth="699.0" spacing="20" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 25;">
 
-    <TableView fx:id="employeeTable" prefHeight="400" prefWidth="700">
-        <columns>
-            <TableColumn fx:id="colId" prefWidth="120" text="ID" />
-            <TableColumn fx:id="colName" prefWidth="150" text="Name" />
-            <TableColumn fx:id="colDepartment" prefWidth="150" text="Department" />
-            <TableColumn fx:id="colPosition" prefWidth="150" text="Position" />
-            <TableColumn fx:id="colSalary" prefWidth="100" text="Salary" />
-        </columns>
-    </TableView>
+        <!-- Shadow -->
+        <effect>
+            <DropShadow color="#00000033" offsetX="0" offsetY="5" radius="15" />
+        </effect>
 
-    <HBox spacing="10">
-        <Button onAction="#handleLoadReport" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Load Report" />
-        <Button onAction="#exportToPDF" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Export to PDF" />
-      <Button mnemonicParsing="false" onAction="#handleBackHRMD" style="-fx-background-color: #0078D7; -fx-text-fill: white;" text="Back" />
-    </HBox>
+        <!-- Title -->
+        <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1976D2;" text="HR Summary Report" />
 
-    <Label fx:id="outputMessage" textFill="red" />
-</VBox>
+        <!-- Table -->
+        <TableView fx:id="employeeTable" prefHeight="400" prefWidth="660" style="-fx-background-radius: 10;">
+
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="110" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="150" text="Name" />
+                <TableColumn fx:id="colDepartment" prefWidth="150" text="Department" />
+                <TableColumn fx:id="colPosition" prefWidth="150" text="Position" />
+                <TableColumn fx:id="colSalary" prefWidth="100" text="Salary" />
+            </columns>
+
+        </TableView>
+
+        <!-- Action Buttons -->
+        <HBox spacing="15">
+
+            <Button onAction="#handleLoadReport" prefHeight="40" prefWidth="150" style="-fx-background-color: linear-gradient(to bottom, #42A5F5, #1E88E5);                            -fx-text-fill: white; -fx-font-weight: bold;                            -fx-background-radius: 10; -fx-cursor: hand;" text="Load Report" />
+
+            <Button onAction="#exportToPDF" prefHeight="40" prefWidth="150" style="-fx-background-color: #1976D2; -fx-text-fill: white;                            -fx-font-weight: bold; -fx-background-radius: 10;                            -fx-cursor: hand;" text="Export to PDF" />
+
+            <Button onAction="#handleBackHRMD" prefHeight="40" prefWidth="150" style="-fx-background-color: #455A64; -fx-text-fill: white;                            -fx-font-weight: bold; -fx-background-radius: 10;                            -fx-cursor: hand;" text="Back" />
+
+        </HBox>
+
+        <!-- Output -->
+        <Label fx:id="outputMessage" prefWidth="650" style="-fx-font-size: 14px;" />
+
+    </VBox>
+
+</AnchorPane>

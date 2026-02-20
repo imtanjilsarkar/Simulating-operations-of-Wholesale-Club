@@ -4,31 +4,77 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="450" prefWidth="500" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.RecruitmentController">
+<AnchorPane prefHeight="510.0" prefWidth="876.0" style="-fx-background-color: #ECEFF1;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group16.simulatingoperationsofwholesaleclub.tanjil.hrManager.controller.RecruitmentController">
 
-    <!-- Title -->
-    <Label layoutX="150" layoutY="20" style="-fx-font-size: 24px; -fx-text-fill: #0078D7; -fx-font-weight: bold;" text="Recruitment Form" />
+    <!-- Center Card -->
+    <VBox alignment="TOP_CENTER" layoutX="125.0" layoutY="67.0" spacing="20" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 30;">
 
-    <!-- Full Name -->
-    <Label layoutX="50" layoutY="80" style="-fx-text-fill: #0078D7;" text="Full Name:" />
-    <TextField fx:id="txtFullName" layoutX="180" layoutY="75" prefWidth="250" promptText="Enter full name" />
+        <!-- Shadow -->
+        <effect>
+            <DropShadow color="#00000033" offsetX="0" offsetY="5" radius="15" />
+        </effect>
 
-    <!-- Department -->
-    <Label layoutX="50" layoutY="130" style="-fx-text-fill: #0078D7;" text="Department:" />
-    <ComboBox fx:id="cmbDepartment" layoutX="180" layoutY="125" prefWidth="250" promptText="Select department" />
+        <!-- Title -->
+        <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1976D2;" text="Recruitment Form" />
 
-    <!-- Position -->
-    <Label layoutX="50" layoutY="180" style="-fx-text-fill: #0078D7;" text="Position:" />
-    <ComboBox fx:id="cmbPosition" layoutX="180" layoutY="175" prefWidth="250" promptText="Select position" />
+        <!-- Form Fields -->
+        <GridPane hgap="20" vgap="15">
 
-    <!-- Buttons -->
-    <Button layoutX="13.0" layoutY="250.0" onAction="#handleAddEmployee" prefHeight="26.0" prefWidth="109.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold;" text="Add Employee" />
-    <Button layoutX="139.0" layoutY="250.0" onAction="#handleSaveToFile" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold;" text="Save to File" />
-    <Button layoutX="269.0" layoutY="250.0" onAction="#handleClearForm" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold;" text="Clear Form" />
+            <!-- Full Name -->
+            <Label style="-fx-font-weight: bold;" text="Full Name" />
+            <TextField fx:id="txtFullName" prefWidth="250" promptText="Enter full name" style="-fx-background-radius: 8; -fx-border-radius: 8;" GridPane.columnIndex="1" />
 
-    <!-- Output message -->
-    <Label fx:id="outputMessage" layoutX="50" layoutY="320" prefWidth="400" style="-fx-text-fill: red; -fx-font-size: 14px;" />
-   <Button layoutX="379.0" layoutY="250.0" onAction="#handleBackHRMD" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-weight: bold;" text="Back" />
+            <!-- Department -->
+            <Label style="-fx-font-weight: bold;" text="Department" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cmbDepartment" prefWidth="250" promptText="Select department" style="-fx-background-radius: 8;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <!-- Position -->
+            <Label style="-fx-font-weight: bold;" text="Position" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cmbPosition" prefWidth="250" promptText="Select position" style="-fx-background-radius: 8;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+
+        </GridPane>
+
+        <!-- Action Buttons -->
+        <GridPane hgap="15" vgap="15">
+
+            <Button onAction="#handleAddEmployee" prefHeight="40" prefWidth="140" style="-fx-background-color: linear-gradient(to bottom, #42A5F5, #1E88E5);                            -fx-text-fill: white; -fx-font-weight: bold;                            -fx-background-radius: 10; -fx-cursor: hand;" text="Add Employee" />
+
+            <Button onAction="#handleSaveToFile" prefHeight="40" prefWidth="140" style="-fx-background-color: linear-gradient(to bottom, #42A5F5, #1E88E5);                            -fx-text-fill: white; -fx-font-weight: bold;                            -fx-background-radius: 10; -fx-cursor: hand;" text="Save to File" GridPane.columnIndex="1" />
+
+            <Button onAction="#handleClearForm" prefHeight="40" prefWidth="140" style="-fx-background-color: #ECEFF1; -fx-text-fill: #1976D2;                            -fx-border-color: #1976D2; -fx-border-radius: 10;                            -fx-background-radius: 10; -fx-cursor: hand;" text="Clear Form" GridPane.columnIndex="2" />
+
+            <Button onAction="#handleBackHRMD" prefHeight="40" prefWidth="254.0" style="-fx-background-color: #1976D2; -fx-text-fill: white;                            -fx-font-weight: bold; -fx-background-radius: 10; -fx-cursor: hand;" text="Back" GridPane.rowIndex="1" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+
+        </GridPane>
+
+        <!-- Output Message -->
+        <Label fx:id="outputMessage" prefWidth="400" style="-fx-text-fill: #D32F2F; -fx-font-size: 14px;" />
+
+    </VBox>
+
 </AnchorPane>
